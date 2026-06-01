@@ -1,0 +1,15 @@
+# GitHub Pages configuration
+# This file tells GitHub Pages how to serve the site.
+
+# Leave theme blank — we are using a fully custom CSS design system.
+# GitHub Pages will serve the site as plain HTML/CSS/JS from the root.
+
+title: SDWH Limited
+description: Independent analysis on complex commercial decisions
+url: https://sdwh.co.uk
+
+# Exclude files that are not part of the public site
+exclude:
+  - "*.md"
+  - Gemfile
+  - Gemfile.lock

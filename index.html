@@ -1,2 +1,108 @@
 <!DOCTYPE html>
-<html><body><h1>Coming soon</h1></body></html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Independent analysis on complex commercial decisions — SDWH Limited</title>
+  <meta name="description" content="SDWH Limited provides independent, objective analysis of commercial decisions by government and public sector organisations spanning corporate finance, procurement, infrastructure investment and governance. Founded by Matthew Rees.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="canonical" href="https://sdwh.co.uk/">
+  <script async src="https://tally.so/widgets/embed.js"></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/" aria-label="SDWH Limited home">
+        <img src="logo.svg" alt="SDWH Limited" class="site-logo-img">
+      </a>
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" onclick="toggleNav(this)">Menu</button>
+      <nav aria-label="Main navigation">
+        <ul class="site-nav" id="site-nav">
+          <li><a href="corporate-finance.html">Corporate Finance</a></li>
+          <li><a href="public-procurement.html">Public Procurement</a></li>
+          <li><a href="defence-procurement.html">Defence Procurement</a></li>
+          <li><a href="infrastructure-investment.html">Infrastructure</a></li>
+          <li><a href="accountability-and-governance.html">Accountability</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <button class="nav-cta" data-tally-open="jakOE1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Get in touch</button>
+    </div>
+  </header>
+
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="container">
+      <h1 id="hero-heading">Independent analysis on complex commercial decisions.</h1>
+      <p class="lead">SDWH Limited combines expertise in business, finance and government that is rarely found in one place — providing objective, forward-looking analysis and insight that generates real impact.</p>
+
+      <div class="stat-banner" role="list" aria-label="Key statistics">
+        <div class="stat-item" role="listitem">
+          <span class="stat-value">£1.7bn</span>
+          <span class="stat-label">Validated financial impact from a programme of 15 reports</span>
+        </div>
+        <div class="stat-item" role="listitem">
+          <span class="stat-value">~250:1</span>
+          <span class="stat-label">Financial impact ratio against cost of work</span>
+        </div>
+        <div class="stat-item" role="listitem">
+          <span class="stat-value">&gt;15</span>
+          <span class="stat-label">Major reports led across corporate finance, procurement and infrastructure</span>
+        </div>
+      </div>
+      <p class="stat-source">Sources: NAO Annual Report and Accounts 2024–25 (pages 55 and 187); NAO Annual Report and Accounts 2021–22. Includes £1,372m from the UK Guarantees Scheme for Infrastructure and £332m from asset sales reports including the Privatisation of Royal Mail and Sale of Eurostar.</p>
+    </div>
+  </section>
+
+  <main id="main" class="page-main">
+    <div class="container">
+
+      <div class="nav-cards">
+        <div class="nav-card">
+          <h3>Corporate Finance &amp; Investment</h3>
+          <p>How does government structure asset sales, investments and privatisations to achieve the best outcome?</p>
+          <a class="card-link" href="corporate-finance.html">See the work</a>
+        </div>
+        <div class="nav-card">
+          <h3>Public Procurement &amp; Defence</h3>
+          <p>How can government get better value from the ~£400bn (14% of GDP) it spends each year buying goods, services and defence capability?</p>
+          <a class="card-link" href="public-procurement.html">See the work</a>
+        </div>
+        <div class="nav-card">
+          <h3>Infrastructure Investment</h3>
+          <p>When should government use private finance to deliver infrastructure, and on what terms?</p>
+          <a class="card-link" href="infrastructure-investment.html">See the work</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener">Open Government Licence v3.0</a>. The National Audit Office and Single Source Regulations Office are not responsible for and do not endorse the content of this site.</p>
+      <p>&copy; SDWH Limited &middot; Company number 17048595</p>
+      <nav class="footer-legal" aria-label="Legal pages">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav(btn) {
+      var nav = document.getElementById('site-nav');
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('open', !expanded);
+    }
+  </script>
+
+</body>
+</html>
