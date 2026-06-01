@@ -184,7 +184,8 @@ a:focus-visible {
   display: flex;
   align-items: center;
   height: var(--nav-height);
-  gap: var(--space-xl);
+  gap: var(--space-md);
+  position: relative;
 }
 
 .site-logo {
@@ -246,17 +247,43 @@ a:focus-visible {
   color: var(--color-bg);
 }
 
-/* Mobile nav toggle */
+/* Nav toggle — always visible */
 .nav-toggle {
-  display: none;
+  display: block;
   background: none;
-  border: none;
+  border: 1px solid rgba(255,255,255,0.4);
   color: var(--color-bg);
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  padding: var(--space-sm);
-  margin-left: auto;
+  padding: 6px 12px;
+  border-radius: 3px;
+}
+
+/* Nav always hidden until toggled open */
+.site-nav {
+  display: none;
+  position: absolute;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  background: var(--color-text);
+  flex-direction: column;
+  padding: var(--space-sm) var(--space-md);
+  z-index: 99;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.site-nav.open {
+  display: flex;
+}
+
+.site-nav a {
+  height: auto;
+  line-height: 1.5;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  font-size: 15px;
 }
 
 /* --------------------------------------------------------------------------
