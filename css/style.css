@@ -791,7 +791,56 @@ a:focus-visible {
 }
 
 /* --------------------------------------------------------------------------
-   21. RESPONSIVE — TABLET
+   21. RESPONSIVE — MEDIUM DESKTOP (nav compression)
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+  .site-nav a {
+    padding: var(--space-sm) var(--space-sm);
+    font-size: 13px;
+  }
+
+  .site-header .container {
+    gap: var(--space-md);
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: var(--color-text);
+    flex-direction: column;
+    padding: var(--space-sm) var(--space-md);
+    z-index: 99;
+  }
+
+  .site-nav.open {
+    display: flex;
+  }
+
+  .site-nav a {
+    height: auto;
+    line-height: 1.5;
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    font-size: 15px;
+  }
+
+  .site-header .container {
+    position: relative;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   22. RESPONSIVE — TABLET
    -------------------------------------------------------------------------- */
 
 @media (max-width: 768px) {
