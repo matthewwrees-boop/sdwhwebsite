@@ -11,6 +11,17 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="canonical" href="https://sdwh.co.uk/infrastructure-investment">
   <script async src="https://tally.so/widgets/embed.js"></script>
+  <!-- Consent mode default (UK/EEA GDPR compliant) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'wait_for_update': 500,
+      'region': ['GB', 'AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO']
+    });
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-R782QMN7XP"></script>
   <script>
@@ -138,5 +149,38 @@
     </div>
   </footer>
   <script>function toggleNav(btn){var nav=document.getElementById('site-nav');var expanded=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',!expanded);nav.classList.toggle('open',!expanded);}</script>
+
+  <!-- Cookie consent banner -->
+  <div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0b0c0c;color:#ffffff;padding:16px 24px;box-shadow:0 -2px 8px rgba(0,0,0,0.3);">
+    <div style="max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <p style="margin:0;font-family:Inter,sans-serif;font-size:14px;color:#ffffff;max-width:none;flex:1;min-width:200px;">
+        We use analytics cookies to understand how visitors use this site. No advertising cookies are used.
+        <a href="cookie-policy.html" style="color:#8fb8e8;margin-left:4px;">Cookie policy</a>
+      </p>
+      <div style="display:flex;gap:10px;flex-shrink:0;">
+        <button onclick="acceptCookies()" style="background:#1d70b8;color:#ffffff;border:none;padding:8px 18px;font-family:Inter,sans-serif;font-size:14px;font-weight:600;cursor:pointer;border-radius:3px;">Accept</button>
+        <button onclick="declineCookies()" style="background:transparent;color:#ffffff;border:1px solid rgba(255,255,255,0.4);padding:8px 18px;font-family:Inter,sans-serif;font-size:14px;font-weight:600;cursor:pointer;border-radius:3px;">Decline</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(){
+      var consent = localStorage.getItem('sdwh_cookie_consent');
+      if (!consent) {
+        document.getElementById('cookie-banner').style.display = 'block';
+      } else if (consent === 'granted') {
+        gtag('consent', 'update', {'analytics_storage': 'granted'});
+      }
+    })();
+    function acceptCookies() {
+      localStorage.setItem('sdwh_cookie_consent', 'granted');
+      gtag('consent', 'update', {'analytics_storage': 'granted'});
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+    function declineCookies() {
+      localStorage.setItem('sdwh_cookie_consent', 'denied');
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+  </script>
 </body>
 </html>

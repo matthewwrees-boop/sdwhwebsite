@@ -9,6 +9,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="canonical" href="https://sdwh.co.uk/cookie-policy">
+  <!-- Consent mode default (UK/EEA GDPR compliant) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'wait_for_update': 500,
+      'region': ['GB', 'AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO']
+    });
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-R782QMN7XP"></script>
   <script>
@@ -37,18 +48,32 @@
       </nav>
     </div>
   </header>
-  <div class="page-intro"><div class="container"><h1>Cookie Policy</h1><p>Last updated: May 2026</p></div></div>
+  <div class="page-intro"><div class="container"><h1>Cookie Policy</h1><p>Last updated: June 2026</p></div></div>
   <main id="main" class="page-main">
     <div class="container legal-content">
       <h2>What are cookies</h2>
-      <p>Cookies are small text files placed on your device when you visit a website. They help the site function and provide information about how it is used.</p>
-      <h2>Cookies on this site</h2>
-      <p>This website is hosted on GitHub Pages via Cloudflare. Essential cookies are required for the site to function. Analytics cookies help us understand how visitors use the site. We do not place any additional cookies ourselves.</p>
-      <p>Essential cookies cannot be disabled as the site will not function without them. Analytics cookies can be declined using the cookie consent banner when you first visit the site.</p>
+      <p>Cookies are small text files placed on your device when you visit a website. They help the site function and provide information about how it is used. This policy explains what cookies this site uses, why, and how you can control them.</p>
+
+      <h2>Essential cookies</h2>
+      <p>This website is hosted via GitHub and delivered through Cloudflare's content delivery network. Cloudflare places essential technical cookies required for security, performance and reliable delivery of the site. These cannot be disabled as the site will not function correctly without them. No personal data is stored in these cookies beyond what is technically necessary.</p>
+
+      <h2>Analytics cookies</h2>
+      <p>We use Google Analytics (GA4) to understand how visitors use this site — for example, which pages are visited most often and how long visitors spend on each page. This helps us improve the content and structure of the site.</p>
+      <p>Google Analytics sets cookies that collect information in an anonymised form, including the number of visitors, where visitors came from and the pages they visited. No advertising or remarketing cookies are used.</p>
+      <p>Analytics cookies are only placed on your device if you choose to accept them using the consent banner displayed when you first visit the site. If you decline, no analytics cookies are placed and your visit is not tracked. You can change your preference at any time by clearing your browser's local storage for this site.</p>
+      <p>We have configured Google Analytics in consent mode so that analytics data is only collected after you have explicitly accepted. The default for UK and EEA visitors is that analytics storage is denied until consent is given.</p>
+
+      <h2>Your consent</h2>
+      <p>When you first visit sdwh.co.uk, a banner is displayed explaining our use of analytics cookies. You can accept or decline. Your choice is stored in your browser's local storage and the banner will not be shown again on subsequent visits unless you clear your browser data. We do not use cookies to store your consent preference — we use local storage, which is not transmitted to any server.</p>
+
       <h2>Third party cookies</h2>
-      <p>We do not embed social media feeds or advertising that would place additional cookies on your device.</p>
-      <h2>More information</h2>
-      <p>For general information about cookies and how to manage them, visit <a href="https://www.allaboutcookies.org" rel="noopener">allaboutcookies.org</a>.</p>
+      <p>The contact form on this site is provided by Tally.so. If you interact with the contact form, Tally may set its own cookies in accordance with <a href="https://tally.so/help/privacy-policy" rel="noopener">Tally's privacy policy</a>. We do not embed social media feeds or advertising networks that would place additional cookies on your device.</p>
+
+      <h2>Managing cookies</h2>
+      <p>You can control and delete cookies through your browser settings. Deleting cookies may affect the functionality of some websites. For general information about cookies and how to manage them, visit <a href="https://www.allaboutcookies.org" rel="noopener">allaboutcookies.org</a>.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>We may update this policy periodically. The current version will always be published at sdwh.co.uk/cookie-policy.</p>
     </div>
   </main>
   <footer class="site-footer">
@@ -62,5 +87,38 @@
     </div>
   </footer>
   <script>function toggleNav(btn){var nav=document.getElementById('site-nav');var expanded=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',!expanded);nav.classList.toggle('open',!expanded);}</script>
+
+  <!-- Cookie consent banner -->
+  <div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0b0c0c;color:#ffffff;padding:16px 24px;box-shadow:0 -2px 8px rgba(0,0,0,0.3);">
+    <div style="max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <p style="margin:0;font-family:Inter,sans-serif;font-size:14px;color:#ffffff;max-width:none;flex:1;min-width:200px;">
+        We use analytics cookies to understand how visitors use this site. No advertising cookies are used.
+        <a href="cookie-policy.html" style="color:#8fb8e8;margin-left:4px;">Cookie policy</a>
+      </p>
+      <div style="display:flex;gap:10px;flex-shrink:0;">
+        <button onclick="acceptCookies()" style="background:#1d70b8;color:#ffffff;border:none;padding:8px 18px;font-family:Inter,sans-serif;font-size:14px;font-weight:600;cursor:pointer;border-radius:3px;">Accept</button>
+        <button onclick="declineCookies()" style="background:transparent;color:#ffffff;border:1px solid rgba(255,255,255,0.4);padding:8px 18px;font-family:Inter,sans-serif;font-size:14px;font-weight:600;cursor:pointer;border-radius:3px;">Decline</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(){
+      var consent = localStorage.getItem('sdwh_cookie_consent');
+      if (!consent) {
+        document.getElementById('cookie-banner').style.display = 'block';
+      } else if (consent === 'granted') {
+        gtag('consent', 'update', {'analytics_storage': 'granted'});
+      }
+    })();
+    function acceptCookies() {
+      localStorage.setItem('sdwh_cookie_consent', 'granted');
+      gtag('consent', 'update', {'analytics_storage': 'granted'});
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+    function declineCookies() {
+      localStorage.setItem('sdwh_cookie_consent', 'denied');
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
