@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="fc">
+      <polygon points="5,95 95,95 95,20 72,20"/>
+    </clipPath>
+  </defs>
+  <rect width="100" height="100" fill="white"/>
+  <g clip-path="url(#fc)">
+    <polygon points="5,95 95,95 95,20 72,20" fill="white"/>
+    <polygon points="5,95 95,5 95,19 17,95" fill="#2060A8"/>
+    <polygon points="22,95 95,26 95,34 30,95" fill="#C8102E"/>
+    <polygon points="37,95 95,41 95,49 44,95" fill="#2060A8"/>
+  </g>
+  <polygon points="5,95 95,95 95,20 72,20" fill="none" stroke="#2060A8" stroke-width="4" stroke-linejoin="miter"/>
+</svg>
