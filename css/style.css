@@ -925,3 +925,130 @@ a:focus-visible {
   .container { padding: 0 var(--space-sm); }
   .report-entry { padding: var(--space-md); }
 }
+
+/* --------------------------------------------------------------------------
+   SEARCH — Pagefind modal and nav trigger
+   -------------------------------------------------------------------------- */
+
+.nav-search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 8px;
+  color: var(--colour-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.nav-search-btn:hover,
+.nav-search-btn:focus-visible {
+  background: rgba(255,255,255,0.15);
+  outline: 3px solid var(--colour-focus);
+  outline-offset: 1px;
+}
+
+#search-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px 16px 16px;
+}
+#search-modal[hidden] { display: none; }
+
+#search-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(11,12,12,0.6);
+}
+
+#search-modal-panel {
+  position: relative;
+  background: #fff;
+  width: 100%;
+  max-width: 640px;
+  border-radius: 6px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.22);
+  z-index: 1;
+  overflow: hidden;
+}
+
+#search-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid #b1b4b6;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--colour-text);
+}
+
+#search-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #505a5f;
+  padding: 4px 8px;
+  border-radius: 4px;
+  line-height: 1;
+}
+#search-close:hover { background: #f3f2f1; }
+
+#search-widget {
+  padding: 16px 20px 20px;
+  max-height: 65vh;
+  overflow-y: auto;
+}
+
+/* Pagefind UI overrides — match site Inter font + GOV.UK palette */
+#search-widget .pagefind-ui__search-input {
+  font-family: var(--font-primary) !important;
+  border: 2px solid var(--colour-text) !important;
+  border-radius: 4px !important;
+  padding: 8px 12px !important;
+  font-size: 16px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+#search-widget .pagefind-ui__search-input:focus {
+  outline: 3px solid var(--colour-focus) !important;
+  outline-offset: 0 !important;
+}
+#search-widget .pagefind-ui__result-link {
+  color: #1d70b8 !important;
+  font-family: var(--font-primary) !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  text-decoration: underline !important;
+}
+#search-widget .pagefind-ui__result-excerpt {
+  font-family: var(--font-primary) !important;
+  color: #505a5f !important;
+  font-size: 14px !important;
+}
+#search-widget .pagefind-ui__result {
+  border-top: 1px solid #b1b4b6 !important;
+  padding: 12px 0 !important;
+}
+#search-widget .pagefind-ui__button {
+  font-family: var(--font-primary) !important;
+  background: var(--colour-brand) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 8px 16px !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+}
+#search-widget .pagefind-ui__message {
+  font-family: var(--font-primary) !important;
+  color: #505a5f !important;
+  font-size: 14px !important;
+}

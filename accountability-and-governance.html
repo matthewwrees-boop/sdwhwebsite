@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accountability and Governance — SDWH Limited</title>
-  <meta name="description" content="Data and analysis on the UK public accountability cycle: NAO reports, PAC inquiries, Treasury Minutes and departmental scrutiny. Coming soon — SDWH Limited.">
+  <meta name="description" content="Data and analysis on the UK public accountability cycle: NAO reports, PAC inquiries, Treasury Minutes and departmental scrutiny. SDWH Limited.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -31,6 +31,118 @@
     gtag("config", "G-R782QMN7XP");
   </script>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- FAQ structured data for Google rich snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the purpose of an independent national audit body?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An independent national audit body, such as the UK's National Audit Office (NAO), scrutinises public spending on behalf of Parliament. Its purpose is to hold government departments to account for the economy, efficiency and effectiveness with which they use public money — a standard known as value for money. SDWH Limited provides independent analysis of NAO reports and the wider public accountability cycle, identifying how scrutiny translates into measurable financial and policy impact."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a value for money audit report?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A value for money (VFM) audit report assesses whether a government programme or expenditure has achieved its intended outcomes economically, efficiently and effectively. In the UK, the National Audit Office publishes VFM studies across departments. SDWH Limited analyses these reports to track their impact on public policy, financial outcomes and parliamentary accountability over time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which organisations provide financial oversight of UK government departments?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The primary oversight bodies in the UK are the National Audit Office (NAO), which audits and scrutinises departmental spending, and the Public Accounts Committee (PAC), a cross-party parliamentary committee that examines NAO findings and questions ministers and officials. HM Treasury sets spending controls through the Consolidated Budgeting Guidance. SDWH Limited tracks and analyses the accountability cycle connecting these bodies and its consequences for commercial decisions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where can I find official audits of public sector projects and contracts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Official audits of UK public sector projects are published by the National Audit Office at nao.org.uk. Major commercial decisions — including PFI contracts, defence procurement, infrastructure investment and asset sales — are regularly examined in NAO value for money studies. SDWH Limited specialises in analysing these reports, identifying patterns across departments and measuring their financial and accountability impact."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does the NAO stand for and what does it do?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NAO stands for the National Audit Office. It is the UK's independent public spending watchdog, auditing the financial accounts of all central government departments and producing value for money studies on public programmes. It reports to Parliament and its work is examined by the Public Accounts Committee. SDWH Limited has contributed directly to NAO reports across public procurement, corporate finance and infrastructure, with a cumulative financial impact exceeding £1.7 billion."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is best practice for ensuring value for money in public sector procurement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Best practice in public procurement value for money involves clear outcome-based specifications, robust supplier competition, transparent evaluation criteria, realistic cost-benefit appraisal using HM Treasury's Green Book methodology, and strong contract management throughout delivery. Post-contract review against original business case assumptions is also critical. SDWH Limited provides independent analysis of procurement decisions to identify where these standards have and have not been met."
+        }
+      }
+    ]
+  }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" integrity="sha384-iU8HYtnGQ8Cy4zl7gbNMOhsDTTKX02BTXptVP/vqAWIaTfM7isw76iyZCsjL2eVi" crossorigin="anonymous"></script>
+  <script src="https://cdn.plot.ly/plotly-3.5.0.min.js" integrity="sha256-fHbNLP+GlIXN+efbQec78UkemUz3NJp7UmfGxC1tNxs=" crossorigin="anonymous"></script>
+  <style>
+    .stat-banner-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-md);
+      margin: var(--space-lg) 0 var(--space-md);
+    }
+    @media (max-width: 600px) {
+      .stat-banner-4 { grid-template-columns: repeat(2, 1fr); }
+    }
+    .chart-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+      margin-bottom: var(--space-md);
+    }
+    @media (max-width: 640px) {
+      .chart-grid-2 { grid-template-columns: 1fr; }
+    }
+    .chart-wrapper {
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      background: var(--color-bg);
+      overflow: hidden;
+      margin-bottom: var(--space-md);
+    }
+    .chart-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 2px;
+    }
+    .chart-sublabel {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-md);
+    }
+    .about-section p {
+      max-width: none;
+    }
+    .data-note {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      border-left: 3px solid var(--color-border);
+      padding: var(--space-sm) var(--space-md);
+      margin: var(--space-md) 0;
+      font-style: italic;
+      max-width: none;
+    }
+  </style>
+  <!-- Pagefind site search -->
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/pagefind/pagefind-ui.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -49,20 +161,467 @@
           <li><a href="about.html">About</a></li>
         </ul>
       </nav>
+            <button class="nav-search-btn" id="search-open" aria-label="Search this website" title="Search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
       <button class="nav-cta" data-tally-open="jakOE1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Get in touch</button>
     </div>
   </header>
+
+  <div class="page-intro">
+    <div class="container">
+      <h1>Accountability and Governance</h1>
+      <p>The National Audit Office and the Public Accounts Committee together form the primary mechanism through which Parliament holds the government to account for how it spends public money. This page presents data and analysis on the UK's public accountability cycle, drawn from publicly available information published by the NAO, Parliament and Government. The data and analysis is compiled and maintained by SDWH Limited.</p>
+    </div>
+  </div>
+
   <main id="main" class="page-main">
     <div class="container">
-      <div class="holding-page">
-        <span class="holding-badge">Coming soon</span>
-        <h1>Accountability and Governance</h1>
-        <p>SDWH is building a data service tracking the UK public accountability cycle — from NAO audit through PAC inquiry to Treasury Minute. Charts, analysis and regular updates will be published here.</p>
-        <p>If you would like to be notified when this section goes live, get in touch.</p>
+
+      <!-- SECTION 1: KEY STAGES -->
+      <div class="about-section">
+        <h2>What are the key stages of the UK parliamentary accountability process?</h2>
+        <p>The UK parliamentary accountability process operates in three broad stages.</p>
+        <ul class="distinguisher-list">
+          <li>
+            <strong>NAO value for money programme</strong>
+            <span>The NAO's work-in-progress notice provides the first public signal that a value for money study is underway. The NAO gathers and assesses evidence and lays its report in Parliament. These reports may be a full value for money report containing findings, conclusions and recommendations, a set of findings derived from a facts-based investigation, an insights report or briefing.</span>
+          </li>
+          <li>
+            <strong>Public Accounts Committee inquiries</strong>
+            <span>The PAC stage has three components: the inquiry, oral hearings and report. The PAC routinely uses an NAO report as the primary basis for its inquiries and convenes oral evidence sessions with senior officials from the audited body and relevant parties, following which it publishes a report and recommendations.</span>
+          </li>
+          <li>
+            <strong>Government response</strong>
+            <span>The government's formal response to the PAC is published as a Treasury Minute. This addresses the recommendations of the PAC. The NAO tracks its recommendations separately and reports on the progress of implementation through its annual report and accounts.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- SECTION 2: TIMESCALES -->
+      <div class="about-section">
+        <h2>How long does the UK parliamentary accountability cycle take?</h2>
+
+        <p>The process from the NAO first publishing a work-in-progress notice to the government's formal response in a Treasury Minute spans, on average, 304 days (median) — around ten months. This breaks into roughly 84 days from the work-in-progress notice to the published NAO report, and a further 192 days from publication to the Treasury Minute response.</p>
+
+        <!-- Figure 1: Timeline chart -->
+        <p class="chart-label">Figure 1: Accountability cycle — median milestone intervals</p>
+        <div class="chart-wrapper">
+          <div class="canary-portable-chart" id="chart-container-median_timeline" style="width: 100%; min-height: 240px;">
+            <div>
+              <div id="225a55c4-8dfd-4405-896f-8fa049512673" class="plotly-graph-div" style="height:220px; width:100%;"></div>
+              <script>
+                window.PLOTLYENV=window.PLOTLYENV || {};
+                if (document.getElementById("225a55c4-8dfd-4405-896f-8fa049512673")) {
+                  Plotly.newPlot(
+                    "225a55c4-8dfd-4405-896f-8fa049512673",
+                    [{"hoverinfo":"none","line":{"color":"#d5d8dc","width":3},"marker":{"color":["#3D3D3D","#f47738","#12436D","#F46A25","#801650"],"line":{"color":"white","width":2},"size":16},"mode":"markers+lines","x":[-84.0,0.0,45.0,126.0,192.0],"y":[0,0,0,0,0],"type":"scatter"}],
+                    {"annotations":[{"font":{"color":"#2c3e50","size":11},"showarrow":false,"text":"<b>WIP Announcement</b>","x":-84.0,"y":0.05},{"font":{"color":"#505a5f","size":11},"showarrow":false,"text":"T-84d","x":-84.0,"y":-0.05},{"font":{"color":"#2c3e50","size":11},"showarrow":false,"text":"<b>NAO Publishes</b>","x":0.0,"y":-0.05},{"font":{"color":"#505a5f","size":11},"showarrow":false,"text":"Day 0","x":0.0,"y":0.05},{"font":{"color":"#2c3e50","size":11},"showarrow":false,"text":"<b>PAC Oral Evidence</b>","x":45.0,"y":0.05},{"font":{"color":"#505a5f","size":11},"showarrow":false,"text":"+45d","x":45.0,"y":-0.05},{"font":{"color":"#2c3e50","size":11},"showarrow":false,"text":"<b>PAC Report</b>","x":126.0,"y":-0.05},{"font":{"color":"#505a5f","size":11},"showarrow":false,"text":"+126d","x":126.0,"y":0.05},{"font":{"color":"#2c3e50","size":11},"showarrow":false,"text":"<b>Treasury Minute</b>","x":192.0,"y":0.05},{"font":{"color":"#505a5f","size":11},"showarrow":false,"text":"+192d","x":192.0,"y":-0.05},{"font":{"color":"#1d70b8","size":10},"showarrow":false,"text":"+84d","x":-42.0,"y":-0.1},{"font":{"color":"#1d70b8","size":10},"showarrow":false,"text":"+45d","x":22.5,"y":-0.1},{"font":{"color":"#1d70b8","size":10},"showarrow":false,"text":"+81d","x":85.5,"y":-0.1},{"font":{"color":"#1d70b8","size":10},"showarrow":false,"text":"+66d","x":159.0,"y":-0.1}],"height":220,"margin":{"b":20,"l":40,"r":40,"t":20},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","template":{"layout":{"colorway":["#12436D","#28A197","#801650","#F46A25","#3D3D3D","#A285D1"],"font":{"color":"#505a5f","family":"Inter, sans-serif","size":12},"hoverlabel":{"bgcolor":"#ffffff","bordercolor":"#b1b4b6","font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":12}}}},"title":{"text":""},"xaxis":{"showgrid":false,"showticklabels":false,"zeroline":false},"yaxis":{"range":[-0.25,0.2],"visible":false}},
+                    {"responsive": true, "displaylogo": false, "modeBarButtonsToRemove": ["toImage", "sendDataToCloud"]}
+                  )
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+
+        <p>The chart below shows the distribution of end-to-end timescales across 83 completed accountability cycles by combining data from the NAO, PAC and Treasury. Caution should be taken due to inconsistencies and revisions. The six stages are: Step 1: NAO WIP notice published. Step 2: NAO report published. Step 3: PAC inquiry opened. Step 4: PAC oral evidence session and other committee business. Step 5: PAC report published. Step 6: Government response to the PAC contained in correspondence and the Treasury Minute. Note that the date of Step 3 routinely precedes Step 2.</p>
+
+        <!-- Stats row -->
+        <div class="stat-banner-4">
+          <div class="stat-item">
+            <span class="stat-value">254 days</span>
+            <span class="stat-label">25th percentile (P25)</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">304 days</span>
+            <span class="stat-label">Median (P50)</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">308 days</span>
+            <span class="stat-label">Arithmetic mean</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">347 days</span>
+            <span class="stat-label">75th percentile (P75)</span>
+          </div>
+        </div>
+
+        <!-- Figure 1b: PAC-anchored timeline -->
+        <p class="chart-label" style="margin-top: var(--space-md);">Figure 1b: Accountability cycle — median intervals anchored to PAC inquiry opening</p>
+        <div class="chart-wrapper">
+          <div class="canary-portable-chart" id="chart-container-median_timeline_pac_anchored" style="width: 100%; min-height: 240px;">
+            <div>
+              <div id="0007122e-e527-4da7-ae71-a01174d2fef8" class="plotly-graph-div" style="height:220px; width:100%;"></div>
+              <script>
+                window.PLOTLYENV=window.PLOTLYENV || {};
+                if (document.getElementById("0007122e-e527-4da7-ae71-a01174d2fef8")) {
+                  Plotly.newPlot(
+                    "0007122e-e527-4da7-ae71-a01174d2fef8",
+                    [{"hoverinfo":"none","line":{"color":"#d5d8dc","width":3},"marker":{"color":["#3D3D3D","#28A197","#12436D","#F46A25","#801650"],"line":{"color":"white","width":2},"size":16},"mode":"markers+lines","x":[-81.0,0.0,59.0,133.0,197.0],"y":[0,0,0,0,0],"type":"scatter"}],
+                    {"annotations":[{"font":{"color":"#2c3e50","size":11},"showarrow":false,"text":"<b>WIP Announcement</b>","x":-81.0,"y":0.05},{"font":{"color":"#505a5f","size":11},"showarrow":false,"text":"T-81d","x":-81.0,"y":-0.05},{"font":{"color":"#2c3e50","size":11},"showarrow":false,"text":"<b>PAC Inquiry Opened</b>","x":0.0,"y":-0.05},{"font":{"color":"#505a5f","size":11},"showarrow":false,"text":"Day 0","x":0.0,"y":0.05},{"font":{"color":"#2c3e50","size":11},"showarrow":false,"text":"<b>PAC Oral Evidence</b>","x":59.0,"y":0.05},{"font":{"color":"#505a5f","size":11},"showarrow":false,"text":"+59d","x":59.0,"y":-0.05},{"font":{"color":"#2c3e50","size":11},"showarrow":false,"text":"<b>PAC Report</b>","x":133.0,"y":-0.05},{"font":{"color":"#505a5f","size":11},"showarrow":false,"text":"+133d","x":133.0,"y":0.05},{"font":{"color":"#2c3e50","size":11},"showarrow":false,"text":"<b>Treasury Minute</b>","x":197.0,"y":0.05},{"font":{"color":"#505a5f","size":11},"showarrow":false,"text":"+197d","x":197.0,"y":-0.05},{"font":{"color":"#1d70b8","size":10},"showarrow":false,"text":"+81d","x":-40.5,"y":-0.1},{"font":{"color":"#1d70b8","size":10},"showarrow":false,"text":"+59d","x":29.5,"y":-0.1},{"font":{"color":"#1d70b8","size":10},"showarrow":false,"text":"+74d","x":96.0,"y":-0.1},{"font":{"color":"#1d70b8","size":10},"showarrow":false,"text":"+64d","x":165.0,"y":-0.1}],"height":220,"margin":{"b":20,"l":40,"r":40,"t":20},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","template":{"layout":{"colorway":["#12436D","#28A197","#801650","#F46A25","#3D3D3D","#A285D1"],"font":{"color":"#505a5f","family":"Inter, sans-serif","size":12},"hoverlabel":{"bgcolor":"#ffffff","bordercolor":"#b1b4b6","font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":12}}}},"title":{"text":""},"xaxis":{"showgrid":false,"showticklabels":false,"zeroline":false},"yaxis":{"range":[-0.25,0.2],"visible":false}},
+                    {"responsive": true, "displaylogo": false, "modeBarButtonsToRemove": ["toImage", "sendDataToCloud"]}
+                  )
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+
+        <!-- Figure 1c: Distribution chart — inline Plotly -->
+        <div class="chart-wrapper">
+          <div class="canary-portable-chart" id="chart-container-wip_to_tm_distribution" style="width: 100%; min-height: 400px;">
+            <div>
+              <div id="9e44d2fe-3a0a-4551-ab91-7a8fd40d9884" class="plotly-graph-div" style="height:380px; width:100%;"></div>
+              <script>
+                window.PLOTLYENV=window.PLOTLYENV || {};
+                if (document.getElementById("9e44d2fe-3a0a-4551-ab91-7a8fd40d9884")) {
+                  Plotly.newPlot(
+                    "9e44d2fe-3a0a-4551-ab91-7a8fd40d9884",
+                    [{"hoverinfo":"text","hovertext":["<b>Timescale:</b> 0-60 days<br><b>Number of Audits:</b> 0","<b>Timescale:</b> 61-120 days<br><b>Number of Audits:</b> 0","<b>Timescale:</b> 121-180 days<br><b>Number of Audits:</b> 3<br><br><b>Audits in this cohort:</b><br>• UK Research and Innovation: providing support through grants<br>• Progress in implementing Universal Credit<br>• NHS Supply Chain and efficiencies in procurement","<b>Timescale:</b> 181-240 days<br><b>Number of Audits:</b> 12<br><br><b>Audits in this cohort:</b><br>• Regulating for investment and outcomes in the water sector<br>• Collecting the right tax from wealthy individuals<br>• Private finance for infrastructure<br>• Teacher workforce: secondary and further education<br>• Immigration: Skilled Worker visas<br>• Supporting people to work through jobcentres<br><i>• ... and 6 more audits (see list below)</i>","<b>Timescale:</b> 241-300 days<br><b>Number of Audits:</b> 26<br><br><b>Audits in this cohort:</b><br>• National Savings & Investments' Business Transformation Programme<br>• Police productivity<br>• The UK's F-35 capability<br>• Local bus services in England<br>• Investigation into the administration of the Civil Service Pen...<br>• Supporting the UK's priority industry sectors<br><i>• ... and 20 more audits (see list below)</i>","<b>Timescale:</b> 301-360 days<br><b>Number of Audits:</b> 24<br><br><b>Audits in this cohort:</b><br>• Environmental regulation<br>• The financial sustainability of England's adult hospice sector<br>• Home to school transport<br>• Tackling benefit overpayments due to fraud and error<br>• Building an effective and resilient Probation Service<br>• Costs of clinical negligence<br><i>• ... and 18 more audits (see list below)</i>","<b>Timescale:</b> 361-420 days<br><b>Number of Audits:</b> 11<br><br><b>Audits in this cohort:</b><br>• Using data analytics to tackle fraud and error<br>• The BBC World Service's savings programme<br>• Government's use of external consultants<br>• Improving family court services for children<br>• Maintaining public service facilities<br>• Government's approach to technology suppliers: addressing the ...<br><i>• ... and 5 more audits (see list below)</i>","<b>Timescale:</b> 421-480 days<br><b>Number of Audits:</b> 4<br><br><b>Audits in this cohort:</b><br>• Decommissioning Sellafield: managing risks from the nuclear le...<br>• The condition and maintenance of local roads in England<br>• Decarbonising the power sector<br>• Reducing The Backlog In Criminal Courts","<b>Timescale:</b> 481-540 days<br><b>Number of Audits:</b> 2<br><br><b>Audits in this cohort:</b><br>• The government's support for biomass<br>• Child Maintenance","<b>Timescale:</b> 541-600 days<br><b>Number of Audits:</b> 1<br><br><b>Audits in this cohort:</b><br>• Use of artificial intelligence in government","<b>Timescale:</b> 601-660 days<br><b>Number of Audits:</b> 0","<b>Timescale:</b> 661-720 days<br><b>Number of Audits:</b> 0"],"insidetextanchor":"start","marker":{"color":"#12436D","line":{"color":"white","width":1}},"text":["","","3","12","26","24","11","4","2","1","",""],"textfont":{"color":"white","size":11},"textposition":"inside","width":[56,56,56,56,56,56,56,56,56,56,56,56],"x":[30,90,150,210,270,330,390,450,510,570,630,690],"y":[0,0,3,12,26,24,11,4,2,1,0,0],"type":"bar"}],
+                    {"annotations":[{"bgcolor":"#28A197","bordercolor":"#ffffff","borderwidth":1,"font":{"color":"#ffffff","size":10},"showarrow":false,"text":"<b>P25</b><br>254d","x":254.0,"xanchor":"right","xref":"x","y":0,"yanchor":"bottom","yref":"y domain","yshift":-15},{"bgcolor":"#801650","bordercolor":"#ffffff","borderwidth":1,"font":{"color":"#ffffff","size":10},"showarrow":false,"text":"<b>Median</b><br>304d","x":304.0,"xanchor":"right","xref":"x","y":1,"yanchor":"top","yref":"y domain","yshift":15},{"bgcolor":"#F46A25","bordercolor":"#ffffff","borderwidth":1,"font":{"color":"#ffffff","size":10},"showarrow":false,"text":"<b>Mean</b><br>308d","x":307.73493975903614,"xanchor":"left","xref":"x","y":1,"yanchor":"top","yref":"y domain","yshift":15},{"bgcolor":"#3D3D3D","bordercolor":"#ffffff","borderwidth":1,"font":{"color":"#ffffff","size":10},"showarrow":false,"text":"<b>P75</b><br>347d","x":347.0,"xanchor":"left","xref":"x","y":0,"yanchor":"bottom","yref":"y domain","yshift":-15}],"height":380,"hovermode":"x","margin":{"b":60,"l":60,"r":40,"t":50},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","shapes":[{"layer":"below","line":{"color":"#28A197","dash":"dash","width":2.5},"type":"line","x0":254.0,"x1":254.0,"xref":"x","y0":0,"y1":1,"yref":"y domain"},{"layer":"below","line":{"color":"#801650","dash":"solid","width":2.5},"type":"line","x0":304.0,"x1":304.0,"xref":"x","y0":0,"y1":1,"yref":"y domain"},{"layer":"below","line":{"color":"#F46A25","dash":"dot","width":2.5},"type":"line","x0":307.73493975903614,"x1":307.73493975903614,"xref":"x","y0":0,"y1":1,"yref":"y domain"},{"layer":"below","line":{"color":"#3D3D3D","dash":"dash","width":2.5},"type":"line","x0":347.0,"x1":347.0,"xref":"x","y0":0,"y1":1,"yref":"y domain"}],"showlegend":false,"template":{"layout":{"colorway":["#12436D","#28A197","#801650","#F46A25","#3D3D3D","#A285D1"],"font":{"color":"#505a5f","family":"Inter, sans-serif","size":12},"hoverlabel":{"bgcolor":"#ffffff","bordercolor":"#b1b4b6","font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":12}},"legend":{"bgcolor":"rgba(0,0,0,0)","borderwidth":0,"font":{"color":"#505a5f","size":11},"orientation":"h","x":0,"xanchor":"left","y":-0.22,"yanchor":"top"},"margin":{"b":95,"l":60,"r":30,"t":50},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","title":{"font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":14},"pad":{"l":0,"t":0},"x":0,"xanchor":"left"},"xaxis":{"linecolor":"#b1b4b6","showgrid":false,"tickfont":{"color":"#505a5f","size":11},"title":{"font":{"color":"#505a5f","size":12}},"zeroline":false},"yaxis":{"gridcolor":"#b1b4b6","gridwidth":0.5,"linecolor":"#b1b4b6","showgrid":true,"tickfont":{"color":"#505a5f","size":11},"title":{"font":{"color":"#505a5f","size":12}},"zeroline":false}}},"title":{"text":"Distribution of End-to-End Timescale (WIP to Treasury Minute) — 83 observations"},"xaxis":{"range":[0,720],"tickmode":"array","ticktext":["0-60","61-120","121-180","181-240","241-300","301-360","361-420","421-480","481-540","541-600","601-660","661-720"],"tickvals":[30,90,150,210,270,330,390,450,510,570,630,690],"title":{"text":"Duration (Days from WIP Announcement to Treasury Minute)"}},"yaxis":{"dtick":1,"range":[0,28],"tickmode":"linear","title":{"text":"Count of Audits"}}},
+                    {"responsive": true, "displaylogo": false, "modeBarButtonsToRemove": ["toImage", "sendDataToCloud"]}
+                  )
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+
+        <p class="data-note">This analysis covers cases where all key dates are available — currently 83 completed cycles from 9 July 2021 to 9 January 2026. The count will grow as the database expands. WIP announcement dates have been derived in part from historical records via the Internet Wayback Machine. The data is unaudited and may be limited in accuracy.</p>
+        <p class="source-note">Source: SDWH analysis.</p>
+      </div>
+
+      <!-- SECTION 3: PAC / NAO RELATIONSHIP -->
+      <div class="about-section">
+        <h2>How likely is it that an NAO report will support a PAC inquiry?</h2>
+
+        <div class="chart-grid-2">
+          <div>
+            <p class="chart-label">Figure 2: NAO reports supporting a PAC inquiry</p>
+            <p class="chart-sublabel">Jan 2024 – Jun 2026 &middot; 130 NAO reports</p>
+            <div class="chart-wrapper">
+              <div class="canary-portable-chart" id="chart-container-pie_reports_supporting_inline" style="width: 100%; min-height: 340px;">
+                <div>
+                  <div id="c7c7f0d4-146e-4655-a28a-c0758b901274" class="plotly-graph-div" style="height:320px; width:100%;"></div>
+                  <script>
+                    window.PLOTLYENV=window.PLOTLYENV || {};
+                    if (document.getElementById("c7c7f0d4-146e-4655-a28a-c0758b901274")) {
+                      Plotly.newPlot(
+                        "c7c7f0d4-146e-4655-a28a-c0758b901274",
+                        [{"customdata":[117,13],"domain":{"x":[0.1,0.9],"y":[0.1,0.9]},"hole":0.4,"hovertemplate":"<b>%{label}</b><br>Reports: <b>%{customdata}</b><br>Share: <b>%{percent}</b><extra></extra>","labels":["Yes","No"],"marker":{"colors":["#12436D","#b1b4b6"]},"showlegend":true,"texttemplate":"%{percent:.0%}","values":[90.0,10.0],"type":"pie","textfont":{"family":"Inter, sans-serif","size":11},"insidetextorientation":"horizontal","textposition":"inside"}],
+                        {"template":{"layout":{"colorway":["#12436D","#28A197","#801650","#F46A25","#3D3D3D","#A285D1"],"font":{"color":"#505a5f","family":"Inter, sans-serif","size":12},"hoverlabel":{"bgcolor":"#ffffff","bordercolor":"#b1b4b6","font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":12}}}},"title":{"text":""},"margin":{"l":10,"r":10,"t":10,"b":100,"autoexpand":false},"legend":{"font":{"size":11,"color":"#505a5f"},"orientation":"h","yanchor":"top","y":-0.05,"xanchor":"center","x":0.5,"bgcolor":"rgba(0,0,0,0)","borderwidth":0},"uniformtext":{"minsize":11,"mode":"show"},"showlegend":true,"height":320,"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff"},
+                        {"responsive": true, "displaylogo": false, "modeBarButtonsToRemove": ["toImage", "sendDataToCloud"]}
+                      )
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="chart-label">Figure 3: PAC oral hearings referencing an NAO report</p>
+            <p class="chart-sublabel">Jan 2024 – Jun 2026 &middot; 111 individual hearings</p>
+            <div class="chart-wrapper">
+              <div class="canary-portable-chart" id="chart-container-pie_hearings_supported_inline" style="width: 100%; min-height: 340px;">
+                <div>
+                  <div id="020e057b-b36e-4e17-82c8-d5c1db86841b" class="plotly-graph-div" style="height:320px; width:100%;"></div>
+                  <script>
+                    window.PLOTLYENV=window.PLOTLYENV || {};
+                    if (document.getElementById("020e057b-b36e-4e17-82c8-d5c1db86841b")) {
+                      Plotly.newPlot(
+                        "020e057b-b36e-4e17-82c8-d5c1db86841b",
+                        [{"customdata":[107,4],"domain":{"x":[0.1,0.9],"y":[0.1,0.9]},"hole":0.4,"hovertemplate":"<b>%{label}</b><br>Hearings: <b>%{customdata}</b><br>Share: <b>%{percent}</b><extra></extra>","labels":["Yes","No"],"marker":{"colors":["#12436D","#b1b4b6"]},"showlegend":true,"texttemplate":"%{percent:.0%}","values":[96.3963963963964,3.6036036036036023],"type":"pie","textfont":{"family":"Inter, sans-serif","size":11},"insidetextorientation":"horizontal","textposition":"inside"}],
+                        {"template":{"layout":{"colorway":["#12436D","#28A197","#801650","#F46A25","#3D3D3D","#A285D1"],"font":{"color":"#505a5f","family":"Inter, sans-serif","size":12},"hoverlabel":{"bgcolor":"#ffffff","bordercolor":"#b1b4b6","font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":12}}}},"title":{"text":""},"margin":{"l":10,"r":10,"t":10,"b":100,"autoexpand":false},"legend":{"font":{"size":11,"color":"#505a5f"},"orientation":"h","yanchor":"top","y":-0.05,"xanchor":"center","x":0.5,"bgcolor":"rgba(0,0,0,0)","borderwidth":0},"uniformtext":{"minsize":11,"mode":"show"},"showlegend":true,"height":320,"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff"},
+                        {"responsive": true, "displaylogo": false, "modeBarButtonsToRemove": ["toImage", "sendDataToCloud"]}
+                      )
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p>Nine in ten NAO value for money reports support a subsequent PAC oral evidence session and published report. Conversely, 96% of PAC oral evidence sessions draw on a published NAO report as their primary basis. The committee's scrutiny programme is therefore substantially shaped by the NAO's choice of topics and the pace of its publication programme.</p>
+        <p class="source-note">Source: SDWH analysis, January 2024 – June 2026.</p>
+
+        <!-- Cumulative ratios line chart -->
+        <p class="chart-label" style="margin-top: var(--space-lg);">Cumulative connection ratios over time</p>
+        <p class="chart-sublabel">Running percentages since January 2024 — PAC hearings referencing NAO reports, and NAO reports not yet supporting a PAC inquiry</p>
+        <div class="chart-wrapper">
+          <div class="canary-portable-chart" id="chart-container-hearings_publications_ratios" style="width: 100%; min-height: 400px;">
+            <div>
+              <div id="6081213d-8fa8-43b6-89e0-8030b6932d42" class="plotly-graph-div" style="height:400px; width:100%;"></div>
+              <script>
+                window.PLOTLYENV=window.PLOTLYENV || {};
+                if (document.getElementById("6081213d-8fa8-43b6-89e0-8030b6932d42")) {
+                  Plotly.newPlot(
+                    "6081213d-8fa8-43b6-89e0-8030b6932d42",
+                    [{"hovertemplate":"Cum. % PAC Oral Hearings with NAO Match (Jan 24 – %{x}): <b>%{y:.1f}%</b><extra></extra>","line":{"color":"#00703c","width":2.5},"marker":{"size":6,"symbol":"circle"},"mode":"lines+markers","name":"Cum. % PAC Oral Hearings Referencing an NAO Report","x":["Jan 24","Feb 24","Mar 24","Apr 24","May 24","Jun 24","Jul 24","Aug 24","Sep 24","Oct 24","Nov 24","Dec 24","Jan 25","Feb 25","Mar 25","Apr 25","May 25","Jun 25","Jul 25","Aug 25","Sep 25","Oct 25","Nov 25","Dec 25","Jan 26","Feb 26","Mar 26","Apr 26","May 26","Jun 26"],"y":[100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,97.43589743589743,97.72727272727273,98.07692307692307,98.21428571428571,98.33333333333333,98.50746268656717,98.59154929577466,98.59154929577466,97.2972972972973,97.43589743589743,97.5609756097561,97.72727272727273,97.82608695652173,97.89473684210527,96.07843137254902,96.15384615384616,96.26168224299066,96.3963963963964],"type":"scatter"},{"hovertemplate":"Cum. % NAO Reports with No PAC Inquiry (Jan 24 – %{x}): <b>%{y:.1f}%</b><extra></extra>","line":{"color":"#801650","width":2.5},"marker":{"size":6,"symbol":"x"},"mode":"lines+markers","name":"Cum. % NAO Reports Not Supporting Any PAC Inquiry","x":["Jan 24","Feb 24","Mar 24","Apr 24","May 24","Jun 24","Jul 24","Aug 24","Sep 24","Oct 24","Nov 24","Dec 24","Jan 25","Feb 25","Mar 25","Apr 25","May 25","Jun 25","Jul 25","Aug 25","Sep 25","Oct 25","Nov 25","Dec 25","Jan 26","Feb 26","Mar 26","Apr 26","May 26","Jun 26"],"y":[25.0,11.11111111111111,15.789473684210526,15.0,20.0,20.0,15.789473684210526,15.789473684210526,15.0,14.285714285714285,12.244897959183673,11.320754716981133,10.526315789473683,9.836065573770492,8.823529411764707,8.571428571428571,8.0,7.142857142857142,6.976744186046512,6.976744186046512,6.666666666666667,6.25,6.0,5.714285714285714,5.5045871559633035,5.3097345132743365,7.317073170731707,8.0,8.661417322834646,10.0],"type":"scatter"}],
+                    {"height":400,"legend":{"orientation":"h","x":0.5,"xanchor":"center","y":-0.28,"yanchor":"top"},"margin":{"b":120,"l":60,"r":30,"t":50},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","template":{"layout":{"colorway":["#12436D","#28A197","#801650","#F46A25","#3D3D3D","#A285D1"],"font":{"color":"#505a5f","family":"Inter, sans-serif","size":12},"hoverlabel":{"bgcolor":"#ffffff","bordercolor":"#b1b4b6","font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":12}}}},"title":{"text":"PAC Oral Hearings & NAO Publications — Cumulative Connection Ratios (Since Jan 2024)"},"xaxis":{"title":{"text":"Month (Jan 2024 – present)"}},"yaxis":{"range":[0,105],"ticksuffix":"%","title":{"text":"Cumulative Percentage (%)"}}},
+                    {"responsive": true, "displaylogo": false, "modeBarButtonsToRemove": ["toImage", "sendDataToCloud"]}
+                  )
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+        <p class="source-note">Source: SDWH analysis.</p>
+
+        <!-- Asset type breakdown -->
+        <p class="chart-label" style="margin-top: var(--space-lg);">NAO report type: breakdown by asset type</p>
+        <p class="chart-sublabel">Jan 2024 – Jun 2026 &middot; showing mix of value for money reports, investigations and insights</p>
+        <div class="chart-grid-2">
+          <div>
+            <p class="chart-label">NAO reports by type</p>
+            <p class="chart-sublabel">130 distinct NAO reports</p>
+            <div class="chart-wrapper">
+              <div class="canary-portable-chart" id="chart-container-pie_reports_by_asset_type" style="width: 100%; min-height: 340px;">
+                <div>
+                  <div id="22c9f56e-63be-45d6-b10a-ec60c487e0f4" class="plotly-graph-div" style="height:320px; width:100%;"></div>
+                  <script>
+                    window.PLOTLYENV=window.PLOTLYENV || {};
+                    if (document.getElementById("22c9f56e-63be-45d6-b10a-ec60c487e0f4")) {
+                      Plotly.newPlot(
+                        "22c9f56e-63be-45d6-b10a-ec60c487e0f4",
+                        [{"customdata":[106,19,5],"domain":{"x":[0.1,0.9],"y":[0.1,0.9]},"hole":0.4,"hovertemplate":"%{label}: %{percent}<extra></extra>","insidetextorientation":"horizontal","labels":["Value for money","Investigation","Insight"],"marker":{"colors":["#12436D","#28A197","#801650"]},"showlegend":true,"textfont":{"family":"Inter, sans-serif","size":11},"textposition":"inside","texttemplate":"%{percent:.0%}","values":[106,19,5],"type":"pie"}],
+                        {"height":320,"legend":{"bgcolor":"rgba(0,0,0,0)","borderwidth":0,"font":{"color":"#505a5f","size":11},"orientation":"h","x":0.5,"xanchor":"center","y":-0.05,"yanchor":"top"},"margin":{"autoexpand":false,"b":100,"l":10,"r":10,"t":10},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","showlegend":true,"template":{"layout":{"colorway":["#12436D","#28A197","#801650","#F46A25","#3D3D3D","#A285D1"],"font":{"color":"#505a5f","family":"Inter, sans-serif","size":12},"hoverlabel":{"bgcolor":"#ffffff","bordercolor":"#b1b4b6","font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":12}}}},"title":{"text":""},"uniformtext":{"minsize":11,"mode":"show"}},
+                        {"responsive": true, "displaylogo": false, "modeBarButtonsToRemove": ["toImage", "sendDataToCloud"]}
+                      )
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="chart-label">PAC oral hearings by NAO report type</p>
+            <p class="chart-sublabel">111 individual hearings</p>
+            <div class="chart-wrapper">
+              <div class="canary-portable-chart" id="chart-container-pie_hearings_by_asset_type" style="width: 100%; min-height: 340px;">
+                <div>
+                  <div id="32de9aff-84fb-4719-9f24-56a7b48c7b88" class="plotly-graph-div" style="height:320px; width:100%;"></div>
+                  <script>
+                    window.PLOTLYENV=window.PLOTLYENV || {};
+                    if (document.getElementById("32de9aff-84fb-4719-9f24-56a7b48c7b88")) {
+                      Plotly.newPlot(
+                        "32de9aff-84fb-4719-9f24-56a7b48c7b88",
+                        [{"customdata":[84,13,6,4,4],"domain":{"x":[0.1,0.9],"y":[0.1,0.9]},"hole":0.4,"hovertemplate":"%{label}: %{percent}<extra></extra>","insidetextorientation":"horizontal","labels":["Value for money","Investigation","Insight","Financial Audit","Standalone"],"marker":{"colors":["#12436D","#28A197","#801650","#3D3D3D","#b1b4b6"]},"showlegend":true,"textfont":{"family":"Inter, sans-serif","size":11},"textposition":"inside","texttemplate":"%{percent:.0%}","values":[84,13,6,4,4],"type":"pie"}],
+                        {"height":320,"legend":{"bgcolor":"rgba(0,0,0,0)","borderwidth":0,"font":{"color":"#505a5f","size":11},"orientation":"h","x":0.5,"xanchor":"center","y":-0.05,"yanchor":"top"},"margin":{"autoexpand":false,"b":100,"l":10,"r":10,"t":10},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","showlegend":true,"template":{"layout":{"colorway":["#12436D","#28A197","#801650","#F46A25","#3D3D3D","#A285D1"],"font":{"color":"#505a5f","family":"Inter, sans-serif","size":12},"hoverlabel":{"bgcolor":"#ffffff","bordercolor":"#b1b4b6","font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":12}}}},"title":{"text":""},"uniformtext":{"minsize":11,"mode":"show"}},
+                        {"responsive": true, "displaylogo": false, "modeBarButtonsToRemove": ["toImage", "sendDataToCloud"]}
+                      )
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="source-note">Source: SDWH analysis, January 2024 – June 2026.</p>
+      </div>
+
+      <!-- SECTION 4: MONTHLY VOLUMES -->
+      <div class="about-section">
+        <h2>Monthly volumes: PAC oral evidence sittings and NAO publications</h2>
+        <div class="chart-wrapper">
+          <div class="canary-portable-chart" id="chart-container-hearings_publications_volume" style="width: 100%; min-height: 400px;">
+            <div>
+              <div id="738f8a83-163f-4845-9c2f-b5b73bca6887" class="plotly-graph-div" style="height:400px; width:100%;"></div>
+              <script>
+                window.PLOTLYENV=window.PLOTLYENV || {};
+                if (document.getElementById("738f8a83-163f-4845-9c2f-b5b73bca6887")) {
+                  Plotly.newPlot(
+                    "738f8a83-163f-4845-9c2f-b5b73bca6887",
+                    [{"hovertemplate":"PAC Oral Hearings (Linked to NAO) in %{x}: <b>%{y}</b><extra></extra>","marker":{"color":"#12436D"},"name":"PAC Oral Hearings (Linked to NAO Report)","offsetgroup":"1","x":["Jan 24","Feb 24","Mar 24","Apr 24","May 24","Jun 24","Jul 24","Aug 24","Sep 24","Oct 24","Nov 24","Dec 24","Jan 25","Feb 25","Mar 25","Apr 25","May 25","Jun 25","Jul 25","Aug 25","Sep 25","Oct 25","Nov 25","Dec 25","Jan 26","Feb 26","Mar 26","Apr 26","May 26","Jun 26"],"y":[5,5,5,5,3,0,0,0,0,0,4,6,5,5,8,4,4,7,4,0,2,4,4,6,4,3,5,2,3,4],"type":"bar"},{"base":[5,5,5,5,3,0,0,0,0,0,4,6,5,5,8,4,4,7,4,0,2,4,4,6,4,3,5,2,3,4],"customdata":[0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,2,0,0,0],"hovertemplate":"PAC Oral Hearings (Standalone) in %{x}: <b>%{customdata}</b><extra></extra>","marker":{"color":"#3D3D3D"},"name":"PAC Oral Hearings (Standalone)","offsetgroup":"1","x":["Jan 24","Feb 24","Mar 24","Apr 24","May 24","Jun 24","Jul 24","Aug 24","Sep 24","Oct 24","Nov 24","Dec 24","Jan 25","Feb 25","Mar 25","Apr 25","May 25","Jun 25","Jul 25","Aug 25","Sep 25","Oct 25","Nov 25","Dec 25","Jan 26","Feb 26","Mar 26","Apr 26","May 26","Jun 26"],"y":[0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,2,0,0,0],"type":"bar"},{"hovertemplate":"NAO Reports Published in %{x}: <b>%{y}</b><extra></extra>","marker":{"color":"#F46A25"},"name":"NAO Reports Published","offsetgroup":"2","x":["Jan 24","Feb 24","Mar 24","Apr 24","May 24","Jun 24","Jul 24","Aug 24","Sep 24","Oct 24","Nov 24","Dec 24","Jan 25","Feb 25","Mar 25","Apr 25","May 25","Jun 25","Jul 25","Aug 25","Sep 25","Oct 25","Nov 25","Dec 25","Jan 26","Feb 26","Mar 26","Apr 26","May 26","Jun 26"],"y":[4,5,10,1,5,0,13,0,2,2,7,4,4,4,7,2,5,9,2,0,4,6,4,5,4,4,10,2,2,3],"type":"bar"}],
+                    {"barmode":"group","height":400,"legend":{"orientation":"h","x":0.5,"xanchor":"center","y":-0.28,"yanchor":"top"},"margin":{"b":120,"l":60,"r":30,"t":50},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","template":{"layout":{"colorway":["#12436D","#28A197","#801650","#F46A25","#3D3D3D","#A285D1"],"font":{"color":"#505a5f","family":"Inter, sans-serif","size":12},"hoverlabel":{"bgcolor":"#ffffff","bordercolor":"#b1b4b6","font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":12}},"legend":{"bgcolor":"rgba(0,0,0,0)","borderwidth":0,"font":{"color":"#505a5f","size":11},"orientation":"h","x":0,"xanchor":"left","y":-0.22,"yanchor":"top"},"margin":{"b":95,"l":60,"r":30,"t":50},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","title":{"font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":14},"pad":{"l":0,"t":0},"x":0,"xanchor":"left"},"xaxis":{"linecolor":"#b1b4b6","showgrid":false,"tickfont":{"color":"#505a5f","size":11},"title":{"font":{"color":"#505a5f","size":12}},"zeroline":false},"yaxis":{"gridcolor":"#b1b4b6","gridwidth":0.5,"linecolor":"#b1b4b6","showgrid":true,"tickfont":{"color":"#505a5f","size":11},"title":{"font":{"color":"#505a5f","size":12}},"zeroline":false}}},"title":{"text":"PAC Oral Evidence Sittings & NAO Publications — Monthly Volumes (Since Jan 2024)"},"xaxis":{"title":{"text":"Month (Jan 2024 – present)"}},"yaxis":{"range":[0,15],"title":{"text":"Monthly Count"}}},
+                    {"responsive": true, "displaylogo": false, "modeBarButtonsToRemove": ["toImage", "sendDataToCloud"]}
+                  )
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+        <p class="source-note">Source: SDWH analysis.</p>
+      </div>
+
+      <!-- SECTION 5: NAO FINANCIAL IMPACT -->
+      <div class="about-section">
+        <h2>How does the NAO assess and report the financial impact of its work?</h2>
+        <p>In 2024–25 the NAO's confirmed financial impact was £5,273m: £53 for every £1 of net expenditure, compared with approximately £17 for every £1 in 2023–24. The NAO reports on the financial impact of its value for money programme in its annual report. This methodology applies five principles: causation (a causal link between the NAO's work and the benefit), realisation (the impact has occurred within or before the reporting year), valuation (reliable data support the claim), attribution (the proportion claimed reflects the degree of the NAO's contribution) and validation. In July 2024 the NAO Board changed its financial impact methodology to remove the need for audited bodies to formally agree on causality and attribution of financial impacts, and established a formal role for an Impact Panel to approve financial impacts, with a non-executive director member of the panel.</p>
+        <p class="source-note">Source: NAO Annual Report and Accounts 2024–25.</p>
+      </div>
+
+      <!-- SECTION 6: REPORTS LINKED TO QUANTIFIED IMPACT -->
+      <div class="about-section">
+        <h2>What proportion of NAO reports have been linked to a quantified impact?</h2>
+        <p>The NAO publishes around 60 value for money reports each year. Over the last 5 years a total of 62 individual impact claims have been published, derived from 37 individual reports. The NAO applies a five-principle methodology to this subset of reports for which an impact case is constructed. Whether reports not mapped to any financial impact generated benefits that were not captured, or generated no measurable benefit, cannot be determined from the available information.</p>
+        <p class="chart-label">Figure 4: NAO impact claims by recognition year</p>
+        <p class="chart-sublabel">2020–21 to 2024–25 &middot; 62 individual impact claims across 37 distinct NAO reports</p>
+        <div class="chart-wrapper" style="padding: 16px; height: 300px;">
+          <canvas id="impact-count-web"></canvas>
+        </div>
+        <script>
+        window.addEventListener('DOMContentLoaded', function(){
+          var years = ['2020-21','2021-22','2022-23','2023-24','2024-25'];
+          var claims = [12, 8, 10, 12, 18];
+          new Chart(document.getElementById('impact-count-web'), {
+            type: 'bar',
+            data: {
+              labels: years,
+              datasets: [
+                { label: 'Impact claims', backgroundColor: '#12436D', borderWidth: 0, data: claims }
+              ]
+            },
+            options: {
+              responsive: true, maintainAspectRatio: false,
+              plugins: {
+                legend: { display: false },
+                tooltip: {
+                  backgroundColor: '#ffffff', borderColor: '#b1b4b6', borderWidth: 1,
+                  titleColor: '#0b0c0c', bodyColor: '#505a5f',
+                  titleFont: { family: 'Inter, sans-serif', size: 12, weight: '600' },
+                  bodyFont: { family: 'Inter, sans-serif', size: 12 }
+                }
+              },
+              scales: {
+                x: { grid: { display: false }, ticks: { font: { family: 'Inter, sans-serif', size: 11 }, color: '#505a5f' }, title: { display: true, text: 'Recognition FY', font: { family: 'Inter, sans-serif', size: 12 }, color: '#505a5f' } },
+                y: { beginAtZero: true, grid: { color: '#b1b4b6', lineWidth: 0.5 }, ticks: { font: { family: 'Inter, sans-serif', size: 11 }, color: '#505a5f', precision: 0 }, title: { display: true, text: 'Impact claims', font: { family: 'Inter, sans-serif', size: 12 }, color: '#505a5f' } }
+              },
+              animation: {
+                onComplete: function() {
+                  var chart = this;
+                  var ctx = chart.ctx;
+                  ctx.font = '600 11px Inter, sans-serif';
+                  ctx.textAlign = 'center';
+                  ctx.textBaseline = 'middle';
+                  chart.data.datasets.forEach(function(dataset, i) {
+                    var meta = chart.getDatasetMeta(i);
+                    meta.data.forEach(function(bar, j) {
+                      var val = dataset.data[j];
+                      if (val > 0) {
+                        ctx.fillStyle = '#ffffff';
+                        ctx.fillText(val, bar.x, bar.y + (bar.height / 2));
+                      }
+                    });
+                  });
+                }
+              }
+            }
+          });
+        });
+        </script>
+        <p class="source-note">Source: NAO Annual Reports 2021–22 to 2024–25.</p>
+      </div>
+
+      <!-- SECTION 7: IMPACT BY THEME (full width) -->
+      <div class="about-section">
+        <h2>How is NAO financial impact distributed across topic areas?</h2>
+        <p>Over the five-year period 2020–21 to 2024–25, three topic areas — tax, corporate finance and commercial arrangements — together account for the majority of the NAO's reported cumulative financial impact. NHS and health impacts represent a further significant share. The remaining topic areas contribute a substantially smaller proportion of reported impact, despite accounting for a large share of the NAO's published report volume.</p>
+        <p class="chart-label">Figure 5: NAO financial impact by theme — five-year cumulative, 2020–21 to 2024–25</p>
+        <div class="chart-wrapper" style="padding: 16px; height: 360px;">
+          <canvas id="impact-theme-web"></canvas>
+        </div>
+        <script>
+        window.addEventListener('DOMContentLoaded', function(){
+          var themeData = [
+            {theme:"Tax",sum:1878.1,color:"#6a4c93"},
+            {theme:"Corporate finance",sum:1854.251,color:"#12436D"},
+            {theme:"Commercial arrangements",sum:1712.914,color:"#28A197"},
+            {theme:"NHS / health / patients",sum:1631.086,color:"#801650"},
+            {theme:"Other",sum:895.609,color:"#3D3D3D"},
+            {theme:"Welfare / benefits",sum:822.84,color:"#F46A25"},
+            {theme:"Energy & utilities",sum:405.96,color:"#4d9e6a"}
+          ];
+          var total5yr = themeData.reduce(function(a,b){return a+b.sum;},0);
+          new Chart(document.getElementById('impact-theme-web'), {
+            type: 'bar',
+            data: {
+              labels: themeData.map(function(t){return t.theme;}),
+              datasets: [{
+                data: themeData.map(function(t){return t.sum;}),
+                backgroundColor: themeData.map(function(t){return t.color;}),
+                borderWidth: 0
+              }]
+            },
+            options: {
+              indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+              scales: {
+                x: { beginAtZero: true, title:{display:true,text:'£m (5-year cumulative)',font:{size:12,family:'Inter, sans-serif'},color:'#505a5f'}, ticks:{font:{size:11,family:'Inter, sans-serif'},color:'#505a5f'}, grid:{color:'#b1b4b6'} },
+                y: { ticks:{font:{size:12,family:'Inter, sans-serif'},color:'#0b0c0c'}, grid:{display:false} }
+              },
+              plugins: {
+                legend: { display: false },
+                tooltip: { callbacks:{label:function(c){return '£'+Math.round(c.parsed.x).toLocaleString()+'m ('+(100*c.parsed.x/total5yr).toFixed(1)+'%)';}}, bodyFont:{family:'Inter, sans-serif'}, backgroundColor:'#ffffff', borderColor:'#b1b4b6', borderWidth:1, bodyColor:'#0b0c0c' }
+              }
+            }
+          });
+        });
+        </script>
+        <p class="source-note">Source: SDWH analysis.</p>
+      </div>
+
+      <!-- SECTION 8: RECENCY OF IMPACT (full width) -->
+      <div class="about-section">
+        <h2>How recent are the reports that generate the NAO's current financial impact claims?</h2>
+        <p>The NAO's methodology notes that there is a time lag between work and impact being recorded. The chart below illustrates how the composition of credited impacts has changed across consecutive recognition years. SDWH's analysis of five years of NAO annual reports shows that in 2024–25 the pre-2015 cohort of reports represented the largest share of impact.</p>
+        <p class="chart-label">Figure 6: Origin-decade share of financial impacts by recognition year</p>
+        <div class="chart-wrapper" style="padding: 16px; height: 360px;">
+          <canvas id="impact-stack-web"></canvas>
+        </div>
+        <script>
+        window.addEventListener('DOMContentLoaded', function(){
+          var recogBucket = {"2020-21":{"Pre-2015":29.07,"2015-2019":887.56,"2020-on":0},"2021-22":{"Pre-2015":6.98,"2015-2019":525.5,"2020-on":0},"2022-23":{"Pre-2015":34.63,"2015-2019":282.93,"2020-on":246.1},"2023-24":{"Pre-2015":59.8,"2015-2019":105.35,"2020-on":1420.05},"2024-25":{"Pre-2015":1372.25,"2015-2019":1307.41,"2020-on":2591.13}};
+          var recogYears = ["2020-21","2021-22","2022-23","2023-24","2024-25"];
+          var buckets = ["Pre-2015","2015-2019","2020-on"];
+          var bucketColors = {"Pre-2015":"#801650","2015-2019":"#F46A25","2020-on":"#28A197"};
+          new Chart(document.getElementById('impact-stack-web'), {
+            type: 'bar',
+            data: {
+              labels: recogYears,
+              datasets: buckets.map(function(b){ return { label:b, backgroundColor:bucketColors[b], borderWidth:0, data:recogYears.map(function(fy){return recogBucket[fy][b];})}; })
+            },
+            options: {
+              responsive: true, maintainAspectRatio: false,
+              scales: {
+                x: { stacked:true, title:{display:true,text:'Recognition FY',font:{size:12,family:'Inter, sans-serif'},color:'#505a5f'}, ticks:{font:{size:11,family:'Inter, sans-serif'},color:'#505a5f'}, grid:{display:false} },
+                y: { stacked:true, beginAtZero:true, title:{display:true,text:'£m claimed',font:{size:12,family:'Inter, sans-serif'},color:'#505a5f'}, ticks:{font:{size:11,family:'Inter, sans-serif'},color:'#505a5f'}, grid:{color:'#b1b4b6'} }
+              },
+              plugins: {
+                legend: { position:'bottom', labels:{boxWidth:12,font:{size:11,family:'Inter, sans-serif'},color:'#505a5f'} },
+                tooltip: { callbacks:{label:function(c){return c.dataset.label+': £'+Math.round(c.parsed.y).toLocaleString()+'m';}}, backgroundColor:'#ffffff', borderColor:'#b1b4b6', borderWidth:1, bodyColor:'#0b0c0c', bodyFont:{family:'Inter, sans-serif'} }
+              }
+            }
+          });
+        });
+        </script>
+        <p class="source-note">Source: SDWH analysis of NAO Annual Reports 2020–21 to 2024–25.</p>
+      </div>
+
+      <!-- SECTION 9: RECOMMENDATIONS -->
+      <div class="about-section">
+        <h2>What happens to NAO recommendations after the report is published?</h2>
+        <p>The NAO publishes a recommendations tracker containing 1,191 distinct top-level recommendations across 296 reports over seven years. These concentrate on major projects, procurement, fraud and error. The NAO reported a 93% acceptance rate, exceeding its 90% target. 74% of mature recommendations have been implemented and 5–6% exit as "no longer relevant." 4% of recommendations include an explicit deadline and only 2% include a quantified target.</p>
+        <p class="source-note">Source: NAO, <em>Recommendations Tracker</em>, 2024–25.</p>
+      </div>
+
+      <!-- SECTION 10: COST PER REPORT -->
+      <div class="about-section" style="border-bottom: none;">
+        <h2>What does the NAO's value for money programme cost, and what is the cost per report?</h2>
+        <p>In 2024–25, the combined cost of the NAO's value for money and wider assurance work was approximately £27.3m, covering 60 published products. This implies an average cost of approximately £455,000 per published report. The NAO's total operational cost in 2024–25 was £132.6m. Value for money and wider assurance work therefore represents approximately 21% of the NAO's total expenditure.</p>
+        <p class="source-note">Source: NAO Annual Report and Accounts 2024–25.</p>
+      </div>
+
+      <!-- CONTACT CTA -->
+      <div class="contact-cta">
+        <h2>Independent analysis of the accountability cycle</h2>
+        <p>SDWH tracks NAO reports, PAC inquiries and Treasury Minutes to provide clients with timely, structured analysis of the parliamentary accountability landscape. If you would like to discuss how this service could support your work, get in touch.</p>
         <button class="cta-button" data-tally-open="jakOE1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Get in touch</button>
       </div>
+
     </div>
   </main>
+
   <footer class="site-footer">
     <div class="container">
       <p>Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener">Open Government Licence v3.0</a>. The National Audit Office, Single Source Regulations Office, HM Treasury and other UK government departments and bodies referenced on this site are not responsible for and do not endorse the content of this site.</p>
@@ -108,5 +667,42 @@
       document.getElementById('cookie-banner').style.display = 'none';
     }
   </script>
+
+  <!-- Search modal -->
+  <div id="search-modal" role="dialog" aria-modal="true" aria-label="Search SDWH" hidden>
+    <div id="search-modal-backdrop"></div>
+    <div id="search-modal-panel">
+      <div id="search-modal-header">
+        <span>Search SDWH</span>
+        <button id="search-close" aria-label="Close search">&#x2715;</button>
+      </div>
+      <div id="search-widget"></div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      if (typeof PagefindUI !== 'undefined') {
+        new PagefindUI({ element: '#search-widget', showImages: false, excerptLength: 25 });
+      }
+      var modal = document.getElementById('search-modal');
+      var openBtn = document.getElementById('search-open');
+      var closeBtn = document.getElementById('search-close');
+      var backdrop = document.getElementById('search-modal-backdrop');
+      function openSearch() {
+        modal.hidden = false;
+        document.body.style.overflow = 'hidden';
+        setTimeout(function(){ var inp = modal.querySelector('input'); if (inp) inp.focus(); }, 60);
+      }
+      function closeSearch() {
+        modal.hidden = true;
+        document.body.style.overflow = '';
+      }
+      if (openBtn) openBtn.addEventListener('click', openSearch);
+      if (closeBtn) closeBtn.addEventListener('click', closeSearch);
+      if (backdrop) backdrop.addEventListener('click', closeSearch);
+      document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !modal.hidden) closeSearch(); });
+    });
+  </script>
 </body>
 </html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
