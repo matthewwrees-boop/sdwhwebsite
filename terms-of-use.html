@@ -29,6 +29,9 @@
     gtag("config", "G-R782QMN7XP");
   </script>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Pagefind site search -->
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/pagefind/pagefind-ui.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -109,6 +112,42 @@
       localStorage.setItem('sdwh_cookie_consent', 'denied');
       document.getElementById('cookie-banner').style.display = 'none';
     }
+  </script>
+
+  <!-- Search modal -->
+  <div id="search-modal" role="dialog" aria-modal="true" aria-label="Search SDWH" hidden>
+    <div id="search-modal-backdrop"></div>
+    <div id="search-modal-panel">
+      <div id="search-modal-header">
+        <span>Search SDWH</span>
+        <button id="search-close" aria-label="Close search">&#x2715;</button>
+      </div>
+      <div id="search-widget"></div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      if (typeof PagefindUI !== 'undefined') {
+        new PagefindUI({ element: '#search-widget', showImages: false, excerptLength: 25 });
+      }
+      var modal = document.getElementById('search-modal');
+      var openBtn = document.getElementById('search-open');
+      var closeBtn = document.getElementById('search-close');
+      var backdrop = document.getElementById('search-modal-backdrop');
+      function openSearch() {
+        modal.hidden = false;
+        document.body.style.overflow = 'hidden';
+        setTimeout(function(){ var inp = modal.querySelector('input'); if (inp) inp.focus(); }, 60);
+      }
+      function closeSearch() {
+        modal.hidden = true;
+        document.body.style.overflow = '';
+      }
+      if (openBtn) openBtn.addEventListener('click', openSearch);
+      if (closeBtn) closeBtn.addEventListener('click', closeSearch);
+      if (backdrop) backdrop.addEventListener('click', closeSearch);
+      document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !modal.hidden) closeSearch(); });
+    });
   </script>
 </body>
 </html>
