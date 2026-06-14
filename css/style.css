@@ -935,7 +935,7 @@ a:focus-visible {
   border: none;
   cursor: pointer;
   padding: 6px 8px;
-  color: var(--colour-white);
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -945,7 +945,7 @@ a:focus-visible {
 .nav-search-btn:hover,
 .nav-search-btn:focus-visible {
   background: rgba(255,255,255,0.15);
-  outline: 3px solid var(--colour-focus);
+  outline: 3px solid var(--color-yellow);
   outline-offset: 1px;
 }
 
@@ -983,10 +983,10 @@ a:focus-visible {
   justify-content: space-between;
   padding: 14px 20px;
   border-bottom: 1px solid #b1b4b6;
-  font-family: var(--font-primary);
+  font-family: var(--font-main);
   font-size: 14px;
   font-weight: 600;
-  color: var(--colour-text);
+  color: var(--color-text);
 }
 
 #search-close {
@@ -1009,8 +1009,8 @@ a:focus-visible {
 
 /* Pagefind UI overrides — match site Inter font + GOV.UK palette */
 #search-widget .pagefind-ui__search-input {
-  font-family: var(--font-primary) !important;
-  border: 2px solid var(--colour-text) !important;
+  font-family: var(--font-main) !important;
+  border: 2px solid var(--color-text) !important;
   border-radius: 4px !important;
   padding: 8px 12px !important;
   font-size: 16px !important;
@@ -1018,18 +1018,18 @@ a:focus-visible {
   box-sizing: border-box !important;
 }
 #search-widget .pagefind-ui__search-input:focus {
-  outline: 3px solid var(--colour-focus) !important;
+  outline: 3px solid var(--color-yellow) !important;
   outline-offset: 0 !important;
 }
 #search-widget .pagefind-ui__result-link {
   color: #1d70b8 !important;
-  font-family: var(--font-primary) !important;
+  font-family: var(--font-main) !important;
   font-size: 15px !important;
   font-weight: 600 !important;
   text-decoration: underline !important;
 }
 #search-widget .pagefind-ui__result-excerpt {
-  font-family: var(--font-primary) !important;
+  font-family: var(--font-main) !important;
   color: #505a5f !important;
   font-size: 14px !important;
 }
@@ -1038,8 +1038,8 @@ a:focus-visible {
   padding: 12px 0 !important;
 }
 #search-widget .pagefind-ui__button {
-  font-family: var(--font-primary) !important;
-  background: var(--colour-brand) !important;
+  font-family: var(--font-main) !important;
+  background: var(--color-accent) !important;
   color: #fff !important;
   border: none !important;
   border-radius: 4px !important;
@@ -1048,7 +1048,7 @@ a:focus-visible {
   font-size: 14px !important;
 }
 #search-widget .pagefind-ui__message {
-  font-family: var(--font-primary) !important;
+  font-family: var(--font-main) !important;
   color: #505a5f !important;
   font-size: 14px !important;
 }
