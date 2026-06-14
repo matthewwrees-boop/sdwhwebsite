@@ -932,19 +932,20 @@ a:focus-visible {
 
 .nav-search-btn {
   background: none;
-  border: none;
+  border: 1px solid rgba(255,255,255,0.4);
   cursor: pointer;
-  padding: 6px 8px;
+  padding: 6px 10px;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
+  border-radius: 3px;
   flex-shrink: 0;
 }
 .nav-search-btn:hover,
 .nav-search-btn:focus-visible {
   background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.8);
   outline: 3px solid var(--color-yellow);
   outline-offset: 1px;
 }
