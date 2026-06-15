@@ -1,0 +1,124 @@
+# SDWH Limited
+
+> Independent analysis on complex commercial decisions by government and public sector organisations, spanning corporate finance, procurement, infrastructure investment and governance.
+
+SDWH Limited is a consulting practice founded by Matthew Rees. It provides independent, objective research, analysis and briefing to organisations operating at the intersection of business, finance and government. SDWH combines expertise in business, finance and government that is rarely found in one place — providing objective, forward-looking analysis and insight that generates real impact.
+
+Key credentials: a programme of 15 reports led by Matthew Rees has been independently validated as generating £1.7bn of financial impact — a ~250:1 return on the cost of the work. That figure includes £1,372m attributed to the UK Guarantees Scheme for Infrastructure (NAO Annual Report 2024–25) and £332m from asset sales reports including the Privatisation of Royal Mail and the Sale of Eurostar (NAO Annual Report 2021–22).
+
+SDWH Limited does not lead transactions, does not provide regulated financial advice, and does not provide regulated audit services.
+
+## Pages
+
+- [Home](https://sdwh.co.uk/): Overview of SDWH's practice areas and impact credentials.
+- [Corporate Finance & Investment](https://sdwh.co.uk/corporate-finance.html): Analysis of government asset sales, privatisations, investment structures and business cases.
+- [Public Procurement](https://sdwh.co.uk/public-procurement.html): Analysis of how government buys goods, services and works (~£400bn/year, 14% of GDP).
+- [Defence Procurement](https://sdwh.co.uk/defence-procurement.html): Single-source defence contracting, SSRO regulatory framework, profit rate calibration.
+- [Infrastructure Investment](https://sdwh.co.uk/infrastructure-investment.html): Private finance frameworks (PFI/PPP), government guarantees, infrastructure financing structures.
+- [Accountability and Governance](https://sdwh.co.uk/accountability-and-governance.html): Data and analysis on the UK parliamentary accountability cycle (NAO, PAC, Treasury Minutes).
+- [Value for Money](https://sdwh.co.uk/value-for-money.html): VfM principles, HM Treasury Green Book, INTOSAI performance audit standards.
+- [About](https://sdwh.co.uk/about.html): About SDWH Limited and Matthew Rees.
+
+## Corporate Finance & Investment
+
+Government undertakes corporate finance transactions to deliver a variety of policy objectives: privatisations, minority stake sales, investment programmes, portfolio reviews, equity and debt decisions. SDWH provides independent research, analysis and briefing on business cases, transaction and process choices, evaluative criteria, post-transaction accountability and lessons learned.
+
+**Reports and topics covered:**
+
+- Privatisation of Royal Mail (NAO): IPO mechanics — book-building, price setting, share allocation, treatment of retail vs institutional investors, first-day price gain of £750m, long-term ownership implications for regulated utilities and critical national infrastructure.
+- Sale of government shares: competitive sale structures (trade sales, auctions) vs stock market listings; business cases for asset disposal; governance of sale processes.
+- Investment in private companies (British Business Bank): government minority equity stakes; portfolio management; tension between commercial and policy objectives.
+- UK Guarantees Scheme for Infrastructure: government guarantee structures, contingent liabilities, pricing and risk management of the guarantee portfolio.
+
+**SDWH provides independent analysis of:** business case rationale; structure and sequencing of public asset sale options; governance arrangements for sale processes; evaluation of sale outcomes against market benchmarks; briefing material for ministers and accounting officers.
+
+## Public Procurement
+
+Government spends ~£400bn each year (14% of GDP) buying goods, services and works. SDWH provides independent research, analysis and briefing on commercial lifecycle management, drawing on a deep understanding of how public procurement works in practice.
+
+**Reports and topics covered:**
+
+- Efficiency in government procurement of common goods and services (NAO): central purchasing bodies; framework design; aggregation; category management; levy, commission and rebate structures; social value measurement; £125bn common goods and services budget.
+- Investigation into supply chain finance in the NHS (NAO): single-supplier framework risks; pharmaceutical supply chain; supplier distress warning signs; resilience and optionality in high-dependency supply chains.
+- Managing NHS hospital consultants (NAO): workforce procurement; use of agency and locum staff; cost control; framework effectiveness.
+- HS2 rolling stock (NAO): major capital procurement; contract structure; risk allocation; programme governance.
+
+**SDWH provides independent analysis of:** procurement strategy options; framework design and evaluation; spend analysis and opportunity identification; supply chain structure; contract lifecycle management; supplier risk assessment.
+
+## Defence Procurement
+
+Defence procurement is one of the most technically and commercially complex areas of government spending. Much of it takes place outside competitive markets — through single-source contracts — under the regime established by the Defence Reform Act 2014 and administered by the Single Source Regulations Office (SSRO).
+
+**Reports and topics covered:**
+
+- Cost risk and incentives in defence contracts (SSRO): single-source pricing structures; how cost risk and profit incentives are structured; variation in outcomes; regulatory framework signals for government and contractor.
+- Calibrating profit rates (SSRO): baseline profit rate methodology; benchmarking approach; treatment of risk; capital base assumptions; annual statutory review process.
+- Review of allowable costs (SSRO): what costs can be recovered under a single-source contract; principles of allowable cost determination; implications for pricing and supplier behaviour.
+
+**SDWH provides independent analysis of:** single-source pricing structures; cost risk and incentive design; the SSRO regulatory framework and its commercial implications; briefing for procurement teams and finance directors.
+
+## Infrastructure Investment
+
+Infrastructure investment — roads, rail, energy networks, data centres and telecommunications, housing, public buildings — is central to economic growth. SDWH provides independent research, analysis and briefing on infrastructure financing structures, including PFI/PPP structures, private finance decision frameworks, investment appraisals, and the commercial governance of long-term capital investment programmes.
+
+**Reports and topics covered:**
+
+- Private finance for infrastructure investment (NAO): 12 key considerations distilled from over 140 prior NAO reports; creating the right market conditions; effective financing decisions; appropriate commercial strategy for using private capital; cost of capital; risk transfer.
+- UK Guarantees Scheme for Infrastructure (NAO): how government guarantees support private infrastructure investment; contingent liabilities; £1,372m validated financial impact.
+- PFI/PPP structures: conditions under which private finance has and has not delivered value; inflexibility in long-term contracts; demand and technology risk pricing.
+
+**SDWH provides independent analysis of:** private finance decision frameworks; business case structure for capital projects; risk allocation options; the conditions under which private finance has and has not delivered value in comparable programmes.
+
+## Accountability and Governance
+
+The National Audit Office (NAO) and the Public Accounts Committee (PAC) together form the primary mechanism through which Parliament holds government to account for how it spends public money. This page presents data and analysis on the UK's public accountability cycle, drawn from publicly available information published by the NAO, Parliament and Government.
+
+**Key findings on the UK parliamentary accountability cycle:**
+
+The process from NAO first publishing a work-in-progress notice to the government's formal response in a Treasury Minute spans, on average, 304 days (median) — around ten months. This breaks into roughly 84 days from the work-in-progress notice to the published NAO report, and a further 192 days from publication to the Treasury Minute response.
+
+- P25 (25th percentile): 254 days
+- Median (P50): 304 days
+- P75 (75th percentile): 308 days
+
+Based on analysis of 83 completed accountability cycles.
+
+**Three stages of the parliamentary accountability process:**
+1. NAO value for money programme: work-in-progress notice → evidence gathering → report laid in Parliament.
+2. Public Accounts Committee inquiries: PAC inquiry opened → oral hearings → PAC report and recommendations.
+3. Government response: Treasury Minute responding to PAC recommendations; NAO tracks implementation through annual report and accounts.
+
+## Value for Money
+
+Value for money sits at the centre of public accountability. It is the standard against which accounting officers are held to account, the framework within which business cases are assessed, and the primary lens through which independent audit examines government activity.
+
+**HM Treasury Green Book:** defines value for money as the balanced judgement about the optimal use of public resources to achieve the objectives of a proposal. Structures the policy and spending cycle through the ROAMEF framework: Rationale, Objectives, Appraisal, Monitoring, Evaluation and Feedback. Primarily addresses the first three stages.
+
+**HM Treasury Magenta Book:** guidance on evaluation — assessing whether interventions have achieved their objectives, and learning from the evidence produced. Complements the Green Book by addressing the Monitoring, Evaluation and Feedback stages of the ROAMEF cycle.
+
+**Cabinet Office Spend Controls:** framework through which HM Treasury and the Cabinet Office approve significant government expenditure. Applies to IT and digital spend, commercial contracts, property and facilities management, and major programmes.
+
+**INTOSAI performance audit standards (ISSAI 300 series):** international framework for performance audit, covering economy, efficiency and effectiveness. The three Es: Economy (minimising resource inputs for a given quality of output), Efficiency (relationship between outputs and inputs), Effectiveness (extent to which objectives are achieved).
+
+## About SDWH and Matthew Rees
+
+Matthew Rees has spent his career working at the boundary of government and markets. He applies commercial acumen gained in accounting and investment banking to address complex commercial challenges in the public sector. His appointments have included the Competition Commission, National Audit Office and the Single Source Regulations Office.
+
+At the NAO he led and authored major examinations of how government invests for growth, supports companies to safeguard public interests, raises money from asset sales and privatisations, spends money through procurement, manages supply chains, and finances and governs major infrastructure programmes.
+
+At the SSRO he led work on the regulatory framework governing single-source defence contracts, including profit rate calibration, allowable cost determination, and cost risk and incentive structures.
+
+**The SDWH difference:**
+- Independent: no commercial interest in the outcome; no mandate to sell a product; objective assessment of what the evidence shows.
+- Forward-looking: not a review of what went wrong, but a clear view of what should happen next and why it will generate impact.
+- Grounded in evidence: every assessment draws on direct experience of how government has handled comparable decisions, what has worked, and what the data shows.
+- Impact-generative: £1.7bn validated financial impact from 15 reports; ~250:1 return on cost.
+
+## Contact
+
+Website: https://sdwh.co.uk/
+Contact form: https://sdwh.co.uk/#contact
+
+SDWH Limited · Company number 17048595 · Registered in England and Wales
+
+Contains public sector information licensed under the Open Government Licence v3.0. The National Audit Office, Single Source Regulations Office, HM Treasury and other UK government departments and bodies referenced on this site are not responsible for and do not endorse the content of this site.
