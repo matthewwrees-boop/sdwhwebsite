@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Independent analysis on complex commercial decisions — SDWH Limited</title>
-  <meta name="description" content="SDWH Limited provides independent, objective analysis of commercial decisions by government and public sector organisations spanning corporate finance, procurement, infrastructure investment and governance. Founded by Matthew Rees.">
+  <title>Independent economic analysis on complex public sector decisions — SDWH Limited</title>
+  <meta name="description" content="SDWH Limited provides independent economic analysis of public sector decisions spanning corporate finance, procurement, infrastructure investment, regulatory design and governance. Founded by Matthew Rees.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@
     "name": "SDWH Limited",
     "url": "https://sdwh.co.uk",
     "logo": "https://sdwh.co.uk/favicon.svg",
-    "description": "Independent analysis of complex commercial decisions by government and public sector organisations, spanning corporate finance, procurement, infrastructure investment and governance.",
+    "description": "Independent economic analysis of public sector decisions spanning corporate finance, procurement, infrastructure investment, regulatory design and governance.",
     "foundingDate": "2024",
     "founder": {
       "@type": "Person",
@@ -66,7 +66,11 @@
       "Value for money audit",
       "National Audit Office",
       "Public Accounts Committee",
-      "Accountability and governance"
+      "Accountability and governance",
+      "Regulatory economics",
+      "Competition economics",
+      "Market design",
+      "Economic advisory"
     ]
   }
   </script>
@@ -86,11 +90,11 @@
       <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" onclick="toggleNav(this)">Menu</button>
       <nav aria-label="Main navigation">
         <ul class="site-nav" id="site-nav">
-          <li><a href="corporate-finance.html">Corporate Finance</a></li>
+          <li><a href="corporate-finance.html">Corporate Finance &amp; Investment</a></li>
           <li><a href="public-procurement.html">Public Procurement</a></li>
           <li><a href="defence-procurement.html">Defence Procurement</a></li>
-          <li><a href="infrastructure-investment.html">Infrastructure</a></li>
-          <li><a href="accountability-and-governance.html">Accountability</a></li>
+          <li><a href="infrastructure-investment.html">Infrastructure Investment</a></li>
+          <li><a href="accountability-and-governance.html">Accountability and Governance</a></li>
           <li><a href="value-for-money.html">Value for Money</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
@@ -104,8 +108,8 @@
 
   <section class="hero" aria-labelledby="hero-heading">
     <div class="container">
-      <h1 id="hero-heading">Independent analysis on complex commercial decisions.</h1>
-      <p class="lead">SDWH Limited combines expertise in business, finance and government that is rarely found in one place — providing objective, forward-looking analysis and insight that generates real impact.</p>
+      <h1 id="hero-heading">Independent economic analysis on complex public sector decisions.</h1>
+      <p class="lead">SDWH Limited combines expertise in business, finance and government that is rarely found in one place, providing objective, forward-looking analysis and insight that generates real impact. The analysis draws on economic and regulatory frameworks including competition, market design, risk allocation and cost-benefit analysis, applied to decisions with measurable financial and public interest consequences. These decisions sit at the heart of economic growth strategy across advanced economies. In an era of geopolitical uncertainty and supply chain fragmentation, governments are making active choices about which sectors to support, how to mobilise public and private investment, and how to create the conditions in which scalable businesses can grow and remain rooted in their home markets. SDWH provides analytical insight for both sides of those decisions.</p>
 
       <div class="stat-banner" role="list" aria-label="Key statistics">
         <div class="stat-item" role="listitem">
@@ -225,20 +229,4 @@
       var closeBtn = document.getElementById('search-close');
       var backdrop = document.getElementById('search-modal-backdrop');
       function openSearch() {
-        modal.hidden = false;
-        document.body.style.overflow = 'hidden';
-        setTimeout(function(){ var inp = modal.querySelector('input'); if (inp) inp.focus(); }, 60);
-      }
-      function closeSearch() {
-        modal.hidden = true;
-        document.body.style.overflow = '';
-      }
-      if (openBtn) openBtn.addEventListener('click', openSearch);
-      if (closeBtn) closeBtn.addEventListener('click', closeSearch);
-      if (backdrop) backdrop.addEventListener('click', closeSearch);
-      document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !modal.hidden) closeSearch(); });
-    });
-  </script>
-</body>
-</html>
-                                                                                                        
+   

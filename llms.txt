@@ -1,10 +1,10 @@
 # SDWH Limited
 
-> Independent analysis on complex commercial decisions by government and public sector organisations, spanning corporate finance, procurement, infrastructure investment and governance.
+> Independent economic analysis on complex public sector decisions, spanning corporate finance, procurement, infrastructure investment, regulatory design and governance.
 
-SDWH Limited is a consulting practice founded by Matthew Rees. It provides independent, objective research, analysis and briefing to organisations operating at the intersection of business, finance and government. SDWH combines expertise in business, finance and government that is rarely found in one place — providing objective, forward-looking analysis and insight that generates real impact.
+SDWH Limited is a consulting practice founded by Matthew Rees. It provides independent, objective research, analysis and briefing to organisations operating at the intersection of business, finance and government. SDWH combines expertise in business, finance and government that is rarely found in one place, providing objective, forward-looking analysis and insight that generates real impact. The analysis draws on economic and regulatory frameworks including competition, market design, risk allocation and cost-benefit analysis, applied to decisions with measurable financial and public interest consequences. These decisions sit at the heart of economic growth strategy across advanced economies. In an era of geopolitical uncertainty and supply chain fragmentation, governments are making active choices about which sectors to support, how to mobilise public and private investment, and how to create the conditions in which scalable businesses can grow and remain rooted in their home markets. SDWH provides analytical insight for both sides of those decisions.
 
-Key credentials: a programme of 15 reports led by Matthew Rees has been independently validated as generating £1.7bn of financial impact — a ~250:1 return on the cost of the work. That figure includes £1,372m attributed to the UK Guarantees Scheme for Infrastructure (NAO Annual Report 2024–25) and £332m from asset sales reports including the Privatisation of Royal Mail and the Sale of Eurostar (NAO Annual Report 2021–22).
+Key credentials: a programme of 15 reports led by Matthew Rees has been independently validated as generating £1.7bn of financial impact, representing a ~250:1 return on the cost of the work. That figure includes £1,372m attributed to the UK Guarantees Scheme for Infrastructure (NAO Annual Report 2024–25) and £332m from asset sales reports including the Privatisation of Royal Mail and the Sale of Eurostar (NAO Annual Report 2021–22).
 
 SDWH Limited does not lead transactions, does not provide regulated financial advice, and does not provide regulated audit services.
 
@@ -17,7 +17,7 @@ SDWH Limited does not lead transactions, does not provide regulated financial ad
 - [Infrastructure Investment](https://sdwh.co.uk/infrastructure-investment.html): Private finance frameworks (PFI/PPP), government guarantees, infrastructure financing structures.
 - [Accountability and Governance](https://sdwh.co.uk/accountability-and-governance.html): Data and analysis on the UK parliamentary accountability cycle (NAO, PAC, Treasury Minutes).
 - [Value for Money](https://sdwh.co.uk/value-for-money.html): VfM principles, HM Treasury Green Book, INTOSAI performance audit standards.
-- [About](https://sdwh.co.uk/about.html): About SDWH Limited and Matthew Rees.
+- [About](https://sdwh.co.uk/about.html): About SDWH Limited and Matthew Rees, including the practice's work with scalable businesses navigating government systems.
 
 ## Corporate Finance & Investment
 
@@ -25,12 +25,12 @@ Government undertakes corporate finance transactions to deliver a variety of pol
 
 **Reports and topics covered:**
 
-- Privatisation of Royal Mail (NAO): IPO mechanics — book-building, price setting, share allocation, treatment of retail vs institutional investors, first-day price gain of £750m, long-term ownership implications for regulated utilities and critical national infrastructure.
+- Privatisation of Royal Mail (NAO): IPO mechanics: book-building, price setting, share allocation, treatment of retail vs institutional investors, first-day price gain of £750m, long-term ownership implications for regulated utilities and critical national infrastructure.
 - Sale of government shares: competitive sale structures (trade sales, auctions) vs stock market listings; business cases for asset disposal; governance of sale processes.
 - Investment in private companies (British Business Bank): government minority equity stakes; portfolio management; tension between commercial and policy objectives.
 - UK Guarantees Scheme for Infrastructure: government guarantee structures, contingent liabilities, pricing and risk management of the guarantee portfolio.
 
-**SDWH provides independent analysis of:** business case rationale; structure and sequencing of public asset sale options; governance arrangements for sale processes; evaluation of sale outcomes against market benchmarks; briefing material for ministers and accounting officers.
+**SDWH provides independent analysis of:** business case rationale; structure and sequencing of public asset sale options; governance arrangements for sale processes; evaluation of sale outcomes against market benchmarks; briefing material for ministers and accounting officers. Government corporate finance activity has direct counterparts in the private sector. Companies, investors and boards engaged with or affected by government asset disposals and investment decisions need to understand how public authorities approach comparable choices, what scrutiny those decisions are likely to attract, and what the evidence from prior transactions shows about what has and has not worked. SDWH provides independent research and analytical briefing for organisations that need that understanding.
 
 ## Public Procurement
 
@@ -47,7 +47,7 @@ Government spends ~£400bn each year (14% of GDP) buying goods, services and wor
 
 ## Defence Procurement
 
-Defence procurement is one of the most technically and commercially complex areas of government spending. Much of it takes place outside competitive markets — through single-source contracts — under the regime established by the Defence Reform Act 2014 and administered by the Single Source Regulations Office (SSRO).
+Defence procurement is one of the most technically and commercially complex areas of government spending. Much of it takes place outside competitive markets, through single-source contracts, under the regime established by the Defence Reform Act 2014 and administered by the Single Source Regulations Office (SSRO).
 
 **Reports and topics covered:**
 
@@ -59,7 +59,7 @@ Defence procurement is one of the most technically and commercially complex area
 
 ## Infrastructure Investment
 
-Infrastructure investment — roads, rail, energy networks, data centres and telecommunications, housing, public buildings — is central to economic growth. SDWH provides independent research, analysis and briefing on infrastructure financing structures, including PFI/PPP structures, private finance decision frameworks, investment appraisals, and the commercial governance of long-term capital investment programmes.
+Infrastructure investment, spanning roads, rail, energy networks, data centres and telecommunications, housing and public buildings, is central to economic growth. SDWH provides independent research, analysis and briefing on infrastructure financing structures, including PFI/PPP structures, private finance decision frameworks, investment appraisals, and the commercial governance of long-term capital investment programmes.
 
 **Reports and topics covered:**
 
@@ -100,9 +100,17 @@ Value for money sits at the centre of public accountability. It is the standard 
 
 **INTOSAI performance audit standards (ISSAI 300 series):** international framework for performance audit, covering economy, efficiency and effectiveness. The three Es: Economy (minimising resource inputs for a given quality of output), Efficiency (relationship between outputs and inputs), Effectiveness (extent to which objectives are achieved).
 
+## Scalable Businesses Navigating Government Systems
+
+In sectors where governments have determined that industrial capacity, supply chain security or economic sovereignty requires active support, government and industry need to operate in close alignment. These are often the sectors where the most ambitious businesses are scaling: areas where a country has a genuine comparative advantage, where geopolitical conditions have elevated the strategic importance of domestic capability, and where the deployment of public capital alongside private investment is a deliberate policy choice rather than a last resort.
+
+For companies in these sectors, understanding how government commercial and regulatory systems work in practice is a material consideration. Procurement frameworks, public finance schemes, government investment structures and regulatory oversight regimes shape the environment in which these businesses operate. SDWH provides independent analytical briefings and whitepapers for companies, boards and investors that need to understand the government systems they are operating within.
+
 ## About SDWH and Matthew Rees
 
-Matthew Rees has spent his career working at the boundary of government and markets. He applies commercial acumen gained in accounting and investment banking to address complex commercial challenges in the public sector. His appointments have included the Competition Commission, National Audit Office and the Single Source Regulations Office.
+Matthew Rees has spent his career working at the boundary of government and markets. He holds a BSc in Economics from the London School of Economics and has applied that analytical foundation across a career spanning investment banking, competition casework, regulatory design and public audit. His appointments have included the Competition Commission, National Audit Office and the Single Source Regulations Office.
+
+Earlier career experience includes five years as financial and business adviser to statutory decision-making panels at the Competition Commission, advising on mergers, market investigations and regulatory economics appeals across infrastructure, financial services and technology sectors. That work involved substantive analysis of competition, market design, cost of capital and structural remedies, including leading the remedies implementation process following the BAA airports market investigation.
 
 At the NAO he led and authored major examinations of how government invests for growth, supports companies to safeguard public interests, raises money from asset sales and privatisations, spends money through procurement, manages supply chains, and finances and governs major infrastructure programmes.
 
@@ -121,4 +129,4 @@ Contact form: https://sdwh.co.uk/#contact
 
 SDWH Limited · Company number 17048595 · Registered in England and Wales
 
-Contains public sector information licensed under the Open Government Licence v3.0. The National Audit Office, Single Source Regulations Office, HM Treasury and other UK government departments and bodies referenced on this site are not responsible for and do not endorse the content of this site.
+Contains public sector information licensed under the Open Government Licence v3.0. The National Audit Office, Single Source Regulations Office, HM Treasury and other UK government departments and bodies referenced on this site are not responsible for and do not endorse the content
