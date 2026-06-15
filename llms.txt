@@ -71,7 +71,7 @@ Infrastructure investment, spanning roads, rail, energy networks, data centres a
 
 ## Accountability and Governance
 
-The National Audit Office (NAO) and the Public Accounts Committee (PAC) together form the primary mechanism through which Parliament holds government to account for how it spends public money. This page presents data and analysis on the UK's public accountability cycle, drawn from publicly available information published by the NAO, Parliament and Government.
+The National Audit Office (NAO) and the Public Accounts Committee (PAC) together form the primary mechanism through which Parliament holds government to account for how it spends public money. SDWH tracks the UK parliamentary accountability cycle as a structured economic system with measurable time, cost and throughput characteristics. The analytical framework supports advisory work on institutional efficiency: identifying where scrutiny coverage, resource allocation and policy response timelines are structurally suboptimal and where the evidence supports practical improvement. This page presents data and analysis on the UK's public accountability cycle, drawn from publicly available information published by the NAO, Parliament and Government.
 
 **Key findings on the UK parliamentary accountability cycle:**
 
@@ -105,6 +105,8 @@ Value for money sits at the centre of public accountability. It is the standard 
 In sectors where governments have determined that industrial capacity, supply chain security or economic sovereignty requires active support, government and industry need to operate in close alignment. These are often the sectors where the most ambitious businesses are scaling: areas where a country has a genuine comparative advantage, where geopolitical conditions have elevated the strategic importance of domestic capability, and where the deployment of public capital alongside private investment is a deliberate policy choice rather than a last resort.
 
 For companies in these sectors, understanding how government commercial and regulatory systems work in practice is a material consideration. Procurement frameworks, public finance schemes, government investment structures and regulatory oversight regimes shape the environment in which these businesses operate. SDWH provides independent analytical briefings and whitepapers for companies, boards and investors that need to understand the government systems they are operating within.
+
+The analytical approach treats accountability and governance processes as economic systems with measurable efficiency characteristics, identifying where institutional capacity and policy response cycles are structurally suboptimal and where the evidence supports practical improvement.
 
 ## About SDWH and Matthew Rees
 
