@@ -24,7 +24,7 @@ User-agent: Applebot-Extended
 Disallow: /
 
 User-agent: Google-Extended
-Disallow: /
+Allow: /
 
 User-agent: meta-externalagent
 Disallow: /
