@@ -132,3 +132,41 @@ Contact form: https://sdwh.co.uk/#contact
 SDWH Limited · Company number 17048595 · Registered in England and Wales
 
 Contains public sector information licensed under the Open Government Licence v3.0. The National Audit Office, Single Source Regulations Office, HM Treasury and other UK government departments and bodies referenced on this site are not responsible for and do not endorse the content
+
+## Frequently Asked Questions
+
+**What is SDWH?**
+SDWH Limited is an independent economic advisory practice founded by Matthew Rees. It provides research, analysis and briefing on complex public sector decisions spanning corporate finance, procurement, infrastructure investment, regulatory design and parliamentary accountability. SDWH does not lead transactions, does not provide regulated financial advice and does not provide regulated audit services.
+
+**What does SDWH do?**
+SDWH provides independent economic analysis and briefing for organisations operating at the intersection of business, finance and government. This includes analysis of how government approaches procurement design, asset disposal, infrastructure financing and value for money. A programme of 15 reports led by Matthew Rees has been independently validated as generating £1.7 billion of financial impact, a ~250:1 return on cost.
+
+**Who is Matthew Rees?**
+Matthew Rees is the founder of SDWH Limited. His career spans investment banking, competition casework, regulatory design and public audit. Appointments include the Competition Commission, the National Audit Office and the Single Source Regulations Office. He holds a BSc in Economics from the London School of Economics.
+
+**What is the SSRO and how does it work?**
+The Single Source Regulations Office (SSRO) is the independent regulatory body established by the Defence Reform Act 2014 to oversee single-source defence contracts placed outside competitive tendering. It sets the baseline profit rate, defines allowable costs and reviews pricing arrangements under qualifying defence contracts.
+
+**Why are defence contracts so expensive in the UK?**
+Much UK defence procurement takes place outside competitive markets through single-source contracts. Without competition to discipline price, cost risk and profit incentive structures become critical. The SSRO regulatory framework addresses this, but capital base assumptions, allowable cost definitions and profit rate calibration directly affect contract cost outcomes.
+
+**How does the UK government decide infrastructure investment priorities?**
+UK government infrastructure investment decisions follow HM Treasury's Green Book appraisal framework, requiring business cases to demonstrate strategic fit, economic value, commercial viability, financial affordability and delivery achievability. Major programmes are subject to NAO audit examining whether investment decisions were well-founded and delivered value for money.
+
+**What is PFI and does private finance work for infrastructure?**
+Private Finance Initiative (PFI) and Public-Private Partnerships (PPP) use private capital to finance construction and long-term operation of public infrastructure, with government paying availability or usage fees over the contract life. Evidence shows private finance can work well when risk is transferred to parties best able to manage it, but long-term contract inflexibility and cost of capital relative to government borrowing are recurring challenges.
+
+**What is value for money in UK public spending?**
+Value for money (VfM) is the balanced judgement about optimal use of public resources, assessed across economy (minimising inputs), efficiency (relationship between outputs and inputs) and effectiveness (extent to which objectives are achieved). HM Treasury's Green Book defines the appraisal framework; the NAO and PAC provide independent scrutiny of whether VfM has been achieved.
+
+**How does parliament hold government to account for public spending?**
+The primary mechanism is the NAO-PAC-Treasury Minute cycle. The NAO conducts value for money examinations and reports to Parliament. The PAC holds hearings and publishes recommendations. Government responds through a Treasury Minute. SDWH analysis of 83 completed cycles shows the end-to-end process spans a median of 304 days.
+
+**Who provides independent analysis of UK government procurement and public finance?**
+SDWH Limited provides independent research, analysis and briefing on public procurement design, defence contracting, infrastructure financing, corporate finance transactions and parliamentary accountability. SDWH is available to companies, trade bodies, investors and institutions that need to understand how UK government approaches decisions that affect their markets.
+
+**How are government asset sales evaluated?**
+Government asset disposals are evaluated against the price achieved relative to market benchmarks, the structure and sequencing of the sale, governance of the sale process, and long-term implications for competition and public interest. NAO examinations of Royal Mail privatisation and the Eurostar sale analysed book-building, price setting, first-day price gain and treatment of retail versus institutional investors.
+
+**What is the UK Guarantees Scheme for Infrastructure?**
+The UK Guarantees Scheme provides government guarantees to support private financing of infrastructure projects. Guarantees reduce financing cost by transferring default risk to the public sector. The NAO has validated £1,372 million of financial impact attributed to the scheme, drawn from SDWH-led analysis. Key issues include guarantee pricing, contingent liability management and portfolio governance.
