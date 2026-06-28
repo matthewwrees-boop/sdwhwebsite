@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current Work — SDWH Limited</title>
+  <meta name="description" content="What SDWH is currently working on: analytical insights, live engagements and published case studies across public sector finance, procurement and governance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="canonical" href="https://sdwh.co.uk/current-work">
+  <script async src="https://tally.so/widgets/embed.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied', 'ad_storage': 'denied', 'wait_for_update': 500,
+      'region': ['GB','AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO']
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R782QMN7XP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-R782QMN7XP");
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/pagefind/pagefind-ui.js" defer></script>
+  <style>
+    /* ---- Filter bar ---- */
+    .filter-bar {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin-bottom: 32px; padding-bottom: 20px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .filter-btn {
+      background: var(--color-bg); border: 1px solid var(--color-border);
+      color: var(--color-text-secondary); font-family: var(--font-main);
+      font-size: 14px; font-weight: 500; padding: 6px 14px; border-radius: 3px; cursor: pointer;
+    }
+    .filter-btn:hover { border-color: var(--color-accent); color: var(--color-accent); }
+    .filter-btn.active { background: var(--color-text); border-color: var(--color-text); color: #fff; }
+    .filter-btn:focus-visible { outline: 3px solid var(--color-yellow); outline-offset: 2px; }
+
+    /* ---- Activity entry card ---- */
+    .activity-entry {
+      border: 1px solid var(--color-border); border-radius: 4px;
+      padding: 20px 24px; margin-bottom: 20px; background: var(--color-bg);
+    }
+    .activity-entry[hidden] { display: none; }
+    .entry-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 12px; }
+    .entry-date { font-size: 13px; color: var(--color-text-secondary); }
+    .type-badge {
+      display: inline-block; font-size: 11px; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 3px 8px; border-radius: 3px; color: #fff;
+    }
+    .type-badge.insight    { background: #12436D; }
+    .type-badge.engagement { background: #28A197; }
+    .type-badge.case-study    { background: #801650; }
+    .type-badge.experimental  { background: #505a5f; }
+    .members-badge {
+      display: inline-block; font-size: 11px; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 3px 8px; border-radius: 3px; background: var(--color-orange); color: #fff;
+    }
+    .activity-entry h2 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+    .activity-entry > p { font-size: 15px; color: var(--color-text); max-width: 72ch; margin-bottom: 12px; }
+    .entry-link { font-size: 14px; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+    .entry-link:hover { color: var(--color-accent-hover); text-decoration: underline; }
+    .entry-link::after { content: " \2192"; }
+
+    /* ---- Featured handoff card ---- */
+    .activity-entry.featured {
+      border-color: var(--color-accent); border-left-width: 4px; background: #f8fbff;
+    }
+    .activity-entry.featured h2 { font-size: 22px; }
+
+    /* ---- Key stats row ---- */
+    .entry-stats {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 10px; margin: 16px 0;
+    }
+    .entry-stat {
+      background: var(--color-bg); border: 1px solid var(--color-border);
+      border-radius: 4px; padding: 12px 14px;
+    }
+    .entry-stat-value {
+      display: block; font-size: 22px; font-weight: 700;
+      color: var(--color-text); margin-bottom: 4px;
+    }
+    .entry-stat-label { font-size: 12px; color: var(--color-text-secondary); line-height: 1.4; }
+
+    /* ---- Expandable bullets ---- */
+    .expand-toggle {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: none; border: none; padding: 0;
+      font-family: var(--font-main); font-size: 14px; font-weight: 600;
+      color: var(--color-accent); cursor: pointer; margin-bottom: 12px;
+    }
+    .expand-toggle:hover { color: var(--color-accent-hover); }
+    .expand-toggle:focus-visible { outline: 3px solid var(--color-yellow); outline-offset: 2px; }
+    .expand-toggle .toggle-icon {
+      display: inline-block; font-size: 12px; transition: transform 0.2s;
+    }
+    .expand-toggle[aria-expanded="true"] .toggle-icon { transform: rotate(90deg); }
+
+    .briefing-bullets {
+      border-left: 3px solid var(--color-accent);
+      background: var(--color-bg);
+      margin: 0 0 16px 0;
+      padding: 14px 18px;
+      border-radius: 0 4px 4px 0;
+    }
+    .briefing-bullets[hidden] { display: none; }
+    .briefing-bullets ol {
+      margin: 0; padding-left: 1.4em;
+    }
+    .briefing-bullets li {
+      font-size: 14px; line-height: 1.6; margin-bottom: 10px;
+      color: var(--color-text); max-width: 68ch;
+    }
+    .briefing-bullets li:last-child { margin-bottom: 0; }
+    .briefing-bullets li strong { font-weight: 600; }
+
+    /* ---- Members CTA row ---- */
+    .entry-cta-row {
+      display: flex; align-items: center; gap: 16px;
+      margin-top: 4px; flex-wrap: wrap;
+    }
+    .entry-word-count {
+      font-size: 13px; color: var(--color-text-secondary);
+    }
+
+    @media (max-width: 600px) {
+      .entry-stats { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" aria-label="SDWH Limited home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" height="40" class="site-logo-img" aria-label="SDWH Limited" role="img"><defs><clipPath id="lc"><polygon points="44,316 416,316 416,95 346,95"/></clipPath></defs><g clip-path="url(#lc)"><rect width="480" height="360" fill="white"/><polygon points="44,316 416,44 416,66 74,316" fill="#2060A8"/><polygon points="91,316 416,79 416,96 115,316" fill="#C8102E"/><polygon points="132,316 416,108 416,121 149,316" fill="#2060A8"/></g><polygon points="44,316 416,316 416,95 346,95" fill="none" stroke="#2060A8" stroke-width="6" stroke-linejoin="miter"/><text x="408" y="298" font-family="Arial Black,Arial,sans-serif" font-size="56" font-weight="900" fill="#2060A8" text-anchor="end">SDWH</text></svg></a>
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" onclick="toggleNav(this)">Menu</button>
+      <nav aria-label="Main navigation">
+        <ul class="site-nav" id="site-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="corporate-finance.html">Corporate Finance &amp; Investment</a></li>
+          <li><a href="public-procurement.html">Public Procurement</a></li>
+          <li><a href="defence-procurement.html">Defence Procurement</a></li>
+          <li><a href="infrastructure-investment.html">Infrastructure Investment</a></li>
+          <li><a href="accountability-and-governance.html">Accountability and Governance</a></li>
+          <li><a href="value-for-money.html">Value for Money</a></li>
+          <li><a href="current-work.html" aria-current="page">Current Work</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <button class="nav-search-btn" id="search-open" aria-label="Search this website" title="Search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button class="nav-cta" data-tally-open="jakOE1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Get in touch</button>
+    </div>
+  </header>
+
+  <div class="page-intro">
+    <div class="container">
+      <h1>Current Work</h1>
+      <p>A running record of what SDWH is working on: published insights, live engagements and completed case studies. Updated as work progresses.</p>
+    </div>
+  </div>
+
+  <main id="main" class="page-main">
+    <div class="container">
+
+      <div class="filter-bar" role="group" aria-label="Filter by type">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="insight">Insight</button>
+        <button class="filter-btn" data-filter="experimental">Experimental</button>
+        <button class="filter-btn" data-filter="case-study">Case study</button>
+      </div>
+
+      <!-- FEATURED: Innovation in government loan guarantees -->
+      <div class="activity-entry featured" data-type="insight">
+        <div class="entry-meta">
+          <span class="members-badge">Members</span>
+          <span class="type-badge insight">Insight</span>
+          <span class="entry-date">July 2026</span>
+        </div>
+        <h2>Innovation in government loan guarantees</h2>
+
+        <p>A detailed side-by-side comparison of government loan guarantee schemes in the UK and US. Provides extensive analysis of pricing, risk and trading volumes in secondary markets and securitisations. Finds that the UK has a £1.1bn annual SME financing gap relative to the US, a £12.5bn pool of institutional capital looking for productive UK assets, a fragmented government guarantees programme of £6bn, and a £347bn UK securitisation market in which SME lending barely registers. Indicates that there is an opportunity for innovation to establish a major UK institutional asset class that will attract finance needed to deliver growth agendas including the IT hardware plan and small business strategy. Provides a roadmap for feasibility and stakeholder engagement.</p>
+
+        <div class="entry-stats">
+          <div class="entry-stat">
+            <span class="entry-stat-value">£6.2bn</span>
+            <span class="entry-stat-label">Total exposure across 3 UK government loan guarantee schemes</span>
+          </div>
+          <div class="entry-stat">
+            <span class="entry-stat-value">1.7&times;</span>
+            <span class="entry-stat-label">Higher US government guarantee-to-GDP intensity versus the UK</span>
+          </div>
+          <div class="entry-stat">
+            <span class="entry-stat-value">Base rate +4.5%</span>
+            <span class="entry-stat-label">US interest rate cap for a $250k government-guaranteed loan</span>
+          </div>
+        </div>
+
+        <button class="expand-toggle" aria-expanded="false" aria-controls="briefing-bullets-1" onclick="toggleBullets(this)">
+          <span class="toggle-icon">&#9658;</span> What the briefing contains
+        </button>
+
+        <ol class="briefing-bullets" id="briefing-bullets-1" hidden>
+          <li><strong>The UK's guarantee intensity gap.</strong> The UK runs government-guaranteed business lending at 0.063% of GDP; the US runs at 0.128%. If the UK matched US intensity, annual guarantee volume would roughly double from approximately £1.9 billion to £3.8 billion per year.</li>
+          <li><strong>The lenders, arrangers, and institutional investors already active in this space.</strong> 85 distinct lending institutions have been identified across the three UK schemes; the briefing maps their concentration and cross-scheme participation.</li>
+          <li><strong>The interest rates paid by borrowers and the spread absorbed by intermediation.</strong> The briefing analyses the SBA's published interest rate caps and the implied margin between borrower cost and investor yield, illustrating how secondary market liquidity narrows that spread over time.</li>
+          <li><strong>The default and recovery history that underpins investor confidence.</strong> Using twelve annual cohorts of a leading SME lender between 2014 and 2025, the briefing sets out cumulative default rates and recovery rates.</li>
+          <li><strong>The cost of capital when business loans reach the capital markets.</strong> Based on Funding Circle's tenth securitisation (SBOLT 2026-1, priced May 2026), the briefing sets out the credit ratings, tranche structure, and spreads achieved: senior notes rated A by Fitch at approximately 5.2% all-in, illustrating the yield compression a packaging structure achieves relative to direct lending rates.</li>
+          <li><strong>The scale and mechanics of a working secondary market.</strong> The US Small Business Administration's 7(a) programme has operated a secondary market for government loan guarantees for 35 years with $10–12bn in annual trading volume, premiums consistently at 110–114 cents on the dollar, and transaction counts doubling to 26,000 per year over 2021–25.</li>
+          <li><strong>What the UK could learn from the US.</strong> How the US has combined rate caps for borrowers, reduced personal guarantee dependency, higher guarantee fee income, and higher intensity of guarantees to GDP, through a combination of standardisation and transparency.</li>
+          <li><strong>Why guaranteed loans are currently excluded from securitisation and what it would take to change that.</strong> The GGS guarantee is non-transferable and personal to the accredited lender. The FCA's 2026 consultation paper proposes significant simplification, recognising that current rules are ill-suited to new asset classes. Government and regulator intentions to overhaul SME data are in consultation stage.</li>
+        </ol>
+
+        <div class="entry-cta-row">
+          <a href="members/innovation-loan-guarantees.html" class="entry-link">Read the full briefing</a>
+          <span class="entry-word-count">7,800 words &middot; 21 charts and tables &middot; 30 minutes</span>
+        </div>
+      </div>
+
+      <!-- Predictive model for government accountability cycle -->
+      <div class="activity-entry" data-type="experimental">
+        <div class="entry-meta">
+          <span class="members-badge">Members</span>
+          <span class="type-badge insight">Insight</span>
+          <span class="type-badge experimental">Experimental</span>
+          <span class="entry-date">July 2026</span>
+        </div>
+        <h2>Predictive model for government accountability cycle</h2>
+
+        <p>The oral hearing at the Public Accounts Committee for Accounting Officers marks the apex of an accountability cycle that starts with the NAO publishing a work in progress (WIP) notice and ends with a Treasury Minute setting out the government's response to the PAC report. This experimental tool predicts the date of the oral hearing for all current NAO WIP notices, using a comprehensive dataset of completed accountability cycles, median time delays, and a self-learning algorithm. It also functions as an indicator of the NAO's planning cycle, showing how far ahead publication dates are determined and what that implies for the overall duration of the cycle from WIP notice to Treasury Minute.</p>
+
+        <button class="expand-toggle" aria-expanded="false" aria-controls="briefing-bullets-2" onclick="toggleBullets(this)">
+          <span class="toggle-icon">&#9658;</span> What the model does
+        </button>
+
+        <ol class="briefing-bullets" id="briefing-bullets-2" hidden>
+          <li><strong>Predicts PAC oral hearing dates.</strong> Uses timing patterns from completed accountability cycles to generate a forecast hearing date for every live NAO WIP notice, updated as new data becomes available.</li>
+          <li><strong>Visualises all prevailing WIP notices.</strong> An infographic displays the expected publication window for each WIP notice, overlaid with the median time delay and the predictive algorithm's output.</li>
+          <li><strong>Reveals NAO's planning horizon.</strong> By mapping WIP notice dates against eventual publication dates, the model provides insight into how far into the future the NAO's publication plan is determined at any given moment.</li>
+          <li><strong>Tracks the full accountability cycle.</strong> From WIP notice to Treasury Minute, the model surfaces duration data across all stages, highlighting where delays accumulate and identifying patterns by department and subject matter.</li>
+        </ol>
+
+        <div class="entry-cta-row">
+          <a href="members/pac-forecast.html" class="entry-link">View the infographic</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener">Open Government Licence v3.0</a>. The National Audit Office, Single Source Regulations Office, HM Treasury and other UK government departments and bodies referenced on this site are not responsible for and do not endorse the content of this site.</p>
+      <p>&copy; SDWH Limited &middot; Company number 17048595</p>
+      <nav class="footer-legal" aria-label="Legal pages">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>function toggleNav(btn){var nav=document.getElementById('site-nav');var expanded=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',!expanded);nav.classList.toggle('open',!expanded);}</script>
+
+  <script>
+    function toggleBullets(btn) {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !expanded);
+      var target = document.getElementById(btn.getAttribute('aria-controls'));
+      target.hidden = expanded;
+    }
+    (function() {
+      var btns = document.querySelectorAll('.filter-btn');
+      var entries = document.querySelectorAll('.activity-entry[data-type]');
+      btns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var filter = btn.getAttribute('data-filter');
+          btns.forEach(function(b){ b.classList.remove('active'); });
+          btn.classList.add('active');
+          entries.forEach(function(entry) {
+            entry.hidden = !(filter === 'all' || entry.getAttribute('data-type') === filter);
+          });
+        });
+      });
+    })();
+  </script>
+
+  <div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0b0c0c;color:#ffffff;padding:16px 24px;box-shadow:0 -2px 8px rgba(0,0,0,0.3);">
+    <div style="max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <p style="margin:0;font-family:Inter,sans-serif;font-size:14px;color:#ffffff;max-width:none;flex:1;min-width:200px;">We use analytics cookies to understand how visitors use this site. No advertising cookies are used. <a href="cookie-policy.html" style="color:#8fb8e8;margin-left:4px;">Cookie policy</a></p>
+      <div style="display:flex;gap:10px;flex-shrink:0;">
+        <button onclick="acceptCookies()" style="background:#1d70b8;color:#ffffff;border:none;padding:8px 18px;font-family:Inter,sans-serif;font-size:14px;font-weight:600;cursor:pointer;border-radius:3px;">Accept</button>
+        <button onclick="declineCookies()" style="background:transparent;color:#ffffff;border:1px solid rgba(255,255,255,0.4);padding:8px 18px;font-family:Inter,sans-serif;font-size:14px;font-weight:600;cursor:pointer;border-radius:3px;">Decline</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(){var c=localStorage.getItem('sdwh_cookie_consent');if(!c){document.getElementById('cookie-banner').style.display='block';}else if(c==='granted'){gtag('consent','update',{'analytics_storage':'granted'});}})();
+    function acceptCookies(){localStorage.setItem('sdwh_cookie_consent','granted');gtag('consent','update',{'analytics_storage':'granted'});document.getElementById('cookie-banner').style.display='none';}
+    function declineCookies(){localStorage.setItem('sdwh_cookie_consent','denied');document.getElementById('cookie-banner').style.display='none';}
+  </script>
+
+  <div id="search-modal" role="dialog" aria-modal="true" aria-label="Search SDWH" hidden>
+    <div id="search-modal-backdrop"></div>
+    <div id="search-modal-panel">
+      <div id="search-modal-header"><span>Search SDWH</span><button id="search-close" aria-label="Close search">&#x2715;</button></div>
+      <div id="search-widget"></div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      if (typeof PagefindUI !== 'undefined') { new PagefindUI({ element: '#search-widget', showImages: false, excerptLength: 25 }); }
+      var modal=document.getElementById('search-modal'),openBtn=document.getElementById('search-open'),closeBtn=document.getElementById('search-close'),backdrop=document.getElementById('search-modal-backdrop');
+      function openSearch(){modal.hidden=false;document.body.style.overflow='hidden';setTimeout(function(){var inp=modal.querySelector('input');if(inp)inp.focus();},60);}
+      function closeSearch(){modal.hidden=true;document.body.style.overflow='';}
+      if(openBtn)openBtn.addEventListener('click',openSearch);
+      if(closeBtn)closeBtn.addEventListener('click',closeSearch);
+      if(backdrop)backdrop.addEventListener('click',closeSearch);
+      document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!modal.hidden)closeSearch();});
+    });
+  </script>
+</body>
+</html>
