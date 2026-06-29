@@ -184,7 +184,7 @@
       </div>
 
       <!-- FEATURED: Innovation in government loan guarantees -->
-      <div class="activity-entry featured" data-type="insight">
+      <div class="activity-entry featured" data-type="insight" id="innovation-loan-guarantees">
         <div class="entry-meta">
           <span class="members-badge">Members</span>
           <span class="type-badge insight">Insight</span>
@@ -231,7 +231,7 @@
       </div>
 
       <!-- Predictive model for government accountability cycle -->
-      <div class="activity-entry" data-type="experimental">
+      <div class="activity-entry" data-type="experimental" id="pac-forecast">
         <div class="entry-meta">
           <span class="members-badge">Members</span>
           <span class="type-badge insight">Insight</span>
@@ -274,6 +274,25 @@
   </footer>
 
   <script>function toggleNav(btn){var nav=document.getElementById('site-nav');var expanded=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',!expanded);nav.classList.toggle('open',!expanded);}</script>
+
+  <script>
+    /* ── Hash-based deep linking to individual tiles ── */
+    window.addEventListener('DOMContentLoaded', function() {
+      var hash = location.hash.slice(1);
+      if (!hash) return;
+      var target = document.getElementById(hash);
+      if (!target || !target.classList.contains('activity-entry')) return;
+      /* Reset filter to 'all' so the tile is visible */
+      var btns = document.querySelectorAll('.filter-btn');
+      var entries = document.querySelectorAll('.activity-entry[data-type]');
+      btns.forEach(function(b) { b.classList.remove('active'); });
+      var allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+      if (allBtn) allBtn.classList.add('active');
+      entries.forEach(function(e) { e.hidden = false; });
+      /* Scroll after a short delay to let layout settle */
+      setTimeout(function() { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
+    });
+  </script>
 
   <script>
     function toggleBullets(btn) {
