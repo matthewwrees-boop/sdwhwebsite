@@ -27,6 +27,8 @@
   </script>
   <script src="https://cdn.plot.ly/plotly-3.5.0.min.js"></script>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/pagefind/pagefind-ui.js" defer></script>
   <style>
     .member-layout {
       display: grid;
@@ -188,6 +190,9 @@
           <li><a href="../about.html">About</a></li>
         </ul>
       </nav>
+      <button class="nav-search-btn" id="search-open" aria-label="Search this website" title="Search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
       <button class="nav-cta" data-tally-open="jakOE1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Get in touch</button>
     </div>
   </header>
@@ -235,11 +240,11 @@
         <div class="stat-row">
           <div class="stat-box">
             <span class="stat-value">£6.2bn</span>
-            <span class="stat-label">Total exposure across 3 UK government loan guarantee schemes</span>
+            <span class="stat-label">Total exposure across 3 guarantee schemes operated by BBB and UKEF: GGS, GEF and Enable (a measure of 'stock')</span>
           </div>
           <div class="stat-box">
-            <span class="stat-value">1.7&times;</span>
-            <span class="stat-label">Higher US government guarantee-to-GDP intensity versus the UK</span>
+            <span class="stat-value">1.7&times; historical flow</span>
+            <span class="stat-label">Historically higher US government guarantee-to-GDP flow intensity versus the UK (measured as annual 'flow' of guarantees towards loan origination)</span>
           </div>
           <div class="stat-box">
             <span class="stat-value">Base rate +4.5%</span>
@@ -267,9 +272,9 @@
 
           <p>Based on data for Spring 2026, approximately £1.9bn of new government guarantees are issued each year via the British Business Bank and UK Export Finance. Comparing the UK to the US, the 'GDP intensity' of US government guaranteed small business lending sits at ~1.7&times; the UK's 2 main government lending guarantee schemes.</p>
 
-          <p>Government loan guarantees play a critical part in closing financing gaps in the UK and US. For example, a hypothetical company in the semiconductor or hardware sector that is unable to raise £5&ndash;20m debt over 5&ndash;10 years secured against IP and equipment from the market. The government's June 2026 <em>AI hardware plan</em> identifies the GEF as a policy to support. At present, neither of the current UK schemes is ideally matched to challenges such as this.</p>
+          <p>Government loan guarantees play a critical part in closing financing gaps in the UK and US. For example, a hypothetical company in the semiconductor or hardware sector that is unable to raise £5&ndash;20m debt over 5&ndash;10 years secured against IP and equipment from the market. The government's June 2026 AI hardware plan identifies the GEF as a policy to support. At present, neither of the current UK schemes is ideally matched to challenges such as this.</p>
 
-          <p>The average loan values under the Growth Guarantee Scheme (GGS), below £200,000, are too small. By contrast the General Export Facility (GEF) commitments contain some loans in the £1&ndash;5m band and a number of facilities are in the £10&ndash;40m range, but the 12m revolving tenor of the GEF is too short to support term lending. To address the financing gaps requires government schemes that match the investment requirements of the UK's most promising companies.</p>
+          <p>The average loan values under the Growth Guarantee Scheme (GGS), below £200,000, are too small. By contrast the General Export Facility (GEF) commitments contain some loans in the £1&ndash;5m band and a number of facilities are in the £10&ndash;40m range, but the 12 month revolving tenor of the GEF is too short to support term lending. To address the financing gaps requires government schemes that match the investment requirements of the UK's most promising companies.</p>
 
           <p>There are two contrasting secondary market arrangements - in the US this involves trading the guaranteed element only, and in the UK, it involves institutional placements and/or securitised bundles of loans.</p>
 
@@ -293,7 +298,7 @@
 
           <p>This briefing is aligned with four government objectives: the Small Business Strategy; AI Hardware Plan; institutional investor commitment to private markets via the Mansion House Compact; and the Financial Transaction Control Framework.</p>
 
-          <p>The small business strategy <em>Backing Your Business</em> (DBT, January 2026) frames SME finance access as a structural failure rather than a cyclical problem. Despite the UK having 5.5 million SMEs (99.8% of the business population, accounting for 60% of private sector employment and £2.8 trillion in turnover) bank lending to SMEs relative to GDP has fallen by almost 50% since 2011. Just 1.5% of UK SMEs apply for bank loans, against up to 22% in major EU countries. The strategy commits to expanding BBB's total financial capacity to £25.6 billion and extending the Growth Guarantee Scheme on a longer-term basis.</p>
+          <p>The small business strategy Backing Your Business (DBT, January 2026) frames SME finance access as a structural failure rather than a cyclical problem. Despite the UK having 5.5 million SMEs (99.8% of the business population, accounting for 60% of private sector employment and £2.8 trillion in turnover) bank lending to SMEs relative to GDP has fallen by almost 50% since 2011. Just 1.5% of UK SMEs apply for bank loans, against up to 22% in major EU countries. The strategy commits to expanding BBB's total financial capacity to £25.6 billion and extending the Growth Guarantee Scheme on a longer-term basis.</p>
 
           <p>The AI hardware strategy (June 2026) identifies UK Export Finance's GEF as part of the finance solution within the context of a £1.1bn package of public and private investment.</p>
 
@@ -310,7 +315,7 @@
             <div class="sdwh-table-wrap">
               <table class="sdwh-table">
                 <thead>
-                  <tr><th>Scheme</th><th>Status</th><th>Guarantee %</th><th>Current envelope</th></tr>
+                  <tr><th>Scheme</th><th>Status</th><th>Guarantee %</th><th>Current commitment</th></tr>
                 </thead>
                 <tbody>
                   <tr><td>GGS</td><td>Active to Mar 2030</td><td>70%</td><td>£3,640m drawn cumulative to Mar 2026 (BBB quarterly data)</td></tr>
@@ -344,7 +349,7 @@
                 </thead>
                 <tbody>
                   <tr><td>Annual guaranteed lending</td><td class="num">$37.3bn (FY2025)</td><td class="num">£1.14bn (CY2025)</td><td class="num">£0.771bn (FY2024&ndash;25)</td><td class="num">£1.91bn</td></tr>
-                  <tr><td>GDP (2025)</td><td class="num">$29.2tn</td><td class="num">£3,037bn</td><td class="num">£3,037bn</td><td class="num">£3,037bn</td></tr>
+                  <tr><td>GDP (2025)</td><td class="num">$29,200bn</td><td class="num">£3,037bn</td><td class="num">£3,037bn</td><td class="num">£3,037bn</td></tr>
                   <tr><td>GDP intensity</td><td class="num">0.128%</td><td class="num">0.038%</td><td class="num">0.025%</td><td class="num">0.063%</td></tr>
                   <tr><td>UK / US gap</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td class="num">~1.7&times; combined</td></tr>
                 </tbody>
@@ -433,21 +438,21 @@
                 <thead>
                   <tr>
                     <th class="num">Lower (£)</th><th class="num">Upper (£)</th>
-                    <th class="num">Number</th><th class="num">Total value (£m)</th><th class="num">% by value</th>
+                    <th class="num">Number</th><th class="num">Drawn value (£m)</th><th class="num">% drawn</th><th class="num">% facilities</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td class="num">&ndash;</td><td class="num">10,000</td><td class="num">23</td><td class="num">0.2</td><td class="num">0.0%</td></tr>
-                  <tr><td class="num">10,001</td><td class="num">100,000</td><td class="num">249</td><td class="num">9.3</td><td class="num">1.2%</td></tr>
-                  <tr><td class="num">100,001</td><td class="num">500,000</td><td class="num">107</td><td class="num">30.1</td><td class="num">3.9%</td></tr>
-                  <tr><td class="num">500,001</td><td class="num">1,000,000</td><td class="num">57</td><td class="num">41.2</td><td class="num">5.1%</td></tr>
-                  <tr><td class="num">1,000,001</td><td class="num">5,000,000</td><td class="num">108</td><td class="num">267.3</td><td class="num">33.0%</td></tr>
-                  <tr><td class="num">5,000,001</td><td class="num">10,000,000</td><td class="num">31</td><td class="num">248.1</td><td class="num">28.9%</td></tr>
-                  <tr><td class="num">10,000,001</td><td class="num">20,000,000</td><td class="num">3</td><td class="num">45.3</td><td class="num">11.1%</td></tr>
-                  <tr><td class="num">20,000,001</td><td class="num">40,000,000</td><td class="num">5</td><td class="num">129.9</td><td class="num">16.8%</td></tr>
+                  <tr><td class="num">0</td><td class="num">10,000</td><td class="num">23</td><td class="num">0.2</td><td class="num">0.0%</td><td class="num">3.9%</td></tr>
+                  <tr><td class="num">10,001</td><td class="num">100,000</td><td class="num">249</td><td class="num">9.3</td><td class="num">1.2%</td><td class="num">42.7%</td></tr>
+                  <tr><td class="num">100,001</td><td class="num">500,000</td><td class="num">107</td><td class="num">30.1</td><td class="num">3.9%</td><td class="num">18.4%</td></tr>
+                  <tr><td class="num">500,001</td><td class="num">1,000,000</td><td class="num">57</td><td class="num">41.2</td><td class="num">5.1%</td><td class="num">9.8%</td></tr>
+                  <tr><td class="num">1,000,001</td><td class="num">5,000,000</td><td class="num">108</td><td class="num">267.3</td><td class="num">33.0%</td><td class="num">18.5%</td></tr>
+                  <tr><td class="num">5,000,001</td><td class="num">10,000,000</td><td class="num">31</td><td class="num">248.1</td><td class="num">28.9%</td><td class="num">5.3%</td></tr>
+                  <tr><td class="num">10,000,001</td><td class="num">20,000,000</td><td class="num">3</td><td class="num">45.3</td><td class="num">11.1%</td><td class="num">0.5%</td></tr>
+                  <tr><td class="num">20,000,001</td><td class="num">40,000,000</td><td class="num">5</td><td class="num">129.9</td><td class="num">16.8%</td><td class="num">0.9%</td></tr>
                 </tbody>
                 <tfoot>
-                  <tr><td colspan="2"><strong>Total</strong></td><td class="num"><strong>583</strong></td><td class="num"><strong>771.4</strong></td><td class="num"><strong>100%</strong></td></tr>
+                  <tr><td colspan="2"><strong>Total</strong></td><td class="num"><strong>583</strong></td><td class="num"><strong>771.4</strong></td><td class="num"><strong>100.0%</strong></td><td class="num"><strong>100.0%</strong></td></tr>
                 </tfoot>
               </table>
             </div>
@@ -480,24 +485,24 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Funding Circle</td><td class="num">5.67%</td><td class="num">52.33%</td></tr>
-                  <tr><td>Close Brothers Ltd</td><td class="num">1.66%</td><td class="num">14.42%</td></tr>
-                  <tr><td>HSBC UK Bank Plc</td><td class="num">1.06%</td><td class="num">10.46%</td></tr>
-                  <tr><td>Simply Asset Finance</td><td class="num">1.57%</td><td class="num">6.04%</td></tr>
-                  <tr><td>Shire Leasing plc</td><td class="num">2.80%</td><td class="num">4.13%</td></tr>
-                  <tr><td>Hampshire Trust Bank Plc</td><td class="num">3.30%</td><td class="num">1.39%</td></tr>
-                  <tr><td>Compass Business Finance</td><td class="num">2.96%</td><td class="num">2.99%</td></tr>
-                  <tr><td>NatWest Group plc</td><td class="num">0.78%</td><td class="num">1.64%</td></tr>
-                  <tr><td>Kingsway Finance Group</td><td class="num">1.07%</td><td class="num">1.62%</td></tr>
-                  <tr><td>Lloyds Bank Plc</td><td class="num">0.71%</td><td class="num">1.56%</td></tr>
-                  <tr><td>Paragon Bank PLC</td><td class="num">0.88%</td><td class="num">1.39%</td></tr>
-                  <tr><td>Arkle Finance Ltd</td><td class="num">0.92%</td><td class="num">0.80%</td></tr>
-                  <tr><td>Investec Bank PLC</td><td class="num">0.50%</td><td class="num">0.20%</td></tr>
-                  <tr><td>Haydock Finance</td><td class="num">0.14%</td><td class="num">0.17%</td></tr>
-                  <tr><td>Newable Business Loans Ltd</td><td class="num">13.47%</td><td class="num">0.48%</td></tr>
-                  <tr><td>Allica Bank Limited</td><td class="num">0.08%</td><td class="num">0.37%</td></tr>
-                  <tr><td>Atom Bank / Barclays / Arbuthnot / Santander</td><td class="num">0%</td><td class="num">0%</td></tr>
-                  <tr><td><strong>Total</strong></td><td class="num"><strong>1.70%</strong></td><td class="num"><strong>100%</strong></td></tr>
+                  <tr><td>Funding Circle</td><td class="num">5.7%</td><td class="num">52.3%</td></tr>
+                  <tr><td>Close Brothers Ltd</td><td class="num">1.7%</td><td class="num">14.4%</td></tr>
+                  <tr><td>HSBC UK Bank Plc</td><td class="num">1.1%</td><td class="num">10.5%</td></tr>
+                  <tr><td>Simply Asset Finance</td><td class="num">1.6%</td><td class="num">6.0%</td></tr>
+                  <tr><td>Shire Leasing plc</td><td class="num">2.8%</td><td class="num">4.1%</td></tr>
+                  <tr><td>Hampshire Trust Bank Plc</td><td class="num">3.3%</td><td class="num">1.4%</td></tr>
+                  <tr><td>Compass Business Finance</td><td class="num">3.0%</td><td class="num">3.0%</td></tr>
+                  <tr><td>NatWest Group plc</td><td class="num">0.8%</td><td class="num">1.6%</td></tr>
+                  <tr><td>Kingsway Finance Group</td><td class="num">1.1%</td><td class="num">1.6%</td></tr>
+                  <tr><td>Lloyds Bank Plc</td><td class="num">0.7%</td><td class="num">1.6%</td></tr>
+                  <tr><td>Paragon Bank PLC</td><td class="num">0.9%</td><td class="num">1.4%</td></tr>
+                  <tr><td>Arkle Finance Ltd</td><td class="num">0.9%</td><td class="num">0.8%</td></tr>
+                  <tr><td>Investec Bank PLC</td><td class="num">0.5%</td><td class="num">0.2%</td></tr>
+                  <tr><td>Haydock Finance</td><td class="num">0.1%</td><td class="num">0.2%</td></tr>
+                  <tr><td>Newable Business Loans Ltd</td><td class="num">13.5%</td><td class="num">0.5%</td></tr>
+                  <tr><td>Allica Bank Limited</td><td class="num">0.1%</td><td class="num">0.4%</td></tr>
+                  <tr><td>Atom Bank / Barclays / Arbuthnot / Santander</td><td class="num">0.0%</td><td class="num">0.0%</td></tr>
+                  <tr><td><strong>Total</strong></td><td class="num"><strong>1.7%</strong></td><td class="num"><strong>100.0%</strong></td></tr>
                 </tbody>
               </table>
             </div>
@@ -537,30 +542,30 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>1</td><td>HSBC UK Bank Plc</td><td>Clearing / major bank</td><td class="num">531.39</td><td class="num">14.6%</td><td class="num">1,535</td></tr>
-                  <tr><td>2</td><td>Funding Circle</td><td>Fintech lender</td><td class="num">496.43</td><td class="num">13.6%</td><td class="num">6,192</td></tr>
-                  <tr><td>3</td><td>Close Brothers Ltd</td><td>Asset / specialist finance</td><td class="num">467.60</td><td class="num">12.8%</td><td class="num">2,342</td></tr>
-                  <tr><td>4</td><td>Allica Bank Limited</td><td>Challenger bank</td><td class="num">255.88</td><td class="num">7.0%</td><td class="num">877</td></tr>
-                  <tr><td>5</td><td>Atom Bank plc</td><td>Challenger bank</td><td class="num">209.65</td><td class="num">5.8%</td><td class="num">355</td></tr>
-                  <tr><td>6</td><td>Simply Asset Finance Operations</td><td>Asset / specialist finance</td><td class="num">207.22</td><td class="num">5.7%</td><td class="num">1,621</td></tr>
-                  <tr><td>7</td><td>Barclays Bank Plc</td><td>Clearing / major bank</td><td class="num">179.82</td><td class="num">4.9%</td><td class="num">375</td></tr>
-                  <tr><td>8</td><td>Lloyds Bank Plc</td><td>Clearing / major bank</td><td class="num">117.55</td><td class="num">3.2%</td><td class="num">432</td></tr>
-                  <tr><td>9</td><td>NatWest Group plc</td><td>Clearing / major bank</td><td class="num">113.16</td><td class="num">3.1%</td><td class="num">483</td></tr>
-                  <tr><td>10</td><td>Arbuthnot Latham &amp; Co Ltd</td><td>Challenger bank</td><td class="num">88.68</td><td class="num">2.4%</td><td class="num">83</td></tr>
-                  <tr><td>11</td><td>Paragon Bank PLC</td><td>Challenger bank</td><td class="num">85.20</td><td class="num">2.3%</td><td class="num">682</td></tr>
-                  <tr><td>12</td><td>Kingsway Finance group</td><td>Asset / specialist finance</td><td class="num">81.03</td><td class="num">2.2%</td><td class="num">607</td></tr>
-                  <tr><td>13</td><td>Shire Leasing plc</td><td>Asset / specialist finance</td><td class="num">79.38</td><td class="num">2.2%</td><td class="num">908</td></tr>
-                  <tr><td>14</td><td>Haydock Finance</td><td>Asset / specialist finance</td><td class="num">64.11</td><td class="num">1.8%</td><td class="num">192</td></tr>
-                  <tr><td>15</td><td>Compass Business Finance</td><td>Asset / specialist finance</td><td class="num">54.47</td><td class="num">1.5%</td><td class="num">581</td></tr>
-                  <tr><td>16</td><td>Arkle Finance Ltd</td><td>Asset / specialist finance</td><td class="num">46.88</td><td class="num">1.3%</td><td class="num">523</td></tr>
-                  <tr><td>17</td><td>Finance for Enterprise</td><td>CDFI / social lender</td><td class="num">36.04</td><td class="num">1.0%</td><td class="num">262</td></tr>
-                  <tr><td>18</td><td>Business Enterprise Fund</td><td>CDFI / social lender</td><td class="num">35.83</td><td class="num">1.0%</td><td class="num">459</td></tr>
-                  <tr><td>19</td><td>Santander UK</td><td>Clearing / major bank</td><td class="num">31.15</td><td class="num">0.9%</td><td class="num">50</td></tr>
-                  <tr><td>20</td><td>Merchant Money Ltd (Momenta Finance)</td><td>Fintech lender</td><td class="num">25.62</td><td class="num">0.7%</td><td class="num">144</td></tr>
+                  <tr><td>1</td><td>HSBC UK Bank Plc</td><td>Clearing / major bank</td><td class="num">531.4</td><td class="num">14.6%</td><td class="num">1,535</td></tr>
+                  <tr><td>2</td><td>Funding Circle</td><td>Fintech lender</td><td class="num">496.4</td><td class="num">13.6%</td><td class="num">6,192</td></tr>
+                  <tr><td>3</td><td>Close Brothers Ltd</td><td>Asset / specialist finance</td><td class="num">467.6</td><td class="num">12.8%</td><td class="num">2,342</td></tr>
+                  <tr><td>4</td><td>Allica Bank Limited</td><td>Challenger bank</td><td class="num">255.9</td><td class="num">7.0%</td><td class="num">877</td></tr>
+                  <tr><td>5</td><td>Atom Bank plc</td><td>Challenger bank</td><td class="num">209.7</td><td class="num">5.8%</td><td class="num">355</td></tr>
+                  <tr><td>6</td><td>Simply Asset Finance Operations</td><td>Asset / specialist finance</td><td class="num">207.2</td><td class="num">5.7%</td><td class="num">1,621</td></tr>
+                  <tr><td>7</td><td>Barclays Bank Plc</td><td>Clearing / major bank</td><td class="num">179.8</td><td class="num">4.9%</td><td class="num">375</td></tr>
+                  <tr><td>8</td><td>Lloyds Bank Plc</td><td>Clearing / major bank</td><td class="num">117.6</td><td class="num">3.2%</td><td class="num">432</td></tr>
+                  <tr><td>9</td><td>NatWest Group plc</td><td>Clearing / major bank</td><td class="num">113.2</td><td class="num">3.1%</td><td class="num">483</td></tr>
+                  <tr><td>10</td><td>Arbuthnot Latham &amp; Co Ltd</td><td>Challenger bank</td><td class="num">88.7</td><td class="num">2.4%</td><td class="num">83</td></tr>
+                  <tr><td>11</td><td>Paragon Bank PLC</td><td>Challenger bank</td><td class="num">85.2</td><td class="num">2.3%</td><td class="num">682</td></tr>
+                  <tr><td>12</td><td>Kingsway Finance group</td><td>Asset / specialist finance</td><td class="num">81.0</td><td class="num">2.2%</td><td class="num">607</td></tr>
+                  <tr><td>13</td><td>Shire Leasing plc</td><td>Asset / specialist finance</td><td class="num">79.4</td><td class="num">2.2%</td><td class="num">908</td></tr>
+                  <tr><td>14</td><td>Haydock Finance</td><td>Asset / specialist finance</td><td class="num">64.1</td><td class="num">1.8%</td><td class="num">192</td></tr>
+                  <tr><td>15</td><td>Compass Business Finance</td><td>Asset / specialist finance</td><td class="num">54.5</td><td class="num">1.5%</td><td class="num">581</td></tr>
+                  <tr><td>16</td><td>Arkle Finance Ltd</td><td>Asset / specialist finance</td><td class="num">46.9</td><td class="num">1.3%</td><td class="num">523</td></tr>
+                  <tr><td>17</td><td>Finance for Enterprise</td><td>CDFI / social lender</td><td class="num">36.0</td><td class="num">1.0%</td><td class="num">262</td></tr>
+                  <tr><td>18</td><td>Business Enterprise Fund</td><td>CDFI / social lender</td><td class="num">35.8</td><td class="num">1.0%</td><td class="num">459</td></tr>
+                  <tr><td>19</td><td>Santander UK</td><td>Clearing / major bank</td><td class="num">31.2</td><td class="num">0.9%</td><td class="num">50</td></tr>
+                  <tr><td>20</td><td>Merchant Money Ltd (Momenta Finance)</td><td>Fintech lender</td><td class="num">25.6</td><td class="num">0.7%</td><td class="num">144</td></tr>
                 </tbody>
                 <tfoot>
-                  <tr><td colspan="3"><strong>Top 20 subtotal</strong></td><td class="num"><strong>3,207.09</strong></td><td class="num"><strong>88.0%</strong></td><td class="num"><strong>18,703</strong></td></tr>
-                  <tr><td colspan="3"><strong>Grand total (all 68 lenders)</strong></td><td class="num"><strong>3,643.11</strong></td><td class="num"><strong>100.0%</strong></td><td class="num"><strong>21,194</strong></td></tr>
+                  <tr><td colspan="3"><strong>Top 20 subtotal</strong></td><td class="num"><strong>3,207.1</strong></td><td class="num"><strong>88.0%</strong></td><td class="num"><strong>18,703</strong></td></tr>
+                  <tr><td colspan="3"><strong>Grand total (all 68 lenders)</strong></td><td class="num"><strong>3,643.1</strong></td><td class="num"><strong>100.0%</strong></td><td class="num"><strong>21,194</strong></td></tr>
                 </tfoot>
               </table>
             </div>
@@ -657,17 +662,17 @@
                 <tbody>
                   <tr><td>Guarantor</td><td>SBA</td><td>BBB</td><td>UKEF</td></tr>
                   <tr><td>Fee comparison</td><td>~5&ndash;6% all-in</td><td>~1.5&ndash;3% inferred (note 1)</td><td>~2.5&ndash;3% inferred (note 1)</td></tr>
-                  <tr><td>Guarantee %</td><td>75&ndash;85%</td><td>70%</td><td>Up to 80%</td></tr>
-                  <tr><td>Typical tenor</td><td>Up to 10 years, amortising</td><td>3m to 10 years</td><td>12&ndash;18 months, revolving</td></tr>
-                  <tr><td>Per-borrower cap</td><td>$5m</td><td>£2m per group</td><td>£10m (stated); non-bank sub-limits lower [inferred]</td></tr>
+                  <tr><td>Guarantee %</td><td>75&ndash;85% (note 2)</td><td>70%</td><td>Up to 80%</td></tr>
+                  <tr><td>Typical tenor</td><td>Up to 10 years, amortising</td><td>3 months-10 years</td><td>12&ndash;18 months, revolving</td></tr>
+                  <tr><td>Per-borrower cap</td><td>$5m</td><td>£2m per group</td><td>£10m</td></tr>
                   <tr><td>Average loan value</td><td>$530,000 (2021&ndash;2025)</td><td>£168,500 (Dec 2025)</td><td>£1,323,000 (FY2024&ndash;25)</td></tr>
                   <tr><td>Data transparency</td><td>35-year annual flow series</td><td>Quarterly</td><td>Aggregate UKEF only; GEF not separately disaggregated</td></tr>
                   <tr><td>Secondary market</td><td>~30% of guaranteed portions sold; ~$7bn/year (2021&ndash;25)</td><td>None</td><td>None</td></tr>
-                  <tr><td>Standard-form lender agreement</td><td>Published (SBA Form 1086 for secondary sales)</td><td>None</td><td>Bilateral, unpublished</td></tr>
+                  <tr><td>Standard-form lender agreement</td><td>Published (SBA Form 1086 for secondary sales)</td><td>Not published</td><td>Not published</td></tr>
                 </tbody>
               </table>
             </div>
-            <p class="figure-note">Source: SDWH Limited review of SBA, BBB and UKEF data. Note 1: BBB and UKEF do not publish fees. DBT's Annual Report and Accounts 2024&ndash;25 discloses £101m of premium fees from financial guarantees across all schemes. The ratio of fees to liability is plausibly in the range ~1.5&ndash;3% but cannot be directly attributed to the GGS. GEF average loan value derived from 583 facilities and £771.4m total drawn (FY2024&ndash;25).</p>
+            <p class="figure-note">Source: SDWH Limited review of SBA, BBB and UKEF data. Note 1: BBB and UKEF do not publish fees. DBT's Annual Report and Accounts 2024&ndash;25 discloses £101m of premium fees from financial guarantees across all schemes. The ratio of fees to liability is plausibly in the range ~1.5&ndash;3% but cannot be directly attributed to the GGS. GEF average loan value derived from 583 facilities and £771.4m total drawn (FY2024&ndash;25). Note 2: 7(a) small loans: 85% guarantee up to $150,000, 75% guarantee $150,001&ndash;$5,000,000.</p>
           </div>
         </section>
 
@@ -869,11 +874,11 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>A (Loan Note)</td><td class="num">276.475</td><td class="num">78.4%</td><td class="num">23.50%</td><td class="num">1.94</td><td class="num">95 bps</td><td class="num">~5.20%</td><td>A</td></tr>
-                  <tr><td>B</td><td class="num">36.216</td><td class="num">10.3%</td><td class="num">13.25%</td><td class="num">2.21</td><td class="num">185 bps</td><td class="num">~6.10%</td><td>BBB</td></tr>
-                  <tr><td>C</td><td class="num">22.966</td><td class="num">6.5%</td><td class="num">6.75%</td><td class="num">2.21</td><td class="num">310 bps</td><td class="num">~7.35%</td><td>BB</td></tr>
-                  <tr><td>Z</td><td class="num">17.666</td><td class="num">5.0%</td><td class="num">0.00%</td><td class="num">2.21</td><td class="num">750 bps</td><td class="num">~11.75%</td><td>NR</td></tr>
-                  <tr><td>R (residual)</td><td class="num">0.005</td><td class="num">~0%</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td>NR</td></tr>
+                  <tr><td>A (Loan Note)</td><td class="num">£276.5m</td><td class="num">78.4%</td><td class="num">23.5%</td><td class="num">1.9</td><td class="num">95 bps</td><td class="num">~5.2%</td><td>A</td></tr>
+                  <tr><td>B</td><td class="num">£36.2m</td><td class="num">10.3%</td><td class="num">13.3%</td><td class="num">2.2</td><td class="num">185 bps</td><td class="num">~6.1%</td><td>BBB</td></tr>
+                  <tr><td>C</td><td class="num">£23.0m</td><td class="num">6.5%</td><td class="num">6.8%</td><td class="num">2.2</td><td class="num">310 bps</td><td class="num">~7.4%</td><td>BB</td></tr>
+                  <tr><td>Z</td><td class="num">£17.7m</td><td class="num">5.0%</td><td class="num">0.0%</td><td class="num">2.2</td><td class="num">750 bps</td><td class="num">~11.8%</td><td>NR</td></tr>
+                  <tr><td>R (residual)</td><td class="num">£0.0m</td><td class="num">~0%</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td>NR</td></tr>
                 </tbody>
               </table>
             </div>
@@ -895,7 +900,7 @@
             <p class="figure-note">Source: Funding Circle. Note: grey box = min-max range; blue tick = average; teal tick = median</p>
           </div>
 
-          <h3>Why SBOLT loans do not carry a government guarantee</h3>
+          <h3>SBOLT securitisation programme is for loans which do not carry a government guarantee</h3>
 
           <p>SBOLT pools contain no government-scheme loans. The government guarantee under GGS is non-transferable - it is personal to the accredited lender - meaning that if a GGS loan were sold to an SPV, the guarantee would be voided, exposing the SPV to the full credit risk of the underlying borrower. Were the guarantee to be called before transfer, the Crown additionally acquires subrogation rights against the borrower that would create competing creditor claims in insolvency, sitting outside any securitisation waterfall. Together, these features mean that government-guaranteed loans cannot participate in capital markets structures of this kind.</p>
 
@@ -1080,7 +1085,7 @@
 
         <div class="disclaimer-box">
           <strong>Important notice and disclaimer</strong>
-          <p>SDWH Limited is a management consultancy registered in England and Wales (company number 15710055). This briefing note is produced by SDWH Limited for its members. It does not constitute regulated financial advice and SDWH Limited is not authorised or regulated by the Financial Conduct Authority.</p>
+          <p>SDWH Limited is a management consultancy registered in England and Wales (company number 17048595). This briefing note is produced by SDWH Limited for its members. It does not constitute regulated financial advice and SDWH Limited is not authorised or regulated by the Financial Conduct Authority.</p>
           <p>While SDWH Limited has taken reasonable care to ensure the accuracy of the information contained in this briefing, no warranty or representation, express or implied, is given as to its accuracy, completeness or fitness for any particular purpose. The briefing is based entirely on publicly available information and has not been independently verified or audited.</p>
           <p>This briefing contains forward-looking statements, projections and estimates. These reflect the judgement of SDWH Limited at the time of writing and are subject to change without notice. Actual outcomes may differ materially from those projected.</p>
           <p>Nothing in this briefing constitutes or should be construed as a recommendation, invitation, or inducement to invest in any security, financial instrument, or scheme. Members should obtain independent financial, legal and tax advice before taking any investment decision.</p>
@@ -1098,7 +1103,7 @@
       <div class="footer-grid">
         <div>
           <p class="footer-org">SDWH Limited</p>
-          <p>Registered in England &amp; Wales &middot; Company No. 15710055</p>
+          <p>Registered in England &amp; Wales &middot; Company No. 17048595</p>
         </div>
         <nav aria-label="Footer navigation">
           <ul class="footer-nav">
@@ -1143,6 +1148,40 @@
       window.addEventListener('scroll', onScroll, { passive: true });
       onScroll();
     })();
+  </script>
+  <div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0b0c0c;color:#ffffff;padding:16px 24px;box-shadow:0 -2px 8px rgba(0,0,0,0.3);">
+    <div style="max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <p style="margin:0;font-family:Inter,sans-serif;font-size:14px;color:#ffffff;max-width:none;flex:1;min-width:200px;">We use analytics cookies to understand how visitors use this site. No advertising cookies are used. <a href="../cookie-policy.html" style="color:#8fb8e8;margin-left:4px;">Cookie policy</a></p>
+      <div style="display:flex;gap:10px;flex-shrink:0;">
+        <button onclick="acceptCookies()" style="background:#1d70b8;color:#ffffff;border:none;padding:8px 18px;font-family:Inter,sans-serif;font-size:14px;font-weight:600;cursor:pointer;border-radius:3px;">Accept</button>
+        <button onclick="declineCookies()" style="background:transparent;color:#ffffff;border:1px solid rgba(255,255,255,0.4);padding:8px 18px;font-family:Inter,sans-serif;font-size:14px;font-weight:600;cursor:pointer;border-radius:3px;">Decline</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(){var c=localStorage.getItem('sdwh_cookie_consent');if(!c){document.getElementById('cookie-banner').style.display='block';}else if(c==='granted'){gtag('consent','update',{'analytics_storage':'granted'});}})();
+    function acceptCookies(){localStorage.setItem('sdwh_cookie_consent','granted');gtag('consent','update',{'analytics_storage':'granted'});document.getElementById('cookie-banner').style.display='none';}
+    function declineCookies(){localStorage.setItem('sdwh_cookie_consent','denied');document.getElementById('cookie-banner').style.display='none';}
+  </script>
+
+  <div id="search-modal" role="dialog" aria-modal="true" aria-label="Search SDWH" hidden>
+    <div id="search-modal-backdrop"></div>
+    <div id="search-modal-panel">
+      <div id="search-modal-header"><span>Search SDWH</span><button id="search-close" aria-label="Close search">&#x2715;</button></div>
+      <div id="search-widget"></div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      if (typeof PagefindUI !== 'undefined') { new PagefindUI({ element: '#search-widget', showImages: false, excerptLength: 25 }); }
+      var modal=document.getElementById('search-modal'),openBtn=document.getElementById('search-open'),closeBtn=document.getElementById('search-close'),backdrop=document.getElementById('search-modal-backdrop');
+      function openSearch(){modal.hidden=false;document.body.style.overflow='hidden';setTimeout(function(){var inp=modal.querySelector('input');if(inp)inp.focus();},60);}
+      function closeSearch(){modal.hidden=true;document.body.style.overflow='';}
+      if(openBtn)openBtn.addEventListener('click',openSearch);
+      if(closeBtn)closeBtn.addEventListener('click',closeSearch);
+      if(backdrop)backdrop.addEventListener('click',closeSearch);
+      document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!modal.hidden)closeSearch();});
+    });
   </script>
 </body>
 </html>
