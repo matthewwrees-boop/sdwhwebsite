@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAC Hearing Forecast — SDWH Members</title>
+  <meta name="description" content="Forecast of upcoming Public Accounts Committee hearings based on NAO WIP list and median timescale modelling. SDWH Members.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="canonical" href="https://sdwh.co.uk/members/pac-forecast">
+  <script async src="https://tally.so/widgets/embed.js"></script>
+  <!-- Consent mode default (UK/EEA GDPR compliant) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'wait_for_update': 500,
+      'region': ['GB', 'AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO']
+    });
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R782QMN7XP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-R782QMN7XP");
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <script src="https://cdn.plot.ly/plotly-3.5.0.min.js" integrity="sha256-fHbNLP+GlIXN+efbQec78UkemUz3NJp7UmfGxC1tNxs=" crossorigin="anonymous"></script>
+  <!-- Pagefind site search -->
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/pagefind/pagefind-ui.js" defer></script>
+  <style>
+    .members-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f47738;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 3px;
+      margin-bottom: var(--space-md);
+    }
+    .forecast-meta {
+      display: flex;
+      gap: var(--space-xl);
+      margin: var(--space-md) 0 var(--space-lg);
+      flex-wrap: wrap;
+    }
+    .forecast-meta-item {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+    }
+    .forecast-meta-item strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+    .legend-key {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-lg);
+      margin: var(--space-md) 0;
+      padding: var(--space-md);
+      background: var(--color-bg-secondary);
+      border-radius: 4px;
+      font-size: 13px;
+    }
+    .legend-key-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .legend-swatch {
+      width: 20px;
+      height: 12px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .about-section p { max-width: none; }
+    .data-note {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      border-left: 3px solid var(--color-border);
+      padding: var(--space-sm) var(--space-md);
+      margin: var(--space-lg) 0 var(--space-md);
+      font-style: italic;
+      max-width: none;
+    }
+    .chart-toolbar {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 8px;
+    }
+    .btn-fullscreen {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: none;
+      border: 1px solid var(--color-border);
+      border-radius: 3px;
+      padding: 5px 12px;
+      font-family: var(--font-main);
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      cursor: pointer;
+    }
+    .btn-fullscreen:hover {
+      background: var(--color-bg-secondary);
+      color: var(--color-text);
+    }
+    #chart-fullscreen-target:-webkit-full-screen { background: #fff; padding: 16px; }
+    #chart-fullscreen-target:-moz-full-screen    { background: #fff; padding: 16px; }
+    #chart-fullscreen-target:fullscreen          { background: #fff; padding: 16px; }
+  </style>
+</head>
+<body data-pagefind-ignore>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" aria-label="SDWH Limited home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" height="40" class="site-logo-img" aria-label="SDWH Limited" role="img"><defs><clipPath id="lc"><polygon points="44,316 416,316 416,95 346,95"/></clipPath></defs><g clip-path="url(#lc)"><rect width="480" height="360" fill="white"/><polygon points="44,316 416,44 416,66 74,316" fill="#2060A8"/><polygon points="91,316 416,79 416,96 115,316" fill="#C8102E"/><polygon points="132,316 416,108 416,121 149,316" fill="#2060A8"/></g><polygon points="44,316 416,316 416,95 346,95" fill="none" stroke="#2060A8" stroke-width="6" stroke-linejoin="miter"/><text x="408" y="298" font-family="Arial Black,Arial,sans-serif" font-size="56" font-weight="900" fill="#2060A8" text-anchor="end">SDWH</text></svg></a>
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" onclick="toggleNav(this)">Menu</button>
+      <nav aria-label="Main navigation">
+        <ul class="site-nav" id="site-nav">
+          <li><a href="../corporate-finance.html">Corporate Finance</a></li>
+          <li><a href="../public-procurement.html">Public Procurement</a></li>
+          <li><a href="../defence-procurement.html">Defence Procurement</a></li>
+          <li><a href="../infrastructure-investment.html">Infrastructure</a></li>
+          <li><a href="../accountability-and-governance.html">Accountability</a></li>
+          <li><a href="../value-for-money.html">Value for Money</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+      <button class="nav-search-btn" id="search-open" aria-label="Search this website" title="Search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button class="nav-cta" data-tally-open="jakOE1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Get in touch</button>
+    </div>
+  </header>
+
+  <div class="page-intro">
+    <div class="container">
+      <div class="members-badge">&#128274; Members</div>
+      <h1>PAC Hearing Forecast</h1>
+    </div>
+  </div>
+
+  <main id="main" class="page-main" data-pagefind-ignore>
+    <div class="container">
+
+      <div class="about-section">
+        <p class="lead">Predicted Public Accounts Committee oral evidence sessions based on the current NAO work-in-progress list and historical WIP-to-hearing timescale data.</p>
+
+        <div class="forecast-meta">
+          <div class="forecast-meta-item">
+            <strong>Updated</strong>
+            30 June 2026
+          </div>
+          <div class="forecast-meta-item">
+            <strong>NAO WIP reports tracked</strong>
+            25
+          </div>
+          <div class="forecast-meta-item">
+            <strong>Median WIP &#x2192; Oral interval</strong>
+            136 days
+          </div>
+          <div class="forecast-meta-item">
+            <strong>Baseline hearing probability</strong>
+            44.9%
+          </div>
+        </div>
+
+        <div class="legend-key">
+          <div class="legend-key-item">
+            <div class="legend-swatch" style="background:#12436D;"></div>
+            <span><strong>WIP Publication Window</strong> &#x2014; expected NAO report publication quarter</span>
+          </div>
+          <div class="legend-key-item">
+            <div class="legend-swatch" style="background:#28A197;"></div>
+            <span><strong>Median interval</strong> &#x2014; 136-day benchmark from WIP entry to PAC hearing</span>
+          </div>
+          <div class="legend-key-item">
+            <div class="legend-swatch" style="background:#F46A25;"></div>
+            <span><strong>Predicted PAC Hearing Range</strong> &#x2014; forecast hearing window with confidence %</span>
+          </div>
+          <div class="legend-key-item">
+            <div class="legend-swatch" style="background:#e74c3c; height:3px; margin:4px 0;"></div>
+            <span><strong>Red line</strong> &#x2014; today&#x2019;s date</span>
+          </div>
+        </div>
+
+        <!-- Newsletter sample -->
+        <div style="border:1px solid var(--color-border); border-radius:4px; padding:18px 22px; margin-bottom:24px; background:#f8fbff; display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+          <div style="flex:1; min-width:220px;">
+            <p style="font-size:14px; font-weight:600; margin:0 0 4px 0; color:var(--color-text);">Sample: Accountability Process Newsletter</p>
+            <p style="font-size:13px; color:var(--color-text-secondary); margin:0;">Please <a href="#" data-tally-open="jakOE1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" style="color:var(--color-accent); font-weight:600;">contact us</a> if you would like to receive this on a regular basis.</p>
+          </div>
+          <a href="SDWH_Executive_Bulletin_35.pdf" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; background:var(--color-text); color:#fff; font-size:13px; font-weight:600; padding:9px 16px; border-radius:3px; text-decoration:none; white-space:nowrap;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Open PDF
+          </a>
+        </div>
+
+        <div class="chart-toolbar">
+          <p style="font-size:13px; color:var(--color-text-secondary); margin:0; display:flex; align-items:center; gap:6px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Use full screen for the best view of this chart.
+          </p>
+          <button class="btn-fullscreen" id="fs-btn" onclick="toggleFullscreen()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+            Full screen
+          </button>
+        </div>
+        <div id="chart-fullscreen-target" class="canary-portable-chart" id="chart-container-wip-gantt_inline" style="width: 100%; min-height: 400px;">
+<div>                        <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.5.0.min.js" integrity="sha256-fHbNLP+GlIXN+efbQec78UkemUz3NJp7UmfGxC1tNxs=" crossorigin="anonymous"></script>                <div id="e7b90006-7c0e-407a-9247-7422f51714f1" class="plotly-graph-div" style="height:1100px; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("e7b90006-7c0e-407a-9247-7422f51714f1")) {                    Plotly.newPlot(                        "e7b90006-7c0e-407a-9247-7422f51714f1",
+                        [{"base":["2027-03-01T00:00:00","2027-03-01T00:00:00","2026-12-01T00:00:00","2026-12-01T00:00:00","2026-12-01T00:00:00","2026-12-01T00:00:00","2026-12-01T00:00:00","2026-12-01T00:00:00","2026-12-01T00:00:00","2026-09-01T00:00:00","2026-09-01T00:00:00","2026-09-01T00:00:00","2026-09-01T00:00:00","2026-09-01T00:00:00","2026-09-01T00:00:00","2026-09-01T00:00:00","2026-09-01T00:00:00","2026-09-01T00:00:00","2026-09-01T00:00:00","2026-06-01T00:00:00","2026-06-01T00:00:00","2026-06-01T00:00:00","2026-06-01T00:00:00","2026-06-01T00:00:00","2026-06-01T00:00:00"],"customdata":[["Spring 2027","Spring 2027","Cross-government","WIP Publication Window"],["Spring 2027","Spring 2027","Data governance","WIP Publication Window"],["Winter 2026/27","Winter 2026/27","Cross-government","WIP Publication Window"],["Winter 2026/27","Winter 2026/27","Justice","WIP Publication Window"],["Winter 2026/27","Winter 2026/27","Cross-government","WIP Publication Window"],["Winter 2026/27","Winter 2026/27","Data governance","WIP Publication Window"],["Winter 2026/27","Winter 2026/27","Pensions","WIP Publication Window"],["Winter 2026/27","Winter 2026/27","Education","WIP Publication Window"],["Winter 2026/27","Winter 2026/27","Cross-government","WIP Publication Window"],["Autumn 2026","Autumn 2026","Defence and national security","WIP Publication Window"],["Autumn 2026","Autumn 2026","BBC","WIP Publication Window"],["Autumn 2026","Autumn 2026","Business and industry","WIP Publication Window"],["Autumn 2026","Autumn 2026","Risk and resilience","WIP Publication Window"],["Autumn 2026","Autumn 2026","Defence and national security","WIP Publication Window"],["Autumn 2026","Autumn 2026","Government Finance","WIP Publication Window"],["Autumn 2026","Autumn 2026","Cross-government","WIP Publication Window"],["Autumn 2026","Autumn 2026","Health","WIP Publication Window"],["Autumn 2026","Autumn 2026","Health","WIP Publication Window"],["Autumn 2026","Autumn 2026","Cross-government","WIP Publication Window"],["Summer 2026","Summer 2026","Data governance","WIP Publication Window"],["Summer 2026","Summer 2026","People and operations","WIP Publication Window"],["Summer 2026","Summer 2026","Justice","WIP Publication Window"],["Summer 2026","Summer 2026","Education, training and skills","WIP Publication Window"],["Summer 2026","Summer 2026","Energy and environment","WIP Publication Window"],["Summer 2026","Summer 2026","Devolution","WIP Publication Window"]],"hovertemplate":"<b>%{hovertext}</b><br><br>Timeline Series=%{customdata[3]}<br>Planned Start=%{base}<br>Planned Finish=%{x}<br>Display Window=%{customdata[0]}<br>Timing / Prediction=%{customdata[1]}<br>Topic/Department=%{customdata[2]}<extra></extra>","hovertext":["Procurement innovation in government","MoJ’s management of IT risk and cyber resilience","The quality of social housing","Recovery of the proceeds of crime","Maximising value for pupils in schools","Integrating patient records: laying the foundations for a more productive NHS","Future of public service pensions","Financial sustainability in universities","Energy prices","Affordability of the MoD’s investment plan","BBC efficiency and transformation programme","Upgrading the electricity transmission network","Risk management in government: improving capability and decision-making","Prevent","HMRC’s management of tax debt","Leveraging private investment to improve nature and biodiversity","Restructuring Integrated Care Boards","Managing the flow of patients through A&E","DWP’s approach to innovation","Digital ID: insights to inform government’s approach","Lessons learned: Government workforce planning","Electronic monitoring: responding to increasing demand","Increasing construction skills","Resilience of the UK food supply chain to disruptions","Devolution in England"],"legendgroup":"WIP Publication Window","marker":{"color":"#12436D","pattern":{"shape":""}},"name":"WIP Publication Window","orientation":"h","showlegend":true,"textposition":"auto","x":[7862400000,7862400000,7689600000,7689600000,7689600000,7689600000,7689600000,7689600000,7689600000,7776000000,7776000000,7776000000,7776000000,7776000000,7776000000,7776000000,7776000000,7776000000,7776000000,7862400000,7862400000,7862400000,7862400000,7862400000,7862400000],"xaxis":"x","y":["Procurement innovation in government","MoJ’s management of IT risk and cyber resilience","The quality of social housing","Recovery of the proceeds of crime","Maximising value for pupils in schools","Integrating patient records: laying the foundations for a more productive NHS","Future of public service pensions","Financial sustainability in universities","Energy prices","Affordability of the MoD’s investment plan","BBC efficiency and transformation programme","Upgrading the electricity transmission network","Risk management in government: improving capability and decision-making","Prevent","HMRC’s management of tax debt","Leveraging private investment to improve nature and biodiversity","Restructuring Integrated Care Boards","Managing the flow of patients through A&E","DWP’s approach to innovation","Digital ID: insights to inform government’s approach","Lessons learned: Government workforce planning","Electronic monitoring: responding to increasing demand","Increasing construction skills","Resilience of the UK food supply chain to disruptions","Devolution in England"],"yaxis":"y","type":"bar"},{"base":["2026-12-07T00:00:00","2026-12-04T00:00:00","2026-11-30T00:00:00","2026-11-27T00:00:00","2026-11-23T00:00:00","2026-11-02T00:00:00","2026-10-30T00:00:00","2026-10-26T00:00:00","2026-10-23T00:00:00","2026-10-19T00:00:00","2026-10-16T00:00:00","2026-10-05T00:00:00","2026-10-02T00:00:00","2026-09-04T00:00:00","2026-08-31T00:00:00","2026-06-15T00:00:00"],"customdata":[["Predicted PAC Hearing: 17 December 2026 (47% Confidence)","Predicted Hearing on 17 Dec 2026 with 47% Confidence","Pensions","Predicted PAC Hearing Range"],["Predicted PAC Hearing: 14 December 2026 (31% Confidence)","Predicted Hearing on 14 Dec 2026 with 31% Confidence","Cross-government","Predicted PAC Hearing Range"],["Predicted PAC Hearing: 10 December 2026 (24% Confidence)","Predicted Hearing on 10 Dec 2026 with 24% Confidence","Cross-government","Predicted PAC Hearing Range"],["Predicted PAC Hearing: 07 December 2026 (27% Confidence)","Predicted Hearing on 07 Dec 2026 with 27% Confidence","Education","Predicted PAC Hearing Range"],["Predicted PAC Hearing: 03 December 2026 (53% Confidence)","Predicted Hearing on 03 Dec 2026 with 53% Confidence","Cross-government","Predicted PAC Hearing Range"],["Predicted PAC Hearing: 12 November 2026 (31% Confidence)","Predicted Hearing on 12 Nov 2026 with 31% Confidence","Defence and national security","Predicted PAC Hearing Range"],["Predicted PAC Hearing: 09 November 2026 (23% Confidence)","Predicted Hearing on 09 Nov 2026 with 23% Confidence","Health","Predicted PAC Hearing Range"],["Predicted PAC Hearing: 05 November 2026 (23% Confidence)","Predicted Hearing on 05 Nov 2026 with 23% Confidence","People and operations","Predicted PAC Hearing Range"],["Predicted PAC Hearing: 02 November 2026 (23% Confidence)","Predicted Hearing on 02 Nov 2026 with 23% Confidence","BBC","Predicted PAC Hearing Range"],["Predicted PAC Hearing: 29 October 2026 (25% Confidence)","Predicted Hearing on 29 Oct 2026 with 25% Confidence","Risk and resilience","Predicted PAC Hearing Range"],["Predicted PAC Hearing: 26 October 2026 (24% Confidence)","Predicted Hearing on 26 Oct 2026 with 24% Confidence","Health","Predicted PAC Hearing Range"],["Predicted PAC Hearing: 15 October 2026 (23% Confidence)","Predicted Hearing on 15 Oct 2026 with 23% Confidence","Government Finance","Predicted PAC Hearing Range"],["Predicted PAC Hearing: 12 October 2026 (25% Confidence)","Predicted Hearing on 12 Oct 2026 with 25% Confidence","Cross-government","Predicted PAC Hearing Range"],["Predicted PAC Hearing: 14 September 2026 (23% Confidence)","Predicted Hearing on 14 Sep 2026 with 23% Confidence","Cross-government","Predicted PAC Hearing Range"],["Predicted PAC Hearing: 10 September 2026 (54% Confidence)","Predicted Hearing on 10 Sep 2026 with 54% Confidence","Energy and environment","Predicted PAC Hearing Range"],["Predicted PAC Hearing: 25 June 2026 (27% Confidence)","Predicted Hearing on 25 Jun 2026 with 27% Confidence","Data governance","Predicted PAC Hearing Range"]],"hovertemplate":"<b>%{hovertext}</b><br><br>Timeline Series=%{customdata[3]}<br>Planned Start=%{base}<br>Planned Finish=%{x}<br>Display Window=%{customdata[0]}<br>Timing / Prediction=%{customdata[1]}<br>Topic/Department=%{customdata[2]}<extra></extra>","hovertext":["Future of public service pensions","The quality of social housing","Maximising value for pupils in schools","Financial sustainability in universities","Energy prices","Prevent","Managing the flow of patients through A&E","Lessons learned: Government workforce planning","BBC efficiency and transformation programme","Risk management in government: improving capability and decision-making","Restructuring Integrated Care Boards","HMRC’s management of tax debt","Leveraging private investment to improve nature and biodiversity","DWP’s approach to innovation","Resilience of the UK food supply chain to disruptions","Digital ID: insights to inform government’s approach"],"legendgroup":"Predicted PAC Hearing Range","marker":{"color":"#F46A25","pattern":{"shape":""}},"name":"Predicted PAC Hearing Range","orientation":"h","showlegend":true,"textposition":"auto","x":{"dtype":"i4","bdata":"ADD/ZgAw/2YAMP9mADD/ZgAw/2YAMP9mADD/ZgAw/2YAMP9mADD/ZgAw/2YAMP9mADD/ZgAw/2YAMP9mADD/Zg=="},"xaxis":"x","y":["Future of public service pensions","The quality of social housing","Maximising value for pupils in schools","Financial sustainability in universities","Energy prices","Prevent","Managing the flow of patients through A&E","Lessons learned: Government workforce planning","BBC efficiency and transformation programme","Risk management in government: improving capability and decision-making","Restructuring Integrated Care Boards","HMRC’s management of tax debt","Leveraging private investment to improve nature and biodiversity","DWP’s approach to innovation","Resilience of the UK food supply chain to disruptions","Digital ID: insights to inform government’s approach"],"yaxis":"y","type":"bar"},{"base":["2026-10-26T00:00:00","2026-10-19T00:00:00","2026-10-19T00:00:00","2026-10-12T00:00:00","2026-10-02T00:00:00","2026-10-02T00:00:00","2026-10-02T00:00:00","2026-10-02T00:00:00","2026-10-02T00:00:00","2026-10-02T00:00:00","2026-10-02T00:00:00","2026-10-02T00:00:00","2026-10-02T00:00:00","2026-08-24T00:00:00","2026-08-24T00:00:00","2026-08-24T00:00:00","2026-08-24T00:00:00","2026-08-24T00:00:00","2026-08-24T00:00:00","2026-06-08T00:00:00","2026-06-08T00:00:00","2026-06-08T00:00:00","2026-06-08T00:00:00","2026-06-08T00:00:00","2026-02-15T00:00:00"],"customdata":[["Median interval: 05 November 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 05 Nov 2026 | Probability: 44.9%","Cross-government","Median interval"],["Median interval: 29 October 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 29 Oct 2026 | Probability: 44.9%","Cross-government","Median interval"],["Median interval: 29 October 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 29 Oct 2026 | Probability: 44.9%","Cross-government","Median interval"],["Median interval: 22 October 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 22 Oct 2026 | Probability: 44.9%","Cross-government","Median interval"],["Median interval: 12 October 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 12 Oct 2026 | Probability: 44.9%","Pensions","Median interval"],["Median interval: 12 October 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 12 Oct 2026 | Probability: 44.9%","Risk and resilience","Median interval"],["Median interval: 12 October 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 12 Oct 2026 | Probability: 44.9%","Education","Median interval"],["Median interval: 12 October 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 12 Oct 2026 | Probability: 44.9%","Health","Median interval"],["Median interval: 12 October 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 12 Oct 2026 | Probability: 44.9%","Government Finance","Median interval"],["Median interval: 12 October 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 12 Oct 2026 | Probability: 44.9%","Justice","Median interval"],["Median interval: 12 October 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 12 Oct 2026 | Probability: 44.9%","Cross-government","Median interval"],["Median interval: 12 October 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 12 Oct 2026 | Probability: 44.9%","Cross-government","Median interval"],["Median interval: 12 October 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 12 Oct 2026 | Probability: 44.9%","Data governance","Median interval"],["Median interval: 03 September 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 03 Sep 2026 | Probability: 44.9%","Health","Median interval"],["Median interval: 03 September 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 03 Sep 2026 | Probability: 44.9%","Data governance","Median interval"],["Median interval: 03 September 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 03 Sep 2026 | Probability: 44.9%","BBC","Median interval"],["Median interval: 03 September 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 03 Sep 2026 | Probability: 44.9%","Data governance","Median interval"],["Median interval: 03 September 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 03 Sep 2026 | Probability: 44.9%","Defence and national security","Median interval"],["Median interval: 03 September 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 03 Sep 2026 | Probability: 44.9%","People and operations","Median interval"],["Median interval: 18 June 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 18 Jun 2026 | Probability: 44.9%","Energy and environment","Median interval"],["Median interval: 18 June 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 18 Jun 2026 | Probability: 44.9%","Devolution","Median interval"],["Median interval: 18 June 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 18 Jun 2026 | Probability: 44.9%","Education, training and skills","Median interval"],["Median interval: 18 June 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 18 Jun 2026 | Probability: 44.9%","Business and industry","Median interval"],["Median interval: 18 June 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 18 Jun 2026 | Probability: 44.9%","Justice","Median interval"],["Median interval: 25 February 2026 (44.9% Baseline Chance)","Median Benchmark (136d WIP→Oral): 25 Feb 2026 | Probability: 44.9%","Defence and national security","Median interval"]],"hovertemplate":"<b>%{hovertext}</b><br><br>Timeline Series=%{customdata[3]}<br>Planned Start=%{base}<br>Planned Finish=%{x}<br>Display Window=%{customdata[0]}<br>Timing / Prediction=%{customdata[1]}<br>Topic/Department=%{customdata[2]}<extra></extra>","hovertext":["Procurement innovation in government","Energy prices","Leveraging private investment to improve nature and biodiversity","Maximising value for pupils in schools","Future of public service pensions","Risk management in government: improving capability and decision-making","Financial sustainability in universities","Restructuring Integrated Care Boards","HMRC’s management of tax debt","Recovery of the proceeds of crime","DWP’s approach to innovation","The quality of social housing","MoJ’s management of IT risk and cyber resilience","Managing the flow of patients through A&E","Digital ID: insights to inform government’s approach","BBC efficiency and transformation programme","Integrating patient records: laying the foundations for a more productive NHS","Prevent","Lessons learned: Government workforce planning","Resilience of the UK food supply chain to disruptions","Devolution in England","Increasing construction skills","Upgrading the electricity transmission network","Electronic monitoring: responding to increasing demand","Affordability of the MoD’s investment plan"],"legendgroup":"Median interval","marker":{"color":"#28A197","pattern":{"shape":""}},"name":"Median interval","orientation":"h","showlegend":true,"textposition":"auto","x":{"dtype":"i4","bdata":"ADD/ZgAw/2YAMP9mADD/ZgAw/2YAMP9mADD/ZgAw/2YAMP9mADD/ZgAw/2YAMP9mADD/ZgAw/2YAMP9mADD/ZgAw/2YAMP9mADD/ZgAw/2YAMP9mADD/Zg=="},"xaxis":"x","y":["Procurement innovation in government","Energy prices","Leveraging private investment to improve nature and biodiversity","Maximising value for pupils in schools","Future of public service pensions","Risk management in government: improving capability and decision-making","Financial sustainability in universities","Restructuring Integrated Care Boards","HMRC’s management of tax debt","Recovery of the proceeds of crime","DWP’s approach to innovation","The quality of social housing","MoJ’s management of IT risk and cyber resilience","Managing the flow of patients through A&E","Digital ID: insights to inform government’s approach","BBC efficiency and transformation programme","Integrating patient records: laying the foundations for a more productive NHS","Prevent","Lessons learned: Government workforce planning","Resilience of the UK food supply chain to disruptions","Devolution in England","Increasing construction skills","Upgrading the electricity transmission network","Electronic monitoring: responding to increasing demand","Affordability of the MoD’s investment plan"],"yaxis":"y","type":"bar"}],                        {"template":{"layout":{"colorway":["#12436D","#28A197","#801650","#F46A25","#3D3D3D","#A285D1"],"font":{"color":"#505a5f","family":"Inter, sans-serif","size":12},"hoverlabel":{"bgcolor":"#ffffff","bordercolor":"#b1b4b6","font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":12}},"legend":{"bgcolor":"rgba(0,0,0,0)","borderwidth":0,"font":{"color":"#505a5f","size":11},"orientation":"h","x":0,"xanchor":"left","y":-0.22,"yanchor":"top"},"margin":{"b":95,"l":60,"r":30,"t":50},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","title":{"font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":14},"pad":{"l":0,"t":0},"x":0,"xanchor":"left"},"xaxis":{"linecolor":"#b1b4b6","showgrid":false,"tickfont":{"color":"#505a5f","size":11},"title":{"font":{"color":"#505a5f","size":12}},"zeroline":false},"yaxis":{"gridcolor":"#b1b4b6","gridwidth":0.5,"linecolor":"#b1b4b6","showgrid":true,"tickfont":{"color":"#505a5f","size":11},"title":{"font":{"color":"#505a5f","size":12}},"zeroline":false}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"type":"date","showgrid":true,"gridcolor":"#b1b4b6","gridwidth":0.5,"title":{"text":"Timeline / Expected Publication Window"},"tickvals":["2026-01-15","2026-04-15","2026-07-16","2026-10-16","2026-12-15","2027-04-15","2027-07-16"],"ticktext":["Winter 2025/26","Spring 2026","Summer 2026","Autumn 2026","Winter 2026/27","Spring 2027","Summer 2027"],"range":["2025-12-01","2027-09-01"]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"VFM Audit WIP List"},"showgrid":false},"legend":{"title":{"text":"Timeline Series"},"tracegroupgap":0,"orientation":"h","yanchor":"bottom","y":1.02,"xanchor":"right","x":1},"margin":{"t":50,"l":280,"r":30,"b":60},"barmode":"overlay","title":{"text":""},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","shapes":[{"line":{"color":"#bdc3c7","dash":"dot","width":1.5},"type":"line","x0":"2025-12-01","x1":"2025-12-01","xref":"x","y0":0,"y1":1,"yref":"paper"},{"line":{"color":"#bdc3c7","dash":"dot","width":1.5},"type":"line","x0":"2026-03-01","x1":"2026-03-01","xref":"x","y0":0,"y1":1,"yref":"paper"},{"line":{"color":"#bdc3c7","dash":"dot","width":1.5},"type":"line","x0":"2026-06-01","x1":"2026-06-01","xref":"x","y0":0,"y1":1,"yref":"paper"},{"line":{"color":"#bdc3c7","dash":"dot","width":1.5},"type":"line","x0":"2026-09-01","x1":"2026-09-01","xref":"x","y0":0,"y1":1,"yref":"paper"},{"line":{"color":"#bdc3c7","dash":"dot","width":1.5},"type":"line","x0":"2026-12-01","x1":"2026-12-01","xref":"x","y0":0,"y1":1,"yref":"paper"},{"line":{"color":"#bdc3c7","dash":"dot","width":1.5},"type":"line","x0":"2027-03-01","x1":"2027-03-01","xref":"x","y0":0,"y1":1,"yref":"paper"},{"line":{"color":"#bdc3c7","dash":"dot","width":1.5},"type":"line","x0":"2027-06-01","x1":"2027-06-01","xref":"x","y0":0,"y1":1,"yref":"paper"},{"line":{"color":"#bdc3c7","dash":"dot","width":1.5},"type":"line","x0":"2027-09-01","x1":"2027-09-01","xref":"x","y0":0,"y1":1,"yref":"paper"},{"line":{"color":"#e74c3c","dash":"solid","width":2.5},"type":"line","x0":"2026-06-30","x1":"2026-06-30","xref":"x","y0":0,"y1":1,"yref":"paper"}],"annotations":[{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"47%","x":"2026-12-17","xanchor":"center","y":"Future of public service pensions","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"31%","x":"2026-12-14","xanchor":"center","y":"The quality of social housing","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"24%","x":"2026-12-10","xanchor":"center","y":"Maximising value for pupils in schools","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"27%","x":"2026-12-07","xanchor":"center","y":"Financial sustainability in universities","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"53%","x":"2026-12-03","xanchor":"center","y":"Energy prices","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"31%","x":"2026-11-12","xanchor":"center","y":"Prevent","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"23%","x":"2026-11-09","xanchor":"center","y":"Managing the flow of patients through A&E","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-11-05","xanchor":"center","y":"Procurement innovation in government","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"23%","x":"2026-11-05","xanchor":"center","y":"Lessons learned: Government workforce planning","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"23%","x":"2026-11-02","xanchor":"center","y":"BBC efficiency and transformation programme","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-10-29","xanchor":"center","y":"Energy prices","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"25%","x":"2026-10-29","xanchor":"center","y":"Risk management in government: improving capability and decision-making","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-10-29","xanchor":"center","y":"Leveraging private investment to improve nature and biodiversity","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"24%","x":"2026-10-26","xanchor":"center","y":"Restructuring Integrated Care Boards","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-10-22","xanchor":"center","y":"Maximising value for pupils in schools","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"23%","x":"2026-10-15","xanchor":"center","y":"HMRC’s management of tax debt","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"25%","x":"2026-10-12","xanchor":"center","y":"Leveraging private investment to improve nature and biodiversity","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-10-12","xanchor":"center","y":"Future of public service pensions","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-10-12","xanchor":"center","y":"Risk management in government: improving capability and decision-making","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-10-12","xanchor":"center","y":"Financial sustainability in universities","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-10-12","xanchor":"center","y":"Restructuring Integrated Care Boards","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-10-12","xanchor":"center","y":"HMRC’s management of tax debt","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-10-12","xanchor":"center","y":"Recovery of the proceeds of crime","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-10-12","xanchor":"center","y":"DWP’s approach to innovation","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-10-12","xanchor":"center","y":"The quality of social housing","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-10-12","xanchor":"center","y":"MoJ’s management of IT risk and cyber resilience","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"23%","x":"2026-09-14","xanchor":"center","y":"DWP’s approach to innovation","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"54%","x":"2026-09-10","xanchor":"center","y":"Resilience of the UK food supply chain to disruptions","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-09-03","xanchor":"center","y":"Managing the flow of patients through A&E","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-09-03","xanchor":"center","y":"Digital ID: insights to inform government’s approach","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-09-03","xanchor":"center","y":"BBC efficiency and transformation programme","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-09-03","xanchor":"center","y":"Integrating patient records: laying the foundations for a more productive NHS","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-09-03","xanchor":"center","y":"Prevent","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-09-03","xanchor":"center","y":"Lessons learned: Government workforce planning","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"27%","x":"2026-06-25","xanchor":"center","y":"Digital ID: insights to inform government’s approach","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-06-18","xanchor":"center","y":"Resilience of the UK food supply chain to disruptions","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-06-18","xanchor":"center","y":"Devolution in England","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-06-18","xanchor":"center","y":"Increasing construction skills","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-06-18","xanchor":"center","y":"Upgrading the electricity transmission network","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-06-18","xanchor":"center","y":"Electronic monitoring: responding to increasing demand","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10},"showarrow":false,"text":"Median","x":"2026-02-25","xanchor":"center","y":"Affordability of the MoD’s investment plan","yanchor":"middle"},{"font":{"color":"black","family":"Inter, sans-serif","size":10,"weight":"bold"},"showarrow":false,"text":"Today (30 Jun 2026)","x":"2026-06-30","xanchor":"center","xref":"x","y":1.02,"yanchor":"bottom","yref":"paper"}],"height":1100},                        {"responsive": true, "displaylogo": false}
+                    )                };            </script>        </div>
+</div>
+
+        <p class="data-note">Methodology: PAC hearing dates are forecast by applying the historical median interval of 136 days between a report&#x2019;s entry on the NAO work-in-progress (WIP) list and the corresponding PAC oral evidence session. Confidence percentages are derived from the empirical distribution of WIP-to-hearing intervals observed across all tracked reports. A baseline hearing probability of 44.9% reflects the proportion of WIP reports that proceed to a PAC hearing within the forecast window. This forecast is updated when the NAO WIP list changes.</p>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener">Open Government Licence v3.0</a>. The National Audit Office, Single Source Regulations Office, HM Treasury and other UK government departments and bodies referenced on this site are not responsible for and do not endorse the content of this site.</p>
+      <p>&copy; SDWH Limited &middot; Company number 17048595</p>
+      <nav class="footer-legal" aria-label="Legal pages">
+        <a href="../privacy-policy.html">Privacy Policy</a>
+        <a href="../cookie-policy.html">Cookie Policy</a>
+        <a href="../terms-of-use.html">Terms of Use</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    function toggleFullscreen() {
+      var el = document.getElementById('chart-fullscreen-target');
+      var btn = document.getElementById('fs-btn');
+      if (!document.fullscreenElement) {
+        (el.requestFullscreen || el.webkitRequestFullscreen || el.mozRequestFullScreen).call(el);
+      } else {
+        (document.exitFullscreen || document.webkitExitFullscreen || document.mozCancelFullScreen).call(document);
+      }
+    }
+    document.addEventListener('fullscreenchange', function() {
+      var btn = document.getElementById('fs-btn');
+      if (document.fullscreenElement) {
+        btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="10" y1="14" x2="3" y2="21"/><line x1="21" y1="3" x2="14" y2="10"/></svg> Exit full screen';
+      } else {
+        btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Full screen';
+      }
+    });
+  </script>
+  <script>function toggleNav(btn){var nav=document.getElementById('site-nav');var expanded=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',!expanded);nav.classList.toggle('open',!expanded);}</script>
+
+  <!-- Cookie consent banner -->
+  <div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0b0c0c;color:#ffffff;padding:16px 24px;box-shadow:0 -2px 8px rgba(0,0,0,0.3);">
+    <div style="max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <p style="margin:0;font-family:Inter,sans-serif;font-size:14px;color:#ffffff;max-width:none;flex:1;min-width:200px;">
+        We use analytics cookies to understand how visitors use this site. No advertising cookies are used.
+        <a href="../cookie-policy.html" style="color:#8fb8e8;margin-left:4px;">Cookie policy</a>
+      </p>
+      <div style="display:flex;gap:10px;flex-shrink:0;">
+        <button onclick="acceptCookies()" style="background:#1d70b8;color:#ffffff;border:none;padding:8px 18px;font-family:Inter,sans-serif;font-size:14px;font-weight:600;cursor:pointer;border-radius:3px;">Accept</button>
+        <button onclick="declineCookies()" style="background:transparent;color:#ffffff;border:1px solid rgba(255,255,255,0.4);padding:8px 18px;font-family:Inter,sans-serif;font-size:14px;font-weight:600;cursor:pointer;border-radius:3px;">Decline</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(){
+      var consent = localStorage.getItem('sdwh_cookie_consent');
+      if (!consent) {
+        document.getElementById('cookie-banner').style.display = 'block';
+      } else if (consent === 'granted') {
+        gtag('consent', 'update', {'analytics_storage': 'granted'});
+      }
+    })();
+    function acceptCookies() {
+      localStorage.setItem('sdwh_cookie_consent', 'granted');
+      gtag('consent', 'update', {'analytics_storage': 'granted'});
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+    function declineCookies() {
+      localStorage.setItem('sdwh_cookie_consent', 'denied');
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+  </script>
+
+  <!-- Search modal -->
+  <div id="search-modal" role="dialog" aria-modal="true" aria-label="Search SDWH" hidden>
+    <div id="search-modal-backdrop"></div>
+    <div id="search-modal-panel">
+      <div id="search-modal-header">
+        <span>Search SDWH</span>
+        <button id="search-close" aria-label="Close search">&#x2715;</button>
+      </div>
+      <div id="search-widget"></div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      if (typeof PagefindUI !== 'undefined') {
+        new PagefindUI({ element: '#search-widget', showImages: false, excerptLength: 25 });
+      }
+      var modal = document.getElementById('search-modal');
+      var openBtn = document.getElementById('search-open');
+      var closeBtn = document.getElementById('search-close');
+      var backdrop = document.getElementById('search-modal-backdrop');
+      function openSearch() {
+        modal.hidden = false;
+        document.body.style.overflow = 'hidden';
+        setTimeout(function(){ var inp = modal.querySelector('input'); if (inp) inp.focus(); }, 60);
+      }
+      function closeSearch() {
+        modal.hidden = true;
+        document.body.style.overflow = '';
+      }
+      if (openBtn) openBtn.addEventListener('click', openSearch);
+      if (closeBtn) closeBtn.addEventListener('click', closeSearch);
+      if (backdrop) backdrop.addEventListener('click', closeSearch);
+      document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !modal.hidden) closeSearch(); });
+    });
+  </script>
+
+</body>
+</html>
