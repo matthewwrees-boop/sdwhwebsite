@@ -65,6 +65,7 @@
 html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 72px; /* offset for sticky 60px header + breathing room */
 }
 
 body {
