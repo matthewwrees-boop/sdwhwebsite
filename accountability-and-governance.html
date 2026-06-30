@@ -258,8 +258,8 @@
           </div>
         </div>
 
-        <!-- Figure 1b: PAC-anchored timeline -->
-        <p class="chart-label" style="margin-top: var(--space-md);">Figure 1b: Accountability cycle — median intervals anchored to PAC inquiry opening</p>
+        <!-- Figure 2: PAC-anchored timeline -->
+        <p class="chart-label">Figure 2: Accountability cycle — median intervals anchored to PAC inquiry opening</p>
         <div class="chart-wrapper">
           <div class="canary-portable-chart" id="chart-container-median_timeline_pac_anchored" style="width: 100%; min-height: 240px;">
             <div>
@@ -279,7 +279,9 @@
           </div>
         </div>
 
-        <!-- Figure 1c: Distribution chart — inline Plotly -->
+        <!-- Figure 3: Distribution chart — inline Plotly -->
+        <p class="chart-label">Figure 3: Distribution of accountability cycle end-to-end timescales</p>
+        <p class="chart-sublabel">WIP notice to Treasury Minute &middot; 83 completed cycles, July 2021 – January 2026</p>
         <div class="chart-wrapper">
           <div class="canary-portable-chart" id="chart-container-wip_to_tm_distribution" style="width: 100%; min-height: 400px;">
             <div>
@@ -300,29 +302,31 @@
         </div>
 
         <p class="data-note">This analysis covers cases where all key dates are available — currently 83 completed cycles from 9 July 2021 to 9 January 2026. The count will grow as the database expands. WIP announcement dates have been derived in part from historical records via the Internet Wayback Machine. The data is unaudited and may be limited in accuracy.</p>
-        <p class="source-note">Source: SDWH analysis.</p>
+        <p class="source-note">Source: SDWH Limited analysis. Last updated 30 June 2026.</p>
       </div>
 
       <!-- SECTION 3: PAC / NAO RELATIONSHIP -->
       <div class="about-section">
         <h2>How likely is it that an NAO report will support a PAC inquiry?</h2>
 
+        <p>Nine in ten NAO value for money reports support a subsequent PAC oral evidence session and published report. Conversely, 96% of PAC oral evidence sessions draw on a published NAO report as their primary basis. The committee's scrutiny programme is therefore substantially shaped by the NAO's choice of topics and the pace of its publication programme.</p>
+
         <div class="chart-grid-2">
           <div>
-            <p class="chart-label">Figure 2: NAO reports supporting a PAC inquiry</p>
-            <p class="chart-sublabel">Jan 2024 – Jun 2026 &middot; 130 NAO reports</p>
+            <p class="chart-label">Figure 4: NAO reports supporting a PAC inquiry</p>
+            <p class="chart-sublabel">Jan 2024 – Jun 2026 &middot; 137 NAO reports</p>
             <div class="chart-wrapper">
-              <div class="canary-portable-chart" id="chart-container-pie_reports_supporting_inline" style="width: 100%; min-height: 340px;">
+              <div class="canary-portable-chart" id="chart-container-pie_reports_supporting_inline" style="width: 100%; min-height: 380px;">
                 <div>
-                  <div id="c7c7f0d4-146e-4655-a28a-c0758b901274" class="plotly-graph-div" style="height:320px; width:100%;"></div>
+                  <div id="73195730-2b31-47b0-b729-2277792ea7c5" class="plotly-graph-div" style="height:320px; width:100%;"></div>
                   <script>
                     window.PLOTLYENV=window.PLOTLYENV || {};
-                    if (document.getElementById("c7c7f0d4-146e-4655-a28a-c0758b901274")) {
+                    if (document.getElementById("73195730-2b31-47b0-b729-2277792ea7c5")) {
                       Plotly.newPlot(
-                        "c7c7f0d4-146e-4655-a28a-c0758b901274",
-                        [{"customdata":[117,13],"domain":{"x":[0.1,0.9],"y":[0.1,0.9]},"hole":0.4,"hovertemplate":"<b>%{label}</b><br>Reports: <b>%{customdata}</b><br>Share: <b>%{percent}</b><extra></extra>","labels":["Yes","No"],"marker":{"colors":["#12436D","#b1b4b6"]},"showlegend":true,"texttemplate":"%{percent:.0%}","values":[90.0,10.0],"type":"pie","textfont":{"family":"Inter, sans-serif","size":11},"insidetextorientation":"horizontal","textposition":"inside"}],
-                        {"template":{"layout":{"colorway":["#12436D","#28A197","#801650","#F46A25","#3D3D3D","#A285D1"],"font":{"color":"#505a5f","family":"Inter, sans-serif","size":12},"hoverlabel":{"bgcolor":"#ffffff","bordercolor":"#b1b4b6","font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":12}}}},"title":{"text":""},"margin":{"l":10,"r":10,"t":10,"b":100,"autoexpand":false},"legend":{"font":{"size":11,"color":"#505a5f"},"orientation":"h","yanchor":"top","y":-0.05,"xanchor":"center","x":0.5,"bgcolor":"rgba(0,0,0,0)","borderwidth":0},"uniformtext":{"minsize":11,"mode":"show"},"showlegend":true,"height":320,"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff"},
-                        {"responsive": true, "displaylogo": false, "modeBarButtonsToRemove": ["toImage", "sendDataToCloud"]}
+                        "73195730-2b31-47b0-b729-2277792ea7c5",
+                        [{"customdata":[118,19],"domain":{"x":[0.1,0.9],"y":[0.1,0.9]},"hole":0.4,"hovertemplate":"%{label}: %{percent}<extra></extra>","insidetextorientation":"horizontal","labels":["Yes","No"],"marker":{"colors":["#12436D","#b1b4b6"]},"showlegend":true,"textfont":{"family":"Inter, sans-serif","size":11},"textposition":"inside","texttemplate":"%{percent:.0%}","values":[86.1,13.9],"type":"pie"}],
+                        {"height":320,"legend":{"bgcolor":"rgba(0,0,0,0)","borderwidth":0,"font":{"color":"#505a5f","size":11},"orientation":"h","x":0.5,"xanchor":"center","y":-0.05,"yanchor":"top"},"margin":{"autoexpand":true,"b":100,"l":10,"r":10,"t":10},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","showlegend":true,"template":{"layout":{"colorway":["#12436D","#28A197","#801650","#F46A25","#3D3D3D","#A285D1"],"font":{"color":"#505a5f","family":"Inter, sans-serif","size":12},"hoverlabel":{"bgcolor":"#ffffff","bordercolor":"#b1b4b6","font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":12}},"legend":{"bgcolor":"rgba(0,0,0,0)","borderwidth":0,"font":{"color":"#505a5f","size":11},"orientation":"h","x":0,"xanchor":"left","y":-0.22,"yanchor":"top"},"margin":{"b":95,"l":60,"r":30,"t":50},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","title":{"font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":14},"pad":{"l":0,"t":0},"x":0,"xanchor":"left"},"xaxis":{"linecolor":"#b1b4b6","showgrid":false,"tickfont":{"color":"#505a5f","size":11},"title":{"font":{"color":"#505a5f","size":12}},"zeroline":false},"yaxis":{"gridcolor":"#b1b4b6","gridwidth":0.5,"linecolor":"#b1b4b6","showgrid":true,"tickfont":{"color":"#505a5f","size":11},"title":{"font":{"color":"#505a5f","size":12}},"zeroline":false}}},"title":{"text":""},"uniformtext":{"minsize":11,"mode":"show"}},
+                        {"responsive": true, "displaylogo": false}
                       )
                     }
                   </script>
@@ -331,20 +335,20 @@
             </div>
           </div>
           <div>
-            <p class="chart-label">Figure 3: PAC oral hearings referencing an NAO report</p>
-            <p class="chart-sublabel">Jan 2024 – Jun 2026 &middot; 111 individual hearings</p>
+            <p class="chart-label">Figure 5: PAC oral hearings referencing an NAO report</p>
+            <p class="chart-sublabel">Jan 2024 – Jun 2026 &middot; 113 individual hearings</p>
             <div class="chart-wrapper">
-              <div class="canary-portable-chart" id="chart-container-pie_hearings_supported_inline" style="width: 100%; min-height: 340px;">
+              <div class="canary-portable-chart" id="chart-container-pie_hearings_supported_inline" style="width: 100%; min-height: 380px;">
                 <div>
-                  <div id="020e057b-b36e-4e17-82c8-d5c1db86841b" class="plotly-graph-div" style="height:320px; width:100%;"></div>
+                  <div id="1e917fb3-b1e2-4c8c-8ffa-114d9fe0b001" class="plotly-graph-div" style="height:320px; width:100%;"></div>
                   <script>
                     window.PLOTLYENV=window.PLOTLYENV || {};
-                    if (document.getElementById("020e057b-b36e-4e17-82c8-d5c1db86841b")) {
+                    if (document.getElementById("1e917fb3-b1e2-4c8c-8ffa-114d9fe0b001")) {
                       Plotly.newPlot(
-                        "020e057b-b36e-4e17-82c8-d5c1db86841b",
-                        [{"customdata":[107,4],"domain":{"x":[0.1,0.9],"y":[0.1,0.9]},"hole":0.4,"hovertemplate":"<b>%{label}</b><br>Hearings: <b>%{customdata}</b><br>Share: <b>%{percent}</b><extra></extra>","labels":["Yes","No"],"marker":{"colors":["#12436D","#b1b4b6"]},"showlegend":true,"texttemplate":"%{percent:.0%}","values":[96.3963963963964,3.6036036036036023],"type":"pie","textfont":{"family":"Inter, sans-serif","size":11},"insidetextorientation":"horizontal","textposition":"inside"}],
-                        {"template":{"layout":{"colorway":["#12436D","#28A197","#801650","#F46A25","#3D3D3D","#A285D1"],"font":{"color":"#505a5f","family":"Inter, sans-serif","size":12},"hoverlabel":{"bgcolor":"#ffffff","bordercolor":"#b1b4b6","font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":12}}}},"title":{"text":""},"margin":{"l":10,"r":10,"t":10,"b":100,"autoexpand":false},"legend":{"font":{"size":11,"color":"#505a5f"},"orientation":"h","yanchor":"top","y":-0.05,"xanchor":"center","x":0.5,"bgcolor":"rgba(0,0,0,0)","borderwidth":0},"uniformtext":{"minsize":11,"mode":"show"},"showlegend":true,"height":320,"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff"},
-                        {"responsive": true, "displaylogo": false, "modeBarButtonsToRemove": ["toImage", "sendDataToCloud"]}
+                        "1e917fb3-b1e2-4c8c-8ffa-114d9fe0b001",
+                        [{"customdata":[109,4],"domain":{"x":[0.1,0.9],"y":[0.1,0.9]},"hole":0.4,"hovertemplate":"%{label}: %{percent}<extra></extra>","insidetextorientation":"horizontal","labels":["Yes","No"],"marker":{"colors":["#12436D","#b1b4b6"]},"showlegend":true,"textfont":{"family":"Inter, sans-serif","size":11},"textposition":"inside","texttemplate":"%{percent:.0%}","values":[96.46017699115043,3.5398230088495666],"type":"pie"}],
+                        {"height":320,"legend":{"bgcolor":"rgba(0,0,0,0)","borderwidth":0,"font":{"color":"#505a5f","size":11},"orientation":"h","x":0.5,"xanchor":"center","y":-0.05,"yanchor":"top"},"margin":{"autoexpand":true,"b":100,"l":10,"r":10,"t":10},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","showlegend":true,"template":{"layout":{"colorway":["#12436D","#28A197","#801650","#F46A25","#3D3D3D","#A285D1"],"font":{"color":"#505a5f","family":"Inter, sans-serif","size":12},"hoverlabel":{"bgcolor":"#ffffff","bordercolor":"#b1b4b6","font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":12}},"legend":{"bgcolor":"rgba(0,0,0,0)","borderwidth":0,"font":{"color":"#505a5f","size":11},"orientation":"h","x":0,"xanchor":"left","y":-0.22,"yanchor":"top"},"margin":{"b":95,"l":60,"r":30,"t":50},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","title":{"font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":14},"pad":{"l":0,"t":0},"x":0,"xanchor":"left"},"xaxis":{"linecolor":"#b1b4b6","showgrid":false,"tickfont":{"color":"#505a5f","size":11},"title":{"font":{"color":"#505a5f","size":12}},"zeroline":false},"yaxis":{"gridcolor":"#b1b4b6","gridwidth":0.5,"linecolor":"#b1b4b6","showgrid":true,"tickfont":{"color":"#505a5f","size":11},"title":{"font":{"color":"#505a5f","size":12}},"zeroline":false}}},"title":{"text":""},"uniformtext":{"minsize":11,"mode":"show"}},
+                        {"responsive": true, "displaylogo": false}
                       )
                     }
                   </script>
@@ -354,51 +358,49 @@
           </div>
         </div>
 
-        <p>Nine in ten NAO value for money reports support a subsequent PAC oral evidence session and published report. Conversely, 96% of PAC oral evidence sessions draw on a published NAO report as their primary basis. The committee's scrutiny programme is therefore substantially shaped by the NAO's choice of topics and the pace of its publication programme.</p>
-        <p class="source-note">Source: SDWH analysis, January 2024 – June 2026.</p>
+        <p class="source-note">Source: SDWH Limited analysis, January 2024 – June 2026. Last updated 30 June 2026.</p>
 
-        <!-- Cumulative ratios line chart -->
-        <p class="chart-label" style="margin-top: var(--space-lg);">Cumulative connection ratios over time</p>
+        <!-- Figure 6: Cumulative ratios line chart -->
+        <p class="chart-label">Figure 6: Cumulative NAO-PAC connection ratios over time</p>
         <p class="chart-sublabel">Running percentages since January 2024 — PAC hearings referencing NAO reports, and NAO reports not yet supporting a PAC inquiry</p>
         <div class="chart-wrapper">
           <div class="canary-portable-chart" id="chart-container-hearings_publications_ratios" style="width: 100%; min-height: 400px;">
             <div>
-              <div id="6081213d-8fa8-43b6-89e0-8030b6932d42" class="plotly-graph-div" style="height:400px; width:100%;"></div>
+              <div id="0f2719d9-2581-4f85-b1a6-f8be7ce8ff58" class="plotly-graph-div" style="height:400px; width:100%;"></div>
               <script>
                 window.PLOTLYENV=window.PLOTLYENV || {};
-                if (document.getElementById("6081213d-8fa8-43b6-89e0-8030b6932d42")) {
+                if (document.getElementById("0f2719d9-2581-4f85-b1a6-f8be7ce8ff58")) {
                   Plotly.newPlot(
-                    "6081213d-8fa8-43b6-89e0-8030b6932d42",
-                    [{"hovertemplate":"Cum. % PAC Oral Hearings with NAO Match (Jan 24 – %{x}): <b>%{y:.1f}%</b><extra></extra>","line":{"color":"#00703c","width":2.5},"marker":{"size":6,"symbol":"circle"},"mode":"lines+markers","name":"Cum. % PAC Oral Hearings Referencing an NAO Report","x":["Jan 24","Feb 24","Mar 24","Apr 24","May 24","Jun 24","Jul 24","Aug 24","Sep 24","Oct 24","Nov 24","Dec 24","Jan 25","Feb 25","Mar 25","Apr 25","May 25","Jun 25","Jul 25","Aug 25","Sep 25","Oct 25","Nov 25","Dec 25","Jan 26","Feb 26","Mar 26","Apr 26","May 26","Jun 26"],"y":[100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,97.43589743589743,97.72727272727273,98.07692307692307,98.21428571428571,98.33333333333333,98.50746268656717,98.59154929577466,98.59154929577466,97.2972972972973,97.43589743589743,97.5609756097561,97.72727272727273,97.82608695652173,97.89473684210527,96.07843137254902,96.15384615384616,96.26168224299066,96.3963963963964],"type":"scatter"},{"hovertemplate":"Cum. % NAO Reports with No PAC Inquiry (Jan 24 – %{x}): <b>%{y:.1f}%</b><extra></extra>","line":{"color":"#801650","width":2.5},"marker":{"size":6,"symbol":"x"},"mode":"lines+markers","name":"Cum. % NAO Reports Not Supporting Any PAC Inquiry","x":["Jan 24","Feb 24","Mar 24","Apr 24","May 24","Jun 24","Jul 24","Aug 24","Sep 24","Oct 24","Nov 24","Dec 24","Jan 25","Feb 25","Mar 25","Apr 25","May 25","Jun 25","Jul 25","Aug 25","Sep 25","Oct 25","Nov 25","Dec 25","Jan 26","Feb 26","Mar 26","Apr 26","May 26","Jun 26"],"y":[25.0,11.11111111111111,15.789473684210526,15.0,20.0,20.0,15.789473684210526,15.789473684210526,15.0,14.285714285714285,12.244897959183673,11.320754716981133,10.526315789473683,9.836065573770492,8.823529411764707,8.571428571428571,8.0,7.142857142857142,6.976744186046512,6.976744186046512,6.666666666666667,6.25,6.0,5.714285714285714,5.5045871559633035,5.3097345132743365,7.317073170731707,8.0,8.661417322834646,10.0],"type":"scatter"}],
-                    {"height":400,"legend":{"orientation":"h","x":0.5,"xanchor":"center","y":-0.28,"yanchor":"top"},"margin":{"b":120,"l":60,"r":30,"t":50},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","template":{"layout":{"colorway":["#12436D","#28A197","#801650","#F46A25","#3D3D3D","#A285D1"],"font":{"color":"#505a5f","family":"Inter, sans-serif","size":12},"hoverlabel":{"bgcolor":"#ffffff","bordercolor":"#b1b4b6","font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":12}}}},"title":{"text":"PAC Oral Hearings & NAO Publications — Cumulative Connection Ratios (Since Jan 2024)"},"xaxis":{"title":{"text":"Month (Jan 2024 – present)"}},"yaxis":{"range":[0,105],"ticksuffix":"%","title":{"text":"Cumulative Percentage (%)"}}},
-                    {"responsive": true, "displaylogo": false, "modeBarButtonsToRemove": ["toImage", "sendDataToCloud"]}
+                    "0f2719d9-2581-4f85-b1a6-f8be7ce8ff58",
+                    [{"hovertemplate":"Cum. % PAC Oral Hearings with NAO Match (Jan 24 – %{x}): <b>%{y:.1f}%</b><extra></extra>","line":{"color":"#00703c","width":2.5},"marker":{"size":6,"symbol":"circle"},"mode":"lines+markers","name":"Cum. % PAC Oral Hearings Referencing an NAO Report","x":["Jan 24","Feb 24","Mar 24","Apr 24","May 24","Jun 24","Jul 24","Aug 24","Sep 24","Oct 24","Nov 24","Dec 24","Jan 25","Feb 25","Mar 25","Apr 25","May 25","Jun 25","Jul 25","Aug 25","Sep 25","Oct 25","Nov 25","Dec 25","Jan 26","Feb 26","Mar 26","Apr 26","May 26","Jun 26"],"y":[100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,97.43589743589743,97.72727272727273,98.07692307692307,98.21428571428571,98.33333333333333,98.50746268656717,98.59154929577466,98.59154929577466,97.2972972972973,97.43589743589743,97.5609756097561,97.72727272727273,97.82608695652173,97.89473684210527,96.07843137254902,96.15384615384616,96.26168224299066,96.46017699115043],"type":"scatter"},{"hovertemplate":"Cum. % NAO Reports with No PAC Inquiry (Jan 24 – %{x}): <b>%{y:.1f}%</b><extra></extra>","line":{"color":"#801650","width":2.5},"marker":{"size":6,"symbol":"x"},"mode":"lines+markers","name":"Cum. % NAO Reports Not Supporting Any PAC Inquiry","x":["Jan 24","Feb 24","Mar 24","Apr 24","May 24","Jun 24","Jul 24","Aug 24","Sep 24","Oct 24","Nov 24","Dec 24","Jan 25","Feb 25","Mar 25","Apr 25","May 25","Jun 25","Jul 25","Aug 25","Sep 25","Oct 25","Nov 25","Dec 25","Jan 26","Feb 26","Mar 26","Apr 26","May 26","Jun 26"],"y":[25.0,11.11111111111111,15.789473684210526,15.0,20.0,20.0,15.789473684210526,15.789473684210526,15.0,14.285714285714285,12.244897959183673,11.320754716981133,10.526315789473683,9.836065573770492,8.823529411764707,8.571428571428571,8.0,7.142857142857142,6.976744186046512,6.976744186046512,6.666666666666667,6.25,6.0,5.714285714285714,5.5045871559633035,5.3097345132743365,7.317073170731707,8.0,8.661417322834646,13.86861313868613],"type":"scatter"}],
+                    {"height":400,"legend":{"orientation":"h","x":0.5,"xanchor":"center","y":-0.28,"yanchor":"top"},"margin":{"b":120,"l":60,"r":30,"t":50},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","template":{"layout":{"colorway":["#12436D","#28A197","#801650","#F46A25","#3D3D3D","#A285D1"],"font":{"color":"#505a5f","family":"Inter, sans-serif","size":12},"hoverlabel":{"bgcolor":"#ffffff","bordercolor":"#b1b4b6","font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":12}},"legend":{"bgcolor":"rgba(0,0,0,0)","borderwidth":0,"font":{"color":"#505a5f","size":11},"orientation":"h","x":0,"xanchor":"left","y":-0.22,"yanchor":"top"},"margin":{"b":95,"l":60,"r":30,"t":50},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","title":{"font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":14},"pad":{"l":0,"t":0},"x":0,"xanchor":"left"},"xaxis":{"linecolor":"#b1b4b6","showgrid":false,"tickfont":{"color":"#505a5f","size":11},"title":{"font":{"color":"#505a5f","size":12}},"zeroline":false},"yaxis":{"gridcolor":"#b1b4b6","gridwidth":0.5,"linecolor":"#b1b4b6","showgrid":true,"tickfont":{"color":"#505a5f","size":11},"title":{"font":{"color":"#505a5f","size":12}},"zeroline":false}}},"title":{"text":"PAC Oral Hearings & NAO Publications — Cumulative Connection Ratios (Since Jan 2024)"},"xaxis":{"title":{"text":"Month (Jan 2024 – present)"}},"yaxis":{"range":[0,105],"ticksuffix":"%","title":{"text":"Cumulative Percentage (%)"}}},
+                    {"responsive": true, "displaylogo": false}
                   )
                 }
               </script>
             </div>
           </div>
         </div>
-        <p class="source-note">Source: SDWH analysis.</p>
+        <p class="source-note">Source: SDWH Limited analysis. Last updated 30 June 2026.</p>
 
-        <!-- Asset type breakdown -->
-        <p class="chart-label" style="margin-top: var(--space-lg);">NAO report type: breakdown by asset type</p>
-        <p class="chart-sublabel">Jan 2024 – Jun 2026 &middot; showing mix of value for money reports, investigations and insights</p>
+        <!-- Figures 7 & 8: Asset type breakdown -->
+        <p>The NAO produces three broad report types. Value for money studies typically contain findings, a conclusion and recommendations. Investigations typically contain factual findings. Insight reports include lessons-learned, good practice guides and occasional briefings. The PAC takes evidence from a variety of NAO report types and also draws on the NAO's financial audit work as well as running standalone inquiries that are not related to NAO outputs.</p>
         <div class="chart-grid-2">
           <div>
-            <p class="chart-label">NAO reports by type</p>
-            <p class="chart-sublabel">130 distinct NAO reports</p>
+            <p class="chart-label">Figure 7: NAO reports by type</p>
+            <p class="chart-sublabel">Jan 2024 – Jun 2026 &middot; 137 distinct NAO reports</p>
             <div class="chart-wrapper">
-              <div class="canary-portable-chart" id="chart-container-pie_reports_by_asset_type" style="width: 100%; min-height: 340px;">
+              <div class="canary-portable-chart" id="chart-container-pie_reports_by_asset_type" style="width: 100%; min-height: 380px;">
                 <div>
-                  <div id="22c9f56e-63be-45d6-b10a-ec60c487e0f4" class="plotly-graph-div" style="height:320px; width:100%;"></div>
+                  <div id="551be461-d543-451e-8030-2c17bd677559" class="plotly-graph-div" style="height:320px; width:100%;"></div>
                   <script>
                     window.PLOTLYENV=window.PLOTLYENV || {};
-                    if (document.getElementById("22c9f56e-63be-45d6-b10a-ec60c487e0f4")) {
+                    if (document.getElementById("551be461-d543-451e-8030-2c17bd677559")) {
                       Plotly.newPlot(
-                        "22c9f56e-63be-45d6-b10a-ec60c487e0f4",
-                        [{"customdata":[106,19,5],"domain":{"x":[0.1,0.9],"y":[0.1,0.9]},"hole":0.4,"hovertemplate":"%{label}: %{percent}<extra></extra>","insidetextorientation":"horizontal","labels":["Value for money","Investigation","Insight"],"marker":{"colors":["#12436D","#28A197","#801650"]},"showlegend":true,"textfont":{"family":"Inter, sans-serif","size":11},"textposition":"inside","texttemplate":"%{percent:.0%}","values":[106,19,5],"type":"pie"}],
-                        {"height":320,"legend":{"bgcolor":"rgba(0,0,0,0)","borderwidth":0,"font":{"color":"#505a5f","size":11},"orientation":"h","x":0.5,"xanchor":"center","y":-0.05,"yanchor":"top"},"margin":{"autoexpand":false,"b":100,"l":10,"r":10,"t":10},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","showlegend":true,"template":{"layout":{"colorway":["#12436D","#28A197","#801650","#F46A25","#3D3D3D","#A285D1"],"font":{"color":"#505a5f","family":"Inter, sans-serif","size":12},"hoverlabel":{"bgcolor":"#ffffff","bordercolor":"#b1b4b6","font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":12}}}},"title":{"text":""},"uniformtext":{"minsize":11,"mode":"show"}},
-                        {"responsive": true, "displaylogo": false, "modeBarButtonsToRemove": ["toImage", "sendDataToCloud"]}
+                        "551be461-d543-451e-8030-2c17bd677559",
+                        [{"customdata":[112,19,5,1],"domain":{"x":[0.1,0.9],"y":[0.1,0.9]},"hole":0.4,"hovertemplate":"%{label}: %{percent}<extra></extra>","insidetextorientation":"horizontal","labels":["Value for money","Investigation","Insight","Other"],"marker":{"colors":["#12436D","#28A197","#801650","#3D3D3D"]},"showlegend":true,"textfont":{"family":"Inter, sans-serif","size":11},"textposition":"inside","texttemplate":"%{percent:.0%}","values":[112,19,5,1],"type":"pie"}],
+                        {"height":320,"legend":{"bgcolor":"rgba(0,0,0,0)","borderwidth":0,"font":{"color":"#505a5f","size":11},"orientation":"h","x":0.5,"xanchor":"center","y":-0.05,"yanchor":"top"},"margin":{"autoexpand":true,"b":100,"l":10,"r":10,"t":10},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","showlegend":true,"template":{"layout":{"colorway":["#12436D","#28A197","#801650","#F46A25","#3D3D3D","#A285D1"],"font":{"color":"#505a5f","family":"Inter, sans-serif","size":12},"hoverlabel":{"bgcolor":"#ffffff","bordercolor":"#b1b4b6","font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":12}},"legend":{"bgcolor":"rgba(0,0,0,0)","borderwidth":0,"font":{"color":"#505a5f","size":11},"orientation":"h","x":0,"xanchor":"left","y":-0.22,"yanchor":"top"},"margin":{"b":95,"l":60,"r":30,"t":50},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","title":{"font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":14},"pad":{"l":0,"t":0},"x":0,"xanchor":"left"},"xaxis":{"linecolor":"#b1b4b6","showgrid":false,"tickfont":{"color":"#505a5f","size":11},"title":{"font":{"color":"#505a5f","size":12}},"zeroline":false},"yaxis":{"gridcolor":"#b1b4b6","gridwidth":0.5,"linecolor":"#b1b4b6","showgrid":true,"tickfont":{"color":"#505a5f","size":11},"title":{"font":{"color":"#505a5f","size":12}},"zeroline":false}}},"title":{"text":""},"uniformtext":{"minsize":11,"mode":"show"}},
+                        {"responsive": true, "displaylogo": false}
                       )
                     }
                   </script>
@@ -407,20 +409,20 @@
             </div>
           </div>
           <div>
-            <p class="chart-label">PAC oral hearings by NAO report type</p>
-            <p class="chart-sublabel">111 individual hearings</p>
+            <p class="chart-label">Figure 8: PAC oral hearings by NAO report type</p>
+            <p class="chart-sublabel">Jan 2024 – Jun 2026 &middot; 113 individual hearings</p>
             <div class="chart-wrapper">
-              <div class="canary-portable-chart" id="chart-container-pie_hearings_by_asset_type" style="width: 100%; min-height: 340px;">
+              <div class="canary-portable-chart" id="chart-container-pie_hearings_by_asset_type" style="width: 100%; min-height: 380px;">
                 <div>
-                  <div id="32de9aff-84fb-4719-9f24-56a7b48c7b88" class="plotly-graph-div" style="height:320px; width:100%;"></div>
+                  <div id="81721c10-2483-4098-a07f-76907d3749c8" class="plotly-graph-div" style="height:320px; width:100%;"></div>
                   <script>
                     window.PLOTLYENV=window.PLOTLYENV || {};
-                    if (document.getElementById("32de9aff-84fb-4719-9f24-56a7b48c7b88")) {
+                    if (document.getElementById("81721c10-2483-4098-a07f-76907d3749c8")) {
                       Plotly.newPlot(
-                        "32de9aff-84fb-4719-9f24-56a7b48c7b88",
-                        [{"customdata":[84,13,6,4,4],"domain":{"x":[0.1,0.9],"y":[0.1,0.9]},"hole":0.4,"hovertemplate":"%{label}: %{percent}<extra></extra>","insidetextorientation":"horizontal","labels":["Value for money","Investigation","Insight","Financial Audit","Standalone"],"marker":{"colors":["#12436D","#28A197","#801650","#3D3D3D","#b1b4b6"]},"showlegend":true,"textfont":{"family":"Inter, sans-serif","size":11},"textposition":"inside","texttemplate":"%{percent:.0%}","values":[84,13,6,4,4],"type":"pie"}],
-                        {"height":320,"legend":{"bgcolor":"rgba(0,0,0,0)","borderwidth":0,"font":{"color":"#505a5f","size":11},"orientation":"h","x":0.5,"xanchor":"center","y":-0.05,"yanchor":"top"},"margin":{"autoexpand":false,"b":100,"l":10,"r":10,"t":10},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","showlegend":true,"template":{"layout":{"colorway":["#12436D","#28A197","#801650","#F46A25","#3D3D3D","#A285D1"],"font":{"color":"#505a5f","family":"Inter, sans-serif","size":12},"hoverlabel":{"bgcolor":"#ffffff","bordercolor":"#b1b4b6","font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":12}}}},"title":{"text":""},"uniformtext":{"minsize":11,"mode":"show"}},
-                        {"responsive": true, "displaylogo": false, "modeBarButtonsToRemove": ["toImage", "sendDataToCloud"]}
+                        "81721c10-2483-4098-a07f-76907d3749c8",
+                        [{"customdata":[85,14,6,4,4],"domain":{"x":[0.1,0.9],"y":[0.1,0.9]},"hole":0.4,"hovertemplate":"%{label}: %{percent}<extra></extra>","insidetextorientation":"horizontal","labels":["Value for money","Investigation","Insight","Financial Audit","Standalone"],"marker":{"colors":["#12436D","#28A197","#801650","#3D3D3D","#b1b4b6"]},"showlegend":true,"textfont":{"family":"Inter, sans-serif","size":11},"textposition":"inside","texttemplate":"%{percent:.0%}","values":[85,14,6,4,4],"type":"pie"}],
+                        {"height":320,"legend":{"bgcolor":"rgba(0,0,0,0)","borderwidth":0,"font":{"color":"#505a5f","size":11},"orientation":"h","x":0.5,"xanchor":"center","y":-0.05,"yanchor":"top"},"margin":{"autoexpand":true,"b":100,"l":10,"r":10,"t":10},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","showlegend":true,"template":{"layout":{"colorway":["#12436D","#28A197","#801650","#F46A25","#3D3D3D","#A285D1"],"font":{"color":"#505a5f","family":"Inter, sans-serif","size":12},"hoverlabel":{"bgcolor":"#ffffff","bordercolor":"#b1b4b6","font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":12}},"legend":{"bgcolor":"rgba(0,0,0,0)","borderwidth":0,"font":{"color":"#505a5f","size":11},"orientation":"h","x":0,"xanchor":"left","y":-0.22,"yanchor":"top"},"margin":{"b":95,"l":60,"r":30,"t":50},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","title":{"font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":14},"pad":{"l":0,"t":0},"x":0,"xanchor":"left"},"xaxis":{"linecolor":"#b1b4b6","showgrid":false,"tickfont":{"color":"#505a5f","size":11},"title":{"font":{"color":"#505a5f","size":12}},"zeroline":false},"yaxis":{"gridcolor":"#b1b4b6","gridwidth":0.5,"linecolor":"#b1b4b6","showgrid":true,"tickfont":{"color":"#505a5f","size":11},"title":{"font":{"color":"#505a5f","size":12}},"zeroline":false}}},"title":{"text":""},"uniformtext":{"minsize":11,"mode":"show"}},
+                        {"responsive": true, "displaylogo": false}
                       )
                     }
                   </script>
@@ -429,31 +431,34 @@
             </div>
           </div>
         </div>
-        <p class="source-note">Source: SDWH analysis, January 2024 – June 2026.</p>
+        <p class="source-note">Source: SDWH Limited analysis, January 2024 – June 2026. Last updated 30 June 2026.</p>
       </div>
 
       <!-- SECTION 4: MONTHLY VOLUMES -->
       <div class="about-section">
         <h2>Monthly volumes: PAC oral evidence sittings and NAO publications</h2>
+        <p>The July 2024 peak with no reports in June or August related to a General Election. The NAO lays reports in Parliament, which means that some periods contain few, or no reports. The NAO reports in its annual report and accounts the total number of reports during its financial reporting period ending 31 March.</p>
+        <p class="chart-label">Figure 9: Monthly volumes — PAC oral evidence sittings and NAO publications</p>
+        <p class="chart-sublabel">Jan 2024 – Jun 2026 &middot; grouped by month</p>
         <div class="chart-wrapper">
           <div class="canary-portable-chart" id="chart-container-hearings_publications_volume" style="width: 100%; min-height: 400px;">
             <div>
-              <div id="738f8a83-163f-4845-9c2f-b5b73bca6887" class="plotly-graph-div" style="height:400px; width:100%;"></div>
+              <div id="e392f98a-50ad-44ab-b1fc-468ccd947e59" class="plotly-graph-div" style="height:400px; width:100%;"></div>
               <script>
                 window.PLOTLYENV=window.PLOTLYENV || {};
-                if (document.getElementById("738f8a83-163f-4845-9c2f-b5b73bca6887")) {
+                if (document.getElementById("e392f98a-50ad-44ab-b1fc-468ccd947e59")) {
                   Plotly.newPlot(
-                    "738f8a83-163f-4845-9c2f-b5b73bca6887",
-                    [{"hovertemplate":"PAC Oral Hearings (Linked to NAO) in %{x}: <b>%{y}</b><extra></extra>","marker":{"color":"#12436D"},"name":"PAC Oral Hearings (Linked to NAO Report)","offsetgroup":"1","x":["Jan 24","Feb 24","Mar 24","Apr 24","May 24","Jun 24","Jul 24","Aug 24","Sep 24","Oct 24","Nov 24","Dec 24","Jan 25","Feb 25","Mar 25","Apr 25","May 25","Jun 25","Jul 25","Aug 25","Sep 25","Oct 25","Nov 25","Dec 25","Jan 26","Feb 26","Mar 26","Apr 26","May 26","Jun 26"],"y":[5,5,5,5,3,0,0,0,0,0,4,6,5,5,8,4,4,7,4,0,2,4,4,6,4,3,5,2,3,4],"type":"bar"},{"base":[5,5,5,5,3,0,0,0,0,0,4,6,5,5,8,4,4,7,4,0,2,4,4,6,4,3,5,2,3,4],"customdata":[0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,2,0,0,0],"hovertemplate":"PAC Oral Hearings (Standalone) in %{x}: <b>%{customdata}</b><extra></extra>","marker":{"color":"#3D3D3D"},"name":"PAC Oral Hearings (Standalone)","offsetgroup":"1","x":["Jan 24","Feb 24","Mar 24","Apr 24","May 24","Jun 24","Jul 24","Aug 24","Sep 24","Oct 24","Nov 24","Dec 24","Jan 25","Feb 25","Mar 25","Apr 25","May 25","Jun 25","Jul 25","Aug 25","Sep 25","Oct 25","Nov 25","Dec 25","Jan 26","Feb 26","Mar 26","Apr 26","May 26","Jun 26"],"y":[0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,2,0,0,0],"type":"bar"},{"hovertemplate":"NAO Reports Published in %{x}: <b>%{y}</b><extra></extra>","marker":{"color":"#F46A25"},"name":"NAO Reports Published","offsetgroup":"2","x":["Jan 24","Feb 24","Mar 24","Apr 24","May 24","Jun 24","Jul 24","Aug 24","Sep 24","Oct 24","Nov 24","Dec 24","Jan 25","Feb 25","Mar 25","Apr 25","May 25","Jun 25","Jul 25","Aug 25","Sep 25","Oct 25","Nov 25","Dec 25","Jan 26","Feb 26","Mar 26","Apr 26","May 26","Jun 26"],"y":[4,5,10,1,5,0,13,0,2,2,7,4,4,4,7,2,5,9,2,0,4,6,4,5,4,4,10,2,2,3],"type":"bar"}],
+                    "e392f98a-50ad-44ab-b1fc-468ccd947e59",
+                    [{"hovertemplate":"PAC Oral Hearings (Linked to NAO) in %{x}: <b>%{y}</b><extra></extra>","marker":{"color":"#12436D"},"name":"PAC Oral Hearings (Linked to NAO Report)","offsetgroup":"1","x":["Jan 24","Feb 24","Mar 24","Apr 24","May 24","Jun 24","Jul 24","Aug 24","Sep 24","Oct 24","Nov 24","Dec 24","Jan 25","Feb 25","Mar 25","Apr 25","May 25","Jun 25","Jul 25","Aug 25","Sep 25","Oct 25","Nov 25","Dec 25","Jan 26","Feb 26","Mar 26","Apr 26","May 26","Jun 26"],"y":[5,5,5,5,3,0,0,0,0,0,4,6,5,5,8,4,4,7,4,0,2,4,4,6,4,3,5,2,3,6],"type":"bar"},{"base":[5,5,5,5,3,0,0,0,0,0,4,6,5,5,8,4,4,7,4,0,2,4,4,6,4,3,5,2,3,6],"customdata":[0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,2,0,0,0],"hovertemplate":"PAC Oral Hearings (Standalone) in %{x}: <b>%{customdata}</b><extra></extra>","marker":{"color":"#3D3D3D"},"name":"PAC Oral Hearings (Standalone)","offsetgroup":"1","x":["Jan 24","Feb 24","Mar 24","Apr 24","May 24","Jun 24","Jul 24","Aug 24","Sep 24","Oct 24","Nov 24","Dec 24","Jan 25","Feb 25","Mar 25","Apr 25","May 25","Jun 25","Jul 25","Aug 25","Sep 25","Oct 25","Nov 25","Dec 25","Jan 26","Feb 26","Mar 26","Apr 26","May 26","Jun 26"],"y":[0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,2,0,0,0],"type":"bar"},{"hovertemplate":"NAO Reports Published in %{x}: <b>%{y}</b><extra></extra>","marker":{"color":"#F46A25"},"name":"NAO Reports Published","offsetgroup":"2","x":["Jan 24","Feb 24","Mar 24","Apr 24","May 24","Jun 24","Jul 24","Aug 24","Sep 24","Oct 24","Nov 24","Dec 24","Jan 25","Feb 25","Mar 25","Apr 25","May 25","Jun 25","Jul 25","Aug 25","Sep 25","Oct 25","Nov 25","Dec 25","Jan 26","Feb 26","Mar 26","Apr 26","May 26","Jun 26"],"y":[4,5,10,1,5,0,13,0,2,2,7,4,4,4,7,2,5,9,2,0,4,6,4,5,4,4,10,2,2,10],"type":"bar"}],
                     {"barmode":"group","height":400,"legend":{"orientation":"h","x":0.5,"xanchor":"center","y":-0.28,"yanchor":"top"},"margin":{"b":120,"l":60,"r":30,"t":50},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","template":{"layout":{"colorway":["#12436D","#28A197","#801650","#F46A25","#3D3D3D","#A285D1"],"font":{"color":"#505a5f","family":"Inter, sans-serif","size":12},"hoverlabel":{"bgcolor":"#ffffff","bordercolor":"#b1b4b6","font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":12}},"legend":{"bgcolor":"rgba(0,0,0,0)","borderwidth":0,"font":{"color":"#505a5f","size":11},"orientation":"h","x":0,"xanchor":"left","y":-0.22,"yanchor":"top"},"margin":{"b":95,"l":60,"r":30,"t":50},"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff","title":{"font":{"color":"#0b0c0c","family":"Inter, sans-serif","size":14},"pad":{"l":0,"t":0},"x":0,"xanchor":"left"},"xaxis":{"linecolor":"#b1b4b6","showgrid":false,"tickfont":{"color":"#505a5f","size":11},"title":{"font":{"color":"#505a5f","size":12}},"zeroline":false},"yaxis":{"gridcolor":"#b1b4b6","gridwidth":0.5,"linecolor":"#b1b4b6","showgrid":true,"tickfont":{"color":"#505a5f","size":11},"title":{"font":{"color":"#505a5f","size":12}},"zeroline":false}}},"title":{"text":"PAC Oral Evidence Sittings & NAO Publications — Monthly Volumes (Since Jan 2024)"},"xaxis":{"title":{"text":"Month (Jan 2024 – present)"}},"yaxis":{"range":[0,15],"title":{"text":"Monthly Count"}}},
-                    {"responsive": true, "displaylogo": false, "modeBarButtonsToRemove": ["toImage", "sendDataToCloud"]}
+                    {"responsive": true, "displaylogo": false}
                   )
                 }
               </script>
             </div>
           </div>
         </div>
-        <p class="source-note">Source: SDWH analysis.</p>
+        <p class="source-note">Source: SDWH Limited analysis. Last updated 30 June 2026.</p>
       </div>
 
       <!-- SECTION 5: NAO FINANCIAL IMPACT -->
@@ -467,7 +472,7 @@
       <div class="about-section" id="nao-impact-trends">
         <h2>What proportion of NAO reports have been linked to a quantified impact?</h2>
         <p>The NAO publishes around 60–70 value for money and insights reports each year. Over the six-year period 2020–21 to 2025–26 a total of 79 individual impact claims have been published. The NAO applies a five-principle methodology to the subset of reports for which an impact case is constructed. Whether reports not mapped to any financial impact generated benefits that were not captured, or generated no measurable benefit, cannot be determined from the available information.</p>
-        <p class="chart-label">Figure 4: NAO impact claims by recognition year — count and average value per claim</p>
+        <p class="chart-label">Figure 10: NAO impact claims by recognition year — count and average value per claim</p>
         <p class="chart-sublabel">2020–21 to 2025–26 &middot; 79 individual impact claims</p>
         <div class="chart-wrapper" style="padding: 16px; height: 340px;">
           <canvas id="impact-count-web"></canvas>
@@ -575,7 +580,7 @@
       <div class="about-section">
         <h2>How is NAO financial impact distributed across topic areas?</h2>
         <p>Over the six-year period 2020–21 to 2025–26, three themes — tax &amp; compliance, infrastructure &amp; capital, and commercial &amp; procurement — are closely clustered, each at approximately £3bn of cumulative recognised impact, together accounting for around three-quarters of the total. NHS &amp; health, at £361m, reflects a consistent but more modest contribution. The theme categorisation spans both recurring stream impacts and one-off items assigned by subject matter.</p>
-        <p class="chart-label">Figure 5: NAO financial impact by theme — six-year cumulative, 2020–21 to 2025–26</p>
+        <p class="chart-label">Figure 11: NAO financial impact by theme — six-year cumulative, 2020–21 to 2025–26</p>
         <div class="chart-wrapper" style="padding: 16px; height: 340px;">
           <canvas id="impact-theme-web"></canvas>
         </div>
@@ -610,14 +615,14 @@
           });
         });
         </script>
-        <p class="source-note">Source: SDWH analysis of NAO Annual Reports 2021–22 to 2025–26.</p>
+        <p class="source-note">Source: SDWH Limited analysis of NAO Annual Reports 2021–22 to 2025–26.</p>
       </div>
 
       <!-- SECTION 8: RECENCY OF IMPACT (full width) -->
       <div class="about-section">
         <h2>How recent are the reports that generate the NAO's current financial impact claims?</h2>
         <p>The chart below uses a Marimekko format in which each column's width is proportional to that recognition year's total impact: 2024–25 was by far the largest at £5.3bn and occupies the most horizontal space. Within each column, segments show the financial year of publication of the underlying NAO report — from pre-2014-15 (darkest) at the bottom, through to the most recent 2025-26 reports at the top. In 2025–26, reports published since 2020 account for the majority of recognised impact for the first time.</p>
-        <p class="chart-label">Figure 6: Origin-cohort composition of financial impacts by recognition year</p>
+        <p class="chart-label">Figure 12: Origin-cohort composition of financial impacts by recognition year</p>
         <div id="fig6-marimekko" style="height:480px; width:100%;"></div>
         <script>
         window.addEventListener('DOMContentLoaded', function(){
@@ -679,14 +684,14 @@
           }, {responsive:true, displayModeBar:false});
         });
         </script>
-        <p class="source-note">Source: SDWH analysis of NAO Annual Reports 2021–22 to 2025–26. Column width proportional to total recognised impact that year. Cohorts stacked oldest (bottom) to most recent (top).</p>
+        <p class="source-note">Source: SDWH Limited analysis of NAO Annual Reports 2021–22 to 2025–26. Column width proportional to total recognised impact that year. Cohorts stacked oldest (bottom) to most recent (top).</p>
       </div>
 
       <!-- SECTION 8b: TOP 10 IMPACT CLAIMS -->
       <div class="about-section">
         <h2>Which individual impact claims have been the largest?</h2>
         <p>The largest impact claim reported by the NAO in the last 6 years related to the £1.4bn 2024-25 impact claim for the report <a href="/infrastructure-investment#uk-guarantees">UK Guarantees Scheme for Infrastructure</a>, published in 2015. This report generated 12% of the £11.8bn total over 6 years. The 10 largest impact claims combined delivered £7.0bn (59% of total).</p>
-        <p class="chart-label">Figure 7: Top 10 NAO impact claims by value, 2020–21 to 2025–26</p>
+        <p class="chart-label">Figure 13: Top 10 NAO impact claims by value, 2020–21 to 2025–26</p>
         <div class="chart-wrapper" style="padding: 16px; height: 440px;">
           <canvas id="impact-top10-web"></canvas>
         </div>
@@ -752,7 +757,7 @@
           });
         });
         </script>
-        <p class="source-note">Source: SDWH analysis of NAO Annual Reports 2021–22 to 2025–26. Bars coloured by theme consistent with Figure 5. BADR figures reflect a disputed classification and appear twice as separate recognition-year claims.</p>
+        <p class="source-note">Source: SDWH Limited analysis of NAO Annual Reports 2021–22 to 2025–26. Bars coloured by theme consistent with Figure 11. BADR figures reflect a disputed classification and appear twice as separate recognition-year claims.</p>
       </div>
 
       <!-- SECTION 9: RECOMMENDATIONS -->
