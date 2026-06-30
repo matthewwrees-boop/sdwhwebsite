@@ -466,147 +466,293 @@
       <!-- SECTION 6: REPORTS LINKED TO QUANTIFIED IMPACT -->
       <div class="about-section">
         <h2>What proportion of NAO reports have been linked to a quantified impact?</h2>
-        <p>The NAO publishes around 60 value for money reports each year. Over the last 5 years a total of 62 individual impact claims have been published, derived from 37 individual reports. The NAO applies a five-principle methodology to this subset of reports for which an impact case is constructed. Whether reports not mapped to any financial impact generated benefits that were not captured, or generated no measurable benefit, cannot be determined from the available information.</p>
-        <p class="chart-label">Figure 4: NAO impact claims by recognition year</p>
-        <p class="chart-sublabel">2020–21 to 2024–25 &middot; 62 individual impact claims across 37 distinct NAO reports</p>
-        <div class="chart-wrapper" style="padding: 16px; height: 300px;">
+        <p>The NAO publishes around 60–70 value for money and insights reports each year. Over the six-year period 2020–21 to 2025–26 a total of 79 individual impact claims have been published. The NAO applies a five-principle methodology to the subset of reports for which an impact case is constructed. Whether reports not mapped to any financial impact generated benefits that were not captured, or generated no measurable benefit, cannot be determined from the available information.</p>
+        <p class="chart-label">Figure 4: NAO impact claims by recognition year — count and average value per claim</p>
+        <p class="chart-sublabel">2020–21 to 2025–26 &middot; 79 individual impact claims</p>
+        <div class="chart-wrapper" style="padding: 16px; height: 340px;">
           <canvas id="impact-count-web"></canvas>
         </div>
         <script>
         window.addEventListener('DOMContentLoaded', function(){
-          var years = ['2020-21','2021-22','2022-23','2023-24','2024-25'];
-          var claims = [12, 8, 10, 12, 18];
+          var years = ['2020-21','2021-22','2022-23','2023-24','2024-25','2025-26'];
+          var counts = [12, 8, 10, 12, 18, 19];
+          var avgs   = [76.4, 108.1, 56.4, 132.1, 292.8, 137.7];
+          var fig4LabelPlugin = {
+            id: 'fig4Labels',
+            afterDatasetsDraw: function(chart) {
+              var ctx = chart.ctx;
+              ctx.save();
+              // Count labels: white, inside base of each bar
+              var barMeta = chart.getDatasetMeta(0);
+              ctx.font = '600 11px Inter, sans-serif';
+              ctx.fillStyle = '#ffffff';
+              ctx.textAlign = 'center';
+              ctx.textBaseline = 'bottom';
+              barMeta.data.forEach(function(bar, j) {
+                if (bar.height > 20) {
+                  ctx.fillText(counts[j], bar.x, bar.y + bar.height - 6);
+                }
+              });
+              // Avg value labels: white outline + orange fill so they read on any background
+              var lineMeta = chart.getDatasetMeta(1);
+              ctx.font = 'bold 10px Inter, sans-serif';
+              ctx.textAlign = 'center';
+              ctx.textBaseline = 'bottom';
+              lineMeta.data.forEach(function(pt, j) {
+                var lbl = '\xA3' + avgs[j].toFixed(0) + 'm';
+                ctx.strokeStyle = '#ffffff';
+                ctx.lineWidth = 3;
+                ctx.lineJoin = 'round';
+                ctx.strokeText(lbl, pt.x, pt.y - 8);
+                ctx.fillStyle = '#F46A25';
+                ctx.fillText(lbl, pt.x, pt.y - 8);
+              });
+              ctx.restore();
+            }
+          };
           new Chart(document.getElementById('impact-count-web'), {
-            type: 'bar',
             data: {
               labels: years,
               datasets: [
-                { label: 'Impact claims', backgroundColor: '#12436D', borderWidth: 0, data: claims }
+                {
+                  type: 'bar', label: 'Impact claims (count)', data: counts,
+                  backgroundColor: '#12436D', borderWidth: 0, yAxisID: 'y'
+                },
+                {
+                  type: 'line', label: 'Avg value per claim (\xA3m)', data: avgs,
+                  borderColor: '#F46A25', backgroundColor: '#F46A25', borderWidth: 2.5,
+                  pointRadius: 6, pointHoverRadius: 8,
+                  pointBackgroundColor: '#F46A25', pointBorderColor: '#ffffff', pointBorderWidth: 2,
+                  tension: 0.15, yAxisID: 'y1'
+                }
               ]
             },
             options: {
               responsive: true, maintainAspectRatio: false,
               plugins: {
-                legend: { display: false },
+                legend: { display: true, position: 'bottom', labels: { font: { family: 'Inter, sans-serif', size: 11 }, color: '#505a5f', boxWidth: 12, padding: 16 } },
                 tooltip: {
                   backgroundColor: '#ffffff', borderColor: '#b1b4b6', borderWidth: 1,
                   titleColor: '#0b0c0c', bodyColor: '#505a5f',
                   titleFont: { family: 'Inter, sans-serif', size: 12, weight: '600' },
-                  bodyFont: { family: 'Inter, sans-serif', size: 12 }
+                  bodyFont: { family: 'Inter, sans-serif', size: 12 },
+                  callbacks: {
+                    label: function(c) {
+                      if (c.datasetIndex === 0) return 'Claims: ' + c.parsed.y;
+                      return 'Avg per claim: \xA3' + c.parsed.y.toFixed(1) + 'm';
+                    }
+                  }
                 }
               },
               scales: {
-                x: { grid: { display: false }, ticks: { font: { family: 'Inter, sans-serif', size: 11 }, color: '#505a5f' }, title: { display: true, text: 'Recognition FY', font: { family: 'Inter, sans-serif', size: 12 }, color: '#505a5f' } },
-                y: { beginAtZero: true, grid: { color: '#b1b4b6', lineWidth: 0.5 }, ticks: { font: { family: 'Inter, sans-serif', size: 11 }, color: '#505a5f', precision: 0 }, title: { display: true, text: 'Impact claims', font: { family: 'Inter, sans-serif', size: 12 }, color: '#505a5f' } }
-              },
-              animation: {
-                onComplete: function() {
-                  var chart = this;
-                  var ctx = chart.ctx;
-                  ctx.font = '600 11px Inter, sans-serif';
-                  ctx.textAlign = 'center';
-                  ctx.textBaseline = 'middle';
-                  chart.data.datasets.forEach(function(dataset, i) {
-                    var meta = chart.getDatasetMeta(i);
-                    meta.data.forEach(function(bar, j) {
-                      var val = dataset.data[j];
-                      if (val > 0) {
-                        ctx.fillStyle = '#ffffff';
-                        ctx.fillText(val, bar.x, bar.y + (bar.height / 2));
-                      }
-                    });
-                  });
+                x: {
+                  grid: { display: false },
+                  ticks: { font: { family: 'Inter, sans-serif', size: 11 }, color: '#505a5f' },
+                  title: { display: true, text: 'Recognition FY', font: { family: 'Inter, sans-serif', size: 12 }, color: '#505a5f' }
+                },
+                y: {
+                  type: 'linear', position: 'left', beginAtZero: true, max: 25,
+                  grid: { color: '#b1b4b6', lineWidth: 0.5 },
+                  ticks: { font: { family: 'Inter, sans-serif', size: 11 }, color: '#12436D', precision: 0 },
+                  title: { display: true, text: 'No. of impact claims', font: { family: 'Inter, sans-serif', size: 12 }, color: '#12436D' }
+                },
+                y1: {
+                  type: 'linear', position: 'right', beginAtZero: true, max: 350,
+                  grid: { drawOnChartArea: false },
+                  ticks: { font: { family: 'Inter, sans-serif', size: 11 }, color: '#F46A25', callback: function(v) { return '\xA3' + v + 'm'; } },
+                  title: { display: true, text: 'Avg value per claim (\xA3m)', font: { family: 'Inter, sans-serif', size: 12 }, color: '#F46A25' }
                 }
               }
-            }
+            },
+            plugins: [fig4LabelPlugin]
           });
         });
         </script>
-        <p class="source-note">Source: NAO Annual Reports 2021–22 to 2024–25.</p>
+        <p class="source-note">Source: NAO Annual Reports 2021–22 to 2025–26.</p>
       </div>
 
       <!-- SECTION 7: IMPACT BY THEME (full width) -->
       <div class="about-section">
         <h2>How is NAO financial impact distributed across topic areas?</h2>
-        <p>Over the five-year period 2020–21 to 2024–25, three topic areas — tax, corporate finance and commercial arrangements — together account for the majority of the NAO's reported cumulative financial impact. NHS and health impacts represent a further significant share. The remaining topic areas contribute a substantially smaller proportion of reported impact, despite accounting for a large share of the NAO's published report volume.</p>
-        <p class="chart-label">Figure 5: NAO financial impact by theme — five-year cumulative, 2020–21 to 2024–25</p>
-        <div class="chart-wrapper" style="padding: 16px; height: 360px;">
+        <p>Over the six-year period 2020–21 to 2025–26, three themes — tax &amp; compliance, infrastructure &amp; capital, and commercial &amp; procurement — are closely clustered, each at approximately £3bn of cumulative recognised impact, together accounting for around three-quarters of the total. NHS &amp; health, at £361m, reflects a consistent but more modest contribution. The theme categorisation spans both recurring stream impacts and one-off items assigned by subject matter.</p>
+        <p class="chart-label">Figure 5: NAO financial impact by theme — six-year cumulative, 2020–21 to 2025–26</p>
+        <div class="chart-wrapper" style="padding: 16px; height: 340px;">
           <canvas id="impact-theme-web"></canvas>
         </div>
         <script>
         window.addEventListener('DOMContentLoaded', function(){
           var themeData = [
-            {theme:"Tax",sum:1878.1,color:"#6a4c93"},
-            {theme:"Corporate finance",sum:1854.251,color:"#12436D"},
-            {theme:"Commercial arrangements",sum:1712.914,color:"#28A197"},
-            {theme:"NHS / health / patients",sum:1631.086,color:"#801650"},
-            {theme:"Other",sum:895.609,color:"#3D3D3D"},
-            {theme:"Welfare / benefits",sum:822.84,color:"#F46A25"},
-            {theme:"Energy & utilities",sum:405.96,color:"#4d9e6a"}
+            {theme:"Tax & compliance",         sum:3041.520, color:"#6a4c93"},
+            {theme:"Infrastructure & capital", sum:3012.172, color:"#12436D"},
+            {theme:"Commercial & procurement", sum:2982.768, color:"#28A197"},
+            {theme:"Benefits & welfare",       sum:1392.696, color:"#F46A25"},
+            {theme:"Energy & networks",        sum:1027.768, color:"#4d9e6a"},
+            {theme:"NHS & health",             sum:360.550,  color:"#801650"}
           ];
-          var total5yr = themeData.reduce(function(a,b){return a+b.sum;},0);
+          var total6yr = themeData.reduce(function(a,b){return a+b.sum;},0);
           new Chart(document.getElementById('impact-theme-web'), {
             type: 'bar',
             data: {
               labels: themeData.map(function(t){return t.theme;}),
+              datasets: [{ data: themeData.map(function(t){return t.sum;}), backgroundColor: themeData.map(function(t){return t.color;}), borderWidth: 0 }]
+            },
+            options: {
+              indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+              scales: {
+                x: { beginAtZero:true, title:{display:true,text:'\xA3m (6-year cumulative)',font:{size:12,family:'Inter, sans-serif'},color:'#505a5f'}, ticks:{font:{size:11,family:'Inter, sans-serif'},color:'#505a5f'}, grid:{color:'#b1b4b6'} },
+                y: { ticks:{font:{size:12,family:'Inter, sans-serif'},color:'#0b0c0c'}, grid:{display:false} }
+              },
+              plugins: {
+                legend: { display: false },
+                tooltip: { callbacks:{label:function(c){return '\xA3'+Math.round(c.parsed.x).toLocaleString()+'m ('+(100*c.parsed.x/total6yr).toFixed(1)+'%)';}}, bodyFont:{family:'Inter, sans-serif'}, backgroundColor:'#ffffff', borderColor:'#b1b4b6', borderWidth:1, bodyColor:'#0b0c0c' }
+              }
+            }
+          });
+        });
+        </script>
+        <p class="source-note">Source: SDWH analysis of NAO Annual Reports 2021–22 to 2025–26.</p>
+      </div>
+
+      <!-- SECTION 8: RECENCY OF IMPACT (full width) -->
+      <div class="about-section">
+        <h2>How recent are the reports that generate the NAO's current financial impact claims?</h2>
+        <p>The chart below uses a Marimekko format in which each column's width is proportional to that recognition year's total impact: 2024–25 was by far the largest at £5.3bn and occupies the most horizontal space. Within each column, segments show the financial year of publication of the underlying NAO report — from pre-2014-15 (darkest) at the bottom, through to the most recent 2025-26 reports at the top. In 2025–26, reports published since 2020 account for the majority of recognised impact for the first time.</p>
+        <p class="chart-label">Figure 6: Origin-cohort composition of financial impacts by recognition year</p>
+        <div id="fig6-marimekko" style="height:480px; width:100%;"></div>
+        <script>
+        window.addEventListener('DOMContentLoaded', function(){
+          var years   = ['2020-21','2021-22','2022-23','2023-24','2024-25','2025-26'];
+          var ytotals = [916.631, 864.482, 563.662, 1585.199, 5270.786, 2616.714];
+          var allTot  = 11817.474;
+          // Proportional widths (sum to 100)
+          var ww = ytotals.map(function(v){return v/allTot*100;});
+          // Cumulative center positions
+          var cx = []; var cum = 0;
+          ww.forEach(function(w){cx.push(cum+w/2); cum+=w;});
+          // Cohort definitions: oldest first (stacks from bottom)
+          var cohorts = [
+            {n:'Pre-2014-15',        c:'#3d0f30', d:[29.068, 6.982,  34.629,  22.800,     0,       0]},
+            {n:'2014-15 to 2019-20', c:'#801650', d:[887.563,857.500,282.933, 142.350,2679.661, 573.870]},
+            {n:'2020-21 report',     c:'#c03a00', d:[0,      0,       33.100,1010.600,1266.205,  49.871]},
+            {n:'2021-22 report',     c:'#F46A25', d:[0,      0,       43.000, 212.809, 229.140, 293.322]},
+            {n:'2022-23 report',     c:'#f0a030', d:[0,      0,       28.000,  37.700, 530.000, 121.109]},
+            {n:'2023-24 report',     c:'#28A197', d:[0,      0,      142.000,  89.940, 423.030, 468.102]},
+            {n:'2024-25 report',     c:'#1d70b8', d:[0,      0,        0,        0,    142.750, 810.954]},
+            {n:'2025-26 report',     c:'#003078', d:[0,      0,        0,       69.000,   0,    299.486]}
+          ];
+          var traces = cohorts.map(function(co){
+            return {
+              type:'bar', name:co.n,
+              x:cx, y:co.d, width:ww,
+              marker:{color:co.c, line:{color:'rgba(255,255,255,0.5)', width:0.6}},
+              customdata:years,
+              hovertemplate:'<b>%{fullData.name}</b><br>Recognition year: %{customdata}<br>\xA3%{y:,.0f}m<extra></extra>'
+            };
+          });
+          var annotations = cx.map(function(x,i){
+            var lbl = ytotals[i]>=1000 ? '\xA3'+(ytotals[i]/1000).toFixed(1)+'bn' : '\xA3'+Math.round(ytotals[i])+'m';
+            return {x:x, y:ytotals[i], text:lbl, xanchor:'center', yanchor:'bottom',
+                    showarrow:false, font:{size:9,color:'#505a5f',family:'Inter, sans-serif'}, yshift:4};
+          });
+          Plotly.newPlot('fig6-marimekko', traces, {
+            barmode:'stack', bargap:0,
+            xaxis:{
+              tickmode:'array', tickvals:cx, ticktext:years,
+              showgrid:false, zeroline:false, range:[-1,101],
+              tickfont:{size:10,family:'Inter, sans-serif',color:'#0b0c0c'}
+            },
+            yaxis:{
+              title:{text:'\xA3m recognised',font:{size:12,family:'Inter, sans-serif',color:'#505a5f'},standoff:8},
+              tickmode:'array',
+              tickvals:[0,1000,2000,3000,4000,5000],
+              ticktext:['\xA30','\xA31bn','\xA32bn','\xA33bn','\xA34bn','\xA35bn'],
+              tickfont:{size:10,family:'Inter, sans-serif',color:'#505a5f'},
+              gridcolor:'#e8e8e8', zeroline:true, zerolinecolor:'#b1b4b6'
+            },
+            legend:{orientation:'h', y:-0.22, x:0.5, xanchor:'center',
+                    font:{size:10,family:'Inter, sans-serif',color:'#505a5f'}, traceorder:'reversed'},
+            annotations:annotations,
+            margin:{t:20,r:20,b:160,l:70},
+            paper_bgcolor:'rgba(0,0,0,0)',
+            plot_bgcolor:'rgba(0,0,0,0)',
+            font:{family:'Inter, sans-serif'}
+          }, {responsive:true, displayModeBar:false});
+        });
+        </script>
+        <p class="source-note">Source: SDWH analysis of NAO Annual Reports 2021–22 to 2025–26. Column width proportional to total recognised impact that year. Cohorts stacked oldest (bottom) to most recent (top).</p>
+      </div>
+
+      <!-- SECTION 8b: TOP 10 IMPACT CLAIMS -->
+      <div class="about-section">
+        <h2>Which individual impact claims have been the largest?</h2>
+        <p>The largest impact claim reported by the NAO in the last 6 years related to the £1.4bn 2024-25 impact claim for the report <a href="/infrastructure-investment#uk-guarantees">UK Guarantees Scheme for Infrastructure</a>, published in 2015. This report generated 12% of the £11.8bn total over 6 years. The 10 largest impact claims combined delivered £7.0bn (59% of total).</p>
+        <p class="chart-label">Figure 7: Top 10 NAO impact claims by value, 2020–21 to 2025–26</p>
+        <div class="chart-wrapper" style="padding: 16px; height: 440px;">
+          <canvas id="impact-top10-web"></canvas>
+        </div>
+        <script>
+        window.addEventListener('DOMContentLoaded', function(){
+          var top10 = [
+            {label:"UK Guarantees Scheme for Infrastructure",  val:1372.251, color:"#12436D", theme:"Infrastructure & capital"},
+            {label:"Test and Trace contract savings",           val:1235.000, color:"#28A197", theme:"Commercial & procurement"},
+            {label:"BADR — Entrepreneurs’ Relief reform (2024-25)", val:1118.500, color:"#6a4c93", theme:"Tax & compliance"},
+            {label:"Historic PFI and PPP refinancing",          val:1003.000, color:"#12436D", theme:"Infrastructure & capital"},
+            {label:"BADR — Entrepreneurs’ Relief reform (2025-26)", val:464.030,  color:"#6a4c93", theme:"Tax & compliance"},
+            {label:"Energy bills support scheme — fraud & error avoided", val:443.254, color:"#4d9e6a", theme:"Energy & networks"},
+            {label:"Road schemes efficiency improvements",      val:393.000,  color:"#12436D", theme:"Infrastructure & capital"},
+            {label:"Asset sales programme",                     val:332.000,  color:"#28A197", theme:"Commercial & procurement"},
+            {label:"CCS government commercial frameworks",      val:311.250,  color:"#28A197", theme:"Commercial & procurement"},
+            {label:"Benefits overpayment reduction",            val:299.486,  color:"#F46A25", theme:"Benefits & welfare"}
+          ];
+          var totalAll = 11817.474;
+          new Chart(document.getElementById('impact-top10-web'), {
+            type: 'bar',
+            data: {
+              labels: top10.map(function(d){return d.label;}),
               datasets: [{
-                data: themeData.map(function(t){return t.sum;}),
-                backgroundColor: themeData.map(function(t){return t.color;}),
+                data: top10.map(function(d){return d.val;}),
+                backgroundColor: top10.map(function(d){return d.color;}),
                 borderWidth: 0
               }]
             },
             options: {
               indexAxis: 'y', responsive: true, maintainAspectRatio: false,
               scales: {
-                x: { beginAtZero: true, title:{display:true,text:'£m (5-year cumulative)',font:{size:12,family:'Inter, sans-serif'},color:'#505a5f'}, ticks:{font:{size:11,family:'Inter, sans-serif'},color:'#505a5f'}, grid:{color:'#b1b4b6'} },
-                y: { ticks:{font:{size:12,family:'Inter, sans-serif'},color:'#0b0c0c'}, grid:{display:false} }
+                x: {
+                  beginAtZero: true,
+                  title:{display:true,text:'\xA3m',font:{size:12,family:'Inter, sans-serif'},color:'#505a5f'},
+                  ticks:{font:{size:11,family:'Inter, sans-serif'},color:'#505a5f'},
+                  grid:{color:'#b1b4b6'}
+                },
+                y: {
+                  ticks:{font:{size:11,family:'Inter, sans-serif'},color:'#0b0c0c'},
+                  grid:{display:false}
+                }
               },
               plugins: {
                 legend: { display: false },
-                tooltip: { callbacks:{label:function(c){return '£'+Math.round(c.parsed.x).toLocaleString()+'m ('+(100*c.parsed.x/total5yr).toFixed(1)+'%)';}}, bodyFont:{family:'Inter, sans-serif'}, backgroundColor:'#ffffff', borderColor:'#b1b4b6', borderWidth:1, bodyColor:'#0b0c0c' }
+                tooltip: {
+                  backgroundColor:'#ffffff', borderColor:'#b1b4b6', borderWidth:1,
+                  titleColor:'#0b0c0c', bodyColor:'#505a5f',
+                  titleFont:{family:'Inter, sans-serif',size:12,weight:'600'},
+                  bodyFont:{family:'Inter, sans-serif',size:11},
+                  callbacks: {
+                    label: function(c){
+                      var item = top10[c.dataIndex];
+                      return [
+                        '\xA3' + item.val.toLocaleString(undefined,{minimumFractionDigits:0,maximumFractionDigits:0}) + 'm',
+                        'Theme: ' + item.theme,
+                        (100*item.val/totalAll).toFixed(1)+'% of 6-year total'
+                      ];
+                    }
+                  }
+                }
               }
             }
           });
         });
         </script>
-        <p class="source-note">Source: SDWH analysis.</p>
-      </div>
-
-      <!-- SECTION 8: RECENCY OF IMPACT (full width) -->
-      <div class="about-section">
-        <h2>How recent are the reports that generate the NAO's current financial impact claims?</h2>
-        <p>The NAO's methodology notes that there is a time lag between work and impact being recorded. The chart below illustrates how the composition of credited impacts has changed across consecutive recognition years. SDWH's analysis of five years of NAO annual reports shows that in 2024–25 the pre-2015 cohort of reports represented the largest share of impact.</p>
-        <p class="chart-label">Figure 6: Origin-decade share of financial impacts by recognition year</p>
-        <div class="chart-wrapper" style="padding: 16px; height: 360px;">
-          <canvas id="impact-stack-web"></canvas>
-        </div>
-        <script>
-        window.addEventListener('DOMContentLoaded', function(){
-          var recogBucket = {"2020-21":{"Pre-2015":29.07,"2015-2019":887.56,"2020-on":0},"2021-22":{"Pre-2015":6.98,"2015-2019":525.5,"2020-on":0},"2022-23":{"Pre-2015":34.63,"2015-2019":282.93,"2020-on":246.1},"2023-24":{"Pre-2015":59.8,"2015-2019":105.35,"2020-on":1420.05},"2024-25":{"Pre-2015":1372.25,"2015-2019":1307.41,"2020-on":2591.13}};
-          var recogYears = ["2020-21","2021-22","2022-23","2023-24","2024-25"];
-          var buckets = ["Pre-2015","2015-2019","2020-on"];
-          var bucketColors = {"Pre-2015":"#801650","2015-2019":"#F46A25","2020-on":"#28A197"};
-          new Chart(document.getElementById('impact-stack-web'), {
-            type: 'bar',
-            data: {
-              labels: recogYears,
-              datasets: buckets.map(function(b){ return { label:b, backgroundColor:bucketColors[b], borderWidth:0, data:recogYears.map(function(fy){return recogBucket[fy][b];})}; })
-            },
-            options: {
-              responsive: true, maintainAspectRatio: false,
-              scales: {
-                x: { stacked:true, title:{display:true,text:'Recognition FY',font:{size:12,family:'Inter, sans-serif'},color:'#505a5f'}, ticks:{font:{size:11,family:'Inter, sans-serif'},color:'#505a5f'}, grid:{display:false} },
-                y: { stacked:true, beginAtZero:true, title:{display:true,text:'£m claimed',font:{size:12,family:'Inter, sans-serif'},color:'#505a5f'}, ticks:{font:{size:11,family:'Inter, sans-serif'},color:'#505a5f'}, grid:{color:'#b1b4b6'} }
-              },
-              plugins: {
-                legend: { position:'bottom', labels:{boxWidth:12,font:{size:11,family:'Inter, sans-serif'},color:'#505a5f'} },
-                tooltip: { callbacks:{label:function(c){return c.dataset.label+': £'+Math.round(c.parsed.y).toLocaleString()+'m';}}, backgroundColor:'#ffffff', borderColor:'#b1b4b6', borderWidth:1, bodyColor:'#0b0c0c', bodyFont:{family:'Inter, sans-serif'} }
-              }
-            }
-          });
-        });
-        </script>
-        <p class="source-note">Source: SDWH analysis of NAO Annual Reports 2020–21 to 2024–25.</p>
+        <p class="source-note">Source: SDWH analysis of NAO Annual Reports 2021–22 to 2025–26. Bars coloured by theme consistent with Figure 5. BADR figures reflect a disputed classification and appear twice as separate recognition-year claims.</p>
       </div>
 
       <!-- SECTION 9: RECOMMENDATIONS -->
@@ -619,8 +765,8 @@
       <!-- SECTION 10: COST PER REPORT -->
       <div class="about-section" style="border-bottom: none;">
         <h2>What does the NAO's value for money programme cost, and what is the cost per report?</h2>
-        <p>In 2024–25, the combined cost of the NAO's value for money and wider assurance work was approximately £27.3m, covering 60 published products. This implies an average cost of approximately £455,000 per published report. The NAO's total operational cost in 2024–25 was £132.6m. Value for money and wider assurance work therefore represents approximately 21% of the NAO's total expenditure.</p>
-        <p class="source-note">Source: NAO Annual Report and Accounts 2024–25.</p>
+        <p>In 2025–26, the combined cost of the NAO's value for money and wider assurance work was approximately £28.9m (+4.1% year on year), and it published 67 VFM and insights reports (75 in 2024-25). This implies an average cost of approximately £431,567 per published report (direct and indirect costs). This represented a +17% increase in cost per report since 2024-25 due mainly to the reduction in the number of Insights reports from 15 to 6. The NAO's gross operational cost in 2025–26 was £147m. Value for money and insights work therefore represents approximately 20% of the NAO's gross expenditure.</p>
+        <p class="source-note">Source: NAO Annual Report and Accounts 2025–26.</p>
       </div>
 
       <!-- SELECT COMMITTEES AND OVERSEAS REACH -->
